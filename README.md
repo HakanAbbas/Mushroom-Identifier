@@ -1,2 +1,0 @@
-# Mushroom-Identifier
-Diplomarbeit

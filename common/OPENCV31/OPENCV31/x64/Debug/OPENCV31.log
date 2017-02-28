@@ -1,7 +1,0 @@
-﻿  Source.cpp
-c:\users\hakan\downloads\telegram desktop\opencv31\opencv31\source.cpp(182): warning C4101: 'capture': unreferenced local variable
-c:\users\hakan\downloads\telegram desktop\opencv31\opencv31\source.cpp(274): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\users\hakan\downloads\telegram desktop\opencv31\opencv31\source.cpp(275): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\users\hakan\downloads\telegram desktop\opencv31\opencv31\source.cpp(282): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-c:\users\hakan\downloads\telegram desktop\opencv31\opencv31\source.cpp(502): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  OPENCV31.vcxproj -> C:\Users\Hakan\Downloads\Telegram Desktop\OPENCV31\x64\Debug\OPENCV31.exe

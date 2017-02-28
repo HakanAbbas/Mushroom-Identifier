@@ -1,0 +1,15 @@
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/edit_cache.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/install.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/install/local.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/openlib.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/rebuild_cache.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/list_install_components.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/install/strip.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/libiconv/CMakeFiles/edit_cache.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/libiconv/CMakeFiles/install.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/libiconv/CMakeFiles/install/local.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/libiconv/CMakeFiles/libcharset.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/libiconv/CMakeFiles/install/strip.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/libiconv/CMakeFiles/libiconv.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/libiconv/CMakeFiles/rebuild_cache.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi/libiconv/CMakeFiles/list_install_components.dir

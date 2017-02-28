@@ -1,0 +1,295 @@
+
+{
+	"buildFiles" : 
+	[
+		"C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/CMakeLists.txt",
+		"C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv/CMakeLists.txt"
+	],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\release\\armeabi --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"IlmImf-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "IlmImf",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/armeabi/libIlmImf.a",
+			"toolchain" : "1236082521"
+		},
+		"libcharset-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "libcharset",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\release\\armeabi --target libcharset",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  -target armv5te-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm -Dlibcharset_EXPORTS -I..\\..\\..\\..\\libiconv -Ilibiconv  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -Os -DNDEBUG -Os -DNDEBUG  -fPIC   -Wall -O2 -fexceptions    -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv/libcharset/lib/relocatable.c",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/armeabi"
+				},
+				
+				{
+					"flags" : "  -target armv5te-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm -Dlibcharset_EXPORTS -I..\\..\\..\\..\\libiconv -Ilibiconv  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -Os -DNDEBUG -Os -DNDEBUG  -fPIC   -Wall -O2 -fexceptions    -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv/libcharset/lib/localcharset.c",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/armeabi"
+				}
+			],
+			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/release/obj/armeabi/liblibcharset.so",
+			"toolchain" : "1236082521"
+		},
+		"libiconv-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "libiconv",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\release\\armeabi --target libiconv",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  -target armv5te-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm -Dlibiconv_EXPORTS -I..\\..\\..\\..\\libiconv -Ilibiconv  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -Os -DNDEBUG -Os -DNDEBUG  -fPIC   -Wall -O2 -fexceptions    -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv/lib/iconv.c",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/armeabi"
+				}
+			],
+			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/release/obj/armeabi/liblibiconv.so",
+			"toolchain" : "1236082521"
+		},
+		"libjasper-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "libjasper",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/armeabi/liblibjasper.a",
+			"toolchain" : "1236082521"
+		},
+		"libjpeg-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "libjpeg",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/armeabi/liblibjpeg.a",
+			"toolchain" : "1236082521"
+		},
+		"libpng-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "libpng",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/armeabi/liblibpng.a",
+			"toolchain" : "1236082521"
+		},
+		"libtiff-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "libtiff",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/armeabi/liblibtiff.a",
+			"toolchain" : "1236082521"
+		},
+		"libwebp-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "libwebp",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/armeabi/liblibwebp.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_calib3d-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_calib3d",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_calib3d.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_core-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_core",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_core.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_features2d-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_features2d",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_features2d.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_flann-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_flann",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_flann.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_highgui-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_highgui",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_highgui.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_imgcodecs-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_imgcodecs",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_imgcodecs.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_imgproc-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_imgproc",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_imgproc.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_java-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_java",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_java3.so",
+			"toolchain" : "1236082521"
+		},
+		"opencv_ml-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_ml",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_ml.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_objdetect-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_objdetect",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_objdetect.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_photo-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_photo",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_photo.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_shape-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_shape",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_shape.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_stitching-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_stitching",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_stitching.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_superres-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_superres",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_superres.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_video-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_video",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_video.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_videoio-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_videoio",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_videoio.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_videostab-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "opencv_videostab",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/armeabi/libopencv_videostab.a",
+			"toolchain" : "1236082521"
+		},
+		"openlib-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "openlib",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\release\\armeabi --target openlib",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  -target armv5te-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -Os -DNDEBUG -Os -DNDEBUG  -fPIC   -Wall -O2 -fexceptions  -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/armeabi"
+				},
+				
+				{
+					"flags" : "  -target armv5te-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -Os -DNDEBUG -Os -DNDEBUG  -fPIC   -Wall -O2 -fexceptions  -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/openCV/Source.cpp",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/armeabi"
+				},
+				
+				{
+					"flags" : "  -target armv5te-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -Os -DNDEBUG -Os -DNDEBUG  -fPIC   -Wall -O2 -fexceptions  -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/openCV/Markup.cpp",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/armeabi"
+				},
+				
+				{
+					"flags" : "  -target armv5te-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -Os -DNDEBUG -Os -DNDEBUG  -fPIC   -Wall -O2 -fexceptions  -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/includes/android_util.cpp",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/armeabi"
+				}
+			],
+			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/release/obj/armeabi/libopenlib.so",
+			"toolchain" : "1236082521"
+		},
+		"tbb-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "tbb",
+			"buildType" : "release",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/armeabi/libtbb.a",
+			"toolchain" : "1236082521"
+		}
+	},
+	"toolchains" : 
+	{
+		"1236082521" : 
+		{
+			"cCompilerExecutable" : "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}

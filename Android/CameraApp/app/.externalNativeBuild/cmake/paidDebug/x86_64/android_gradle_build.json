@@ -1,0 +1,101 @@
+
+{
+	"buildFiles" : [ "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/CMakeLists.txt" ],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\paidDebug\\x86_64 --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"app-glue-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "app-glue",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\paidDebug\\x86_64 --target app-glue",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  -target x86_64-none-linux-android -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-21/arch-x86_64  -I..\\..\\..\\..\\src\\main\\cpp\\include -I..\\..\\..\\..\\src\\main\\openCV\\include -I..\\..\\..\\..\\imported-lib\\include  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/android/native_app_glue/android_native_app_glue.c",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/paidDebug/x86_64"
+				}
+			],
+			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/paidDebug/x86_64/libapp-glue.a",
+			"toolchain" : "1236082521"
+		},
+		"imported-lib-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "imported-lib",
+			"buildType" : "debug",
+			"output" : "imported-lib/src/x86_64/libimported-lib.so",
+			"toolchain" : "1236082521"
+		},
+		"markup-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "markup",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\paidDebug\\x86_64 --target markup",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  -target x86_64-none-linux-android -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-21/arch-x86_64  -Dmarkup_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\include -I..\\..\\..\\..\\src\\main\\openCV\\include -I..\\..\\..\\..\\imported-lib\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -D__STDC_FORMAT_MACROS -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/openCV/Markup.cpp",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/paidDebug/x86_64"
+				}
+			],
+			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/paid/debug/obj/x86_64/libmarkup.so",
+			"toolchain" : "1236082521"
+		},
+		"native-lib-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "native-lib",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\paidDebug\\x86_64 --target native-lib",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  -target x86_64-none-linux-android -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-21/arch-x86_64  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\include -I..\\..\\..\\..\\src\\main\\openCV\\include -I..\\..\\..\\..\\imported-lib\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -D__STDC_FORMAT_MACROS -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/paidDebug/x86_64"
+				}
+			],
+			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/paid/debug/obj/x86_64/libnative-lib.so",
+			"toolchain" : "1236082521"
+		},
+		"source-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "source",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\paidDebug\\x86_64 --target source",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  -target x86_64-none-linux-android -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-21/arch-x86_64  -Dsource_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\include -I..\\..\\..\\..\\src\\main\\openCV\\include -I..\\..\\..\\..\\imported-lib\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -D__STDC_FORMAT_MACROS -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/openCV/Source.cpp",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/paidDebug/x86_64"
+				}
+			],
+			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/paid/debug/obj/x86_64/libsource.so",
+			"toolchain" : "1236082521"
+		}
+	},
+	"toolchains" : 
+	{
+		"1236082521" : 
+		{
+			"cCompilerExecutable" : "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}
