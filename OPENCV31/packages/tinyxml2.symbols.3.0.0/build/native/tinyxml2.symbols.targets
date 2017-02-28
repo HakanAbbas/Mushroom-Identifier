@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="tinyxml2_symbols_init">
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-tinyxml2_symbols Condition="'$(Linkage-tinyxml2_symbols)' == ''">dynamic</Linkage-tinyxml2_symbols>
+    <CallingConvention-tinyxml2_symbols Condition="'$(CallingConvention-tinyxml2_symbols)' == ''">cdecl</CallingConvention-tinyxml2_symbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <UsingTask TaskName="tinyxml2_symbols_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+  <Target Name="tinyxml2_symbols_init">
+    <tinyxml2_symbols_Contains Text="Linkage-dynamic" Library="tinyxml2_symbols" Value="dynamic" Condition="'$(Linkage-tinyxml2_symbols)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-tinyxml2_symbols" />
+    </tinyxml2_symbols_Contains>
+    <tinyxml2_symbols_Contains Text="Linkage-static" Library="tinyxml2_symbols" Value="static" Condition="'$(Linkage-tinyxml2_symbols)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-tinyxml2_symbols" />
+    </tinyxml2_symbols_Contains>
+    <tinyxml2_symbols_Contains Text="Linkage-ltcg" Library="tinyxml2_symbols" Value="ltcg" Condition="'$(Linkage-tinyxml2_symbols)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-tinyxml2_symbols" />
+    </tinyxml2_symbols_Contains>
+    <tinyxml2_symbols_Contains Text="Linkage-sxs" Library="tinyxml2_symbols" Value="sxs" Condition="'$(Linkage-tinyxml2_symbols)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-tinyxml2_symbols" />
+    </tinyxml2_symbols_Contains>
+    <tinyxml2_symbols_Contains Text="CallingConvention-cdecl" Library="tinyxml2_symbols" Value="cdecl" Condition="'$(CallingConvention-tinyxml2_symbols)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-tinyxml2_symbols" />
+    </tinyxml2_symbols_Contains>
+    <tinyxml2_symbols_Contains Text="CallingConvention-stdcall" Library="tinyxml2_symbols" Value="stdcall" Condition="'$(CallingConvention-tinyxml2_symbols)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-tinyxml2_symbols" />
+    </tinyxml2_symbols_Contains>
+    <tinyxml2_symbols_Contains Text="CallingConvention-fastcall" Library="tinyxml2_symbols" Value="fastcall" Condition="'$(CallingConvention-tinyxml2_symbols)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-tinyxml2_symbols" />
+    </tinyxml2_symbols_Contains>
+    <tinyxml2_symbols_Contains Text="CallingConvention-thiscall" Library="tinyxml2_symbols" Value="thiscall" Condition="'$(CallingConvention-tinyxml2_symbols)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-tinyxml2_symbols" />
+    </tinyxml2_symbols_Contains>
+    <tinyxml2_symbols_Contains Text="CallingConvention-clrcall" Library="tinyxml2_symbols" Value="clrcall" Condition="'$(CallingConvention-tinyxml2_symbols)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-tinyxml2_symbols" />
+    </tinyxml2_symbols_Contains>
+  </Target>
+</Project>
