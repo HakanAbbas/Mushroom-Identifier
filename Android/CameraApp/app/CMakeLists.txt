@@ -25,7 +25,7 @@ add_library( # Sets the name of the library.
              # Provides a relative path to your source file(s).
              # Associated headers in the same location as their source
              # file are automatically included.
-             src/main/cpp/native-lib.cpp src/main/openCV/Source.cpp src/main/openCV/Markup.cpp src/main/includes/android_util.cpp )
+             src/main/openCV/Source.cpp C:/Users/Hakan/Desktop/Mushroom-Identifier/common/Source.cpp )
 
 
 include("$ENV{OpenCV_DIR}/OpenCVConfig.cmake")

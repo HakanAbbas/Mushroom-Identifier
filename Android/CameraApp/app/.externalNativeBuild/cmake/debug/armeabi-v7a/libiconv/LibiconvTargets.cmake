@@ -54,14 +54,14 @@ set_target_properties(libiconv PROPERTIES
 # Import target "libcharset" for configuration "Debug"
 set_property(TARGET libcharset APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(libcharset PROPERTIES
-  IMPORTED_LOCATION_DEBUG "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/debug/obj/armeabi-v7a/liblibcharset.so"
+  IMPORTED_LOCATION_DEBUG "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/build/intermediates/cmake/debug/obj/armeabi-v7a/liblibcharset.so"
   IMPORTED_SONAME_DEBUG "liblibcharset.so"
   )
 
 # Import target "libiconv" for configuration "Debug"
 set_property(TARGET libiconv APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(libiconv PROPERTIES
-  IMPORTED_LOCATION_DEBUG "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/debug/obj/armeabi-v7a/liblibiconv.so"
+  IMPORTED_LOCATION_DEBUG "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/build/intermediates/cmake/debug/obj/armeabi-v7a/liblibiconv.so"
   IMPORTED_SONAME_DEBUG "liblibiconv.so"
   )
 

@@ -13,11 +13,11 @@ public:
 	Vec3b bgr; //BGR Farbe
 	Vec3b hsv_v; //HSV Bereich Begin (von)
 	Vec3b hsv_b; //HSV Bereich Ende (bis)
-	Vec3b hsv_v2;//HSV Bereich Begin (von) für Rottöne
-	Vec3b hsv_b2;//HSV Bereich Ende (bis) für Rottöne
+	Vec3b hsv_v2;//HSV Bereich Begin (von) fï¿½r Rottï¿½ne
+	Vec3b hsv_b2;//HSV Bereich Ende (bis) fï¿½r Rottï¿½ne
 	string name; //Name des Pilzes
 	string wiki; //Wikipedia Link
-	string lamell; //1 für es gibt Lamellen, 0 für es gibt keine Lamellen, Eigenschaftswort für "Hat der pilz ... Lamellen?"
+	string lamell; //1 fï¿½r es gibt Lamellen, 0 fï¿½r es gibt keine Lamellen, Eigenschaftswort fï¿½r "Hat der pilz ... Lamellen?"
 	int roud; //ist der Pilz Rund, 1 ja, 0 nein
 	int poisonous; //ist der Pilz giftig, 1 ja, 0 nein
 	string nodule; //= Knolle, Eigenschaftswort (z. B. dicke, rundliche etc.)
@@ -31,15 +31,15 @@ vector<Pilz> readxml(std::string path); //Lesen der PilzXML
 void CannyThreshold(int, void*); //Umrisse werden erkannt
 vector<Pilz> oneornull(vector<Pilz> mushlist2, string question); // 1/0 Entscheidungsfragen
 vector <Pilz> roundornot(vector <Pilz> mushlist, int amountofcircles); //ist der Pilz Rund oder nicht?
-vector <Pilz> questions(vector <Pilz>mushlist); //Ausführliche Entscheidungsfragen
+vector <Pilz> questions(vector <Pilz>mushlist); //Ausfï¿½hrliche Entscheidungsfragen
 int HoughDetection(const Mat& src_gray, const Mat& src_display, int cannyThreshold, int accumulatorThreshold); //Hough Circle Detection
-
-																											   /** Globale Variablen für Maschinelles Lernen*/
+int myStoi(const string& _Str, size_t *_Idx = 0, int _Base = 10);
+																							/** Globale Variablen fï¿½r Maschinelles Lernen*/
 String face_cascade_name = "..\\data\\mushroom_cascade.xml";
 CascadeClassifier face_cascade;
 RNG rng(12345);
 
-//globale Variablen für Canny Edge Detector
+//globale Variablen fï¿½r Canny Edge Detector
 Mat src, src_gray;
 Mat dst, detected_edges;
 int edgeThresh = 1;
@@ -47,7 +47,6 @@ int lowThreshold = 70;
 int const max_lowThreshold = 70;
 int ratio = 3;
 int kernel_size = 3;
-char* window_name = "Canny Edge Detector";
 
 
 
@@ -99,7 +98,7 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 			array2[0] += image.at<Vec3b>(rows_mid +i, cols_mid + j)[0];
 			array2[1] += image.at<Vec3b>(rows_mid + i, cols_mid + j)[1];
 			array2[2] += image.at<Vec3b>(rows_mid + i, cols_mid + j)[2];
-			//cout « "yey" « array2[0];
+			//cout ï¿½ "yey" ï¿½ array2[0];
 		}
 	}
 
@@ -119,7 +118,7 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 	//umwandlung von BGR in HSV
 	cv::cvtColor(image, hsv_image, cv::COLOR_BGR2HSV);
 
-	//Errechnen, ob der Pilz von der Farbe her mit einem oder mehrerem aus dem xml-File übereinstimmt
+	//Errechnen, ob der Pilz von der Farbe her mit einem oder mehrerem aus dem xml-File ï¿½bereinstimmt
 	for (int i = 0; i<mushlist.size(); i++)
 	{
 
@@ -159,7 +158,7 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 	cout << "\nAnzahl der Kreise: " << amountofcircles;
 	int fliegennull = 0;
 
-	//Hier sage ich: wenn ein Pilz von der Farbe her ein Fliegenpilz sein könnte und noch mehrere Kreise erkannt werden, dann ist es verdammt nochmal ein Fliegenpilz, danke aus.
+	//Hier sage ich: wenn ein Pilz von der Farbe her ein Fliegenpilz sein kï¿½nnte und noch mehrere Kreise erkannt werden, dann ist es verdammt nochmal ein Fliegenpilz, danke aus.
 	for (int i = 0; i < mushlist2.size(); i++) {
 		string fliegen;
 		fliegen = ("Fliegenpilz");
@@ -184,7 +183,7 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 	}
 
 
-	//Schwarz Weiß Binäres Bild
+	//Schwarz Weiï¿½ Binï¿½res Bild
 	cv::Mat grayscaleMat(image.size(), CV_8U);
 	cv::cvtColor(image, grayscaleMat, CV_BGR2GRAY);
 	cv::Mat binaryMat(grayscaleMat.size(), grayscaleMat.type());
@@ -194,7 +193,7 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 }
 
 /** @function detectAndDisplay */
-int detectAndDisplay(Mat frame) //Markus´ss Maschinelles Lernen Algorithmus 
+int detectAndDisplay(Mat frame) //Markusï¿½ss Maschinelles Lernen Algorithmus 
 {
 	std::vector<Rect> faces;
 	Mat frame_gray;
@@ -224,9 +223,14 @@ vector<Pilz> readxml(std::string path) {
 	CMarkup xml;
 	xml.Load(path); //XML Datei Laden
 
+	std:stringstream help;
 
 	int counter = 1;
-	std::string counter_str = to_string(counter);
+	help << counter;
+	std::string counter_str;
+	counter_str = help.str();
+	help.str(std::string());
+
 	std::string s("P");
 	std::string ws;
 	std::string pilz;
@@ -236,7 +240,9 @@ vector<Pilz> readxml(std::string path) {
 		while (xml.FindElem(MCD_T("Schwammerl")))
 		{
 			xml.IntoElem();
-			counter_str = to_string(counter);
+			help << counter;
+			counter_str = help.str();
+			help.str(std::string());
 			pilz = ws + counter_str;
 			//cout << "pilz: " << pilz;
 			xml.FindElem(pilz);  //z. B. P1, P2, P3, ...
@@ -245,9 +251,9 @@ vector<Pilz> readxml(std::string path) {
 
 			//Farbe (BGR)
 			xml.FindElem(MCD_T("Farbe"));
-			mush.bgr[0] = std::stoi(xml.GetAttrib(MCD_T("b")));
-			mush.bgr[1] = std::stoi(xml.GetAttrib(MCD_T("g")));
-			mush.bgr[2] = std::stoi(xml.GetAttrib(MCD_T("r")));
+			mush.bgr[0] = stoi(xml.GetAttrib(MCD_T("b")).c_str());
+			mush.bgr[1] = stoi(xml.GetAttrib(MCD_T("g")).c_str());
+			mush.bgr[2] = stoi(xml.GetAttrib(MCD_T("r")).c_str());
 
 			//Name
 			xml.FindElem(MCD_T("Name"));
@@ -255,39 +261,37 @@ vector<Pilz> readxml(std::string path) {
 
 			//HSV-von
 			xml.FindElem(MCD_T("HSV-von"));
-			mush.hsv_v[0] = std::stoi(xml.GetAttrib(MCD_T("h")));
-			mush.hsv_v[1] = std::stoi(xml.GetAttrib(MCD_T("s")));
-			mush.hsv_v[2] = std::stoi(xml.GetAttrib(MCD_T("v")));
-
+			mush.hsv_v[0] = stoi(xml.GetAttrib(MCD_T("h")).c_str());
+			mush.hsv_v[1] = stoi(xml.GetAttrib(MCD_T("s")).c_str());
+			mush.hsv_v[2] = stoi(xml.GetAttrib(MCD_T("v")).c_str());
 			//HSV-bis
 			xml.FindElem(MCD_T("HSV-bis"));
-			mush.hsv_b[0] = std::stoi(xml.GetAttrib(MCD_T("h")));
-			mush.hsv_b[1] = std::stoi(xml.GetAttrib(MCD_T("s")));
-			mush.hsv_b[2] = std::stoi(xml.GetAttrib(MCD_T("v")));
+			mush.hsv_b[0] = stoi(xml.GetAttrib(MCD_T("h")).c_str());
+			mush.hsv_b[1] = stoi(xml.GetAttrib(MCD_T("s")).c_str());
+			mush.hsv_b[2] = stoi(xml.GetAttrib(MCD_T("v")).c_str());
 
 			//HSV-von2
 			xml.FindElem(MCD_T("HSV-von2"));
-			mush.hsv_v2[0] = std::stoi(xml.GetAttrib(MCD_T("h")));
-			mush.hsv_v2[1] = std::stoi(xml.GetAttrib(MCD_T("s")));
-			mush.hsv_v2[2] = std::stoi(xml.GetAttrib(MCD_T("v")));
+			mush.hsv_v2[0] = stoi(xml.GetAttrib(MCD_T("h")).c_str());
+			mush.hsv_v2[1] = stoi(xml.GetAttrib(MCD_T("s")).c_str());
+			mush.hsv_v2[2] = stoi(xml.GetAttrib(MCD_T("v")).c_str());
 
 			//HSV-bis2
 			xml.FindElem(MCD_T("HSV-bis2"));
-			mush.hsv_b2[0] = std::stoi(xml.GetAttrib(MCD_T("h")));
-			mush.hsv_b2[1] = std::stoi(xml.GetAttrib(MCD_T("s")));
-			mush.hsv_b2[2] = std::stoi(xml.GetAttrib(MCD_T("v")));
-
+			mush.hsv_b2[0] = stoi(xml.GetAttrib(MCD_T("h")).c_str());
+			mush.hsv_b2[1] = stoi(xml.GetAttrib(MCD_T("s")).c_str());
+			mush.hsv_b2[2] = stoi(xml.GetAttrib(MCD_T("v")).c_str());
 			//Wiki
 			xml.FindElem(MCD_T("Wiki"));
 			mush.wiki = xml.GetData();
 
 			//Giftigkeit
 			xml.FindElem(MCD_T("Giftigkeit"));
-			mush.poisonous = std::stoi(xml.GetData());
+			mush.poisonous = stoi(xml.GetData().c_str());
 
 			//Rund
 			xml.FindElem(MCD_T("Rund"));
-			mush.roud = std::stoi(xml.GetData());
+			mush.roud = stoi(xml.GetData().c_str());
 
 			//Lamellen
 			//Knolle
@@ -312,9 +316,20 @@ vector<Pilz> readxml(std::string path) {
 	}
 	return mushlist;
 }
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//String in Integer konvertieren
+int myStoi(const string& _Str, size_t *_Idx,
+	int _Base)
+{	// convert string to int
+	const char *_Ptr = _Str.c_str();
+	char *_Eptr;
+	long _Ans = strtol(_Ptr, &_Eptr, _Base);
 
-
+	if (_Idx != 0)
+		*_Idx = (size_t)(_Eptr - _Ptr);
+	return ((int)_Ans);
+}
 //Canny Algorithmus/////////////////////////////////////////////////////////////////////////////////////////////
 void CannyThreshold(int, void*)
 {

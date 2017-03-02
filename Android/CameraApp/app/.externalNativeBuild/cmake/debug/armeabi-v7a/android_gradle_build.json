@@ -2,13 +2,13 @@
 {
 	"buildFiles" : 
 	[
-		"C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/CMakeLists.txt",
-		"C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv/CMakeLists.txt"
+		"C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/CMakeLists.txt",
+		"C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/libiconv/CMakeLists.txt"
 	],
 	"cFileExtensions" : [ "c" ],
 	"cleanCommands" : 
 	[
-		"C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target clean"
+		"C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\Desktop\\Mushroom-Identifier\\Android\\CameraApp\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target clean"
 	],
 	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
@@ -25,42 +25,42 @@
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "libcharset",
-			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target libcharset",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\Desktop\\Mushroom-Identifier\\Android\\CameraApp\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target libcharset",
 			"buildType" : "debug",
 			"files" : 
 			[
 				
 				{
 					"flags" : "  -target armv7-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm -Dlibcharset_EXPORTS -I..\\..\\..\\..\\libiconv -Ilibiconv  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions    -c ",
-					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv/libcharset/lib/relocatable.c",
-					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+					"src" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/libiconv/libcharset/lib/relocatable.c",
+					"workingDirectory" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
 				},
 				
 				{
 					"flags" : "  -target armv7-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm -Dlibcharset_EXPORTS -I..\\..\\..\\..\\libiconv -Ilibiconv  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions    -c ",
-					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv/libcharset/lib/localcharset.c",
-					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+					"src" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/libiconv/libcharset/lib/localcharset.c",
+					"workingDirectory" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
 				}
 			],
-			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/debug/obj/armeabi-v7a/liblibcharset.so",
+			"output" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/build/intermediates/cmake/debug/obj/armeabi-v7a/liblibcharset.so",
 			"toolchain" : "1236082521"
 		},
 		"libiconv-Debug-armeabi-v7a" : 
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "libiconv",
-			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target libiconv",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\Desktop\\Mushroom-Identifier\\Android\\CameraApp\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target libiconv",
 			"buildType" : "debug",
 			"files" : 
 			[
 				
 				{
 					"flags" : "  -target armv7-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm -Dlibiconv_EXPORTS -I..\\..\\..\\..\\libiconv -Ilibiconv  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions    -c ",
-					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv/lib/iconv.c",
-					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+					"src" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/libiconv/lib/iconv.c",
+					"workingDirectory" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
 				}
 			],
-			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/debug/obj/armeabi-v7a/liblibiconv.so",
+			"output" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/build/intermediates/cmake/debug/obj/armeabi-v7a/liblibiconv.so",
 			"toolchain" : "1236082521"
 		},
 		"libjasper-Debug-armeabi-v7a" : 
@@ -251,36 +251,24 @@
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "openlib",
-			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target openlib",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\Desktop\\Mushroom-Identifier\\Android\\CameraApp\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target openlib",
 			"buildType" : "debug",
 			"files" : 
 			[
 				
 				{
 					"flags" : "  -target armv7-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions  -c ",
-					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/cpp/native-lib.cpp",
-					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+					"src" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/src/main/openCV/Source.cpp",
+					"workingDirectory" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
 				},
 				
 				{
 					"flags" : "  -target armv7-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions  -c ",
-					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/openCV/Source.cpp",
-					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
-				},
-				
-				{
-					"flags" : "  -target armv7-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions  -c ",
-					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/openCV/Markup.cpp",
-					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
-				},
-				
-				{
-					"flags" : "  -target armv7-none-linux-androideabi -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions  -c ",
-					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/includes/android_util.cpp",
-					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+					"src" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/common/Source.cpp",
+					"workingDirectory" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
 				}
 			],
-			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libopenlib.so",
+			"output" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libopenlib.so",
 			"toolchain" : "1236082521"
 		},
 		"tbb-Debug-armeabi-v7a" : 

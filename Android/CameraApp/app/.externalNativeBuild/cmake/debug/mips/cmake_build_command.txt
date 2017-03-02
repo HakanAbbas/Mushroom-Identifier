@@ -1,11 +1,11 @@
 Executable : C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\cmake.exe
 arguments : 
--HC:\Users\Hakan\AndroidStudioProjects\CameraApp\app
--BC:\Users\Hakan\AndroidStudioProjects\CameraApp\app\.externalNativeBuild\cmake\debug\mips
+-HC:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app
+-BC:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app\.externalNativeBuild\cmake\debug\mips
 -GAndroid Gradle - Ninja
 -DANDROID_ABI=mips
 -DANDROID_NDK=C:\Users\Hakan\AppData\Local\Android\Sdk\ndk-bundle
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\build\intermediates\cmake\debug\obj\mips
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app\build\intermediates\cmake\debug\obj\mips
 -DCMAKE_BUILD_TYPE=Debug
 -DCMAKE_MAKE_PROGRAM=C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe
 -DCMAKE_TOOLCHAIN_FILE=C:\Users\Hakan\AppData\Local\Android\Sdk\ndk-bundle\build\cmake\android.toolchain.cmake

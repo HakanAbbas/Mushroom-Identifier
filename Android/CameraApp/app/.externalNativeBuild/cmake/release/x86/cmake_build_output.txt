@@ -12,5 +12,5 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/x86
+-- Build files have been written to: C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/x86
 WARNING: Target "openlib" requests linking to directory "C:/Program Files/boost/boost_1_60_0/stage/lib".  Targets may link only to libraries.  CMake is dropping the item.

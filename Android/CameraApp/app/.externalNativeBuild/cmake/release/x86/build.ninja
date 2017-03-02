@@ -34,7 +34,7 @@ include rules.ninja
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\.externalNativeBuild\cmake\release\x86 && C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app\.externalNativeBuild\cmake\release\x86 && C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -43,7 +43,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for install
 
 build CMakeFiles/install.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\.externalNativeBuild\cmake\release\x86 && C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\cmake.exe -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app\.externalNativeBuild\cmake\release\x86 && C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\cmake.exe -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -53,7 +53,7 @@ build install: phony CMakeFiles/install.util
 # Utility command for install/local
 
 build CMakeFiles/install/local.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\.externalNativeBuild\cmake\release\x86 && C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app\.externalNativeBuild\cmake\release\x86 && C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -61,38 +61,22 @@ build install/local: phony CMakeFiles/install/local.util
 # =============================================================================
 # Object build statements for SHARED_LIBRARY target openlib
 
-build CMakeFiles/openlib.dir/src/main/cpp/native-lib.cpp.o: CXX_COMPILER__openlib ../../../../src/main/cpp/native-lib.cpp
-  DEFINES = -Dopenlib_EXPORTS
-  DEP_FILE = CMakeFiles\openlib.dir\src\main\cpp\native-lib.cpp.o.d
-  FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC   -Wall -O2 -fexceptions
-  INCLUDES = -isystem C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/jni/include/opencv -isystem C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/jni/include -I"C:/Program Files/boost/boost_1_60_0" -isystem C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
-  IN_ABS = C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\src\main\cpp\native-lib.cpp
-  OBJECT_DIR = CMakeFiles\openlib.dir
-  OBJECT_FILE_DIR = CMakeFiles\openlib.dir\src\main\cpp
 build CMakeFiles/openlib.dir/src/main/openCV/Source.cpp.o: CXX_COMPILER__openlib ../../../../src/main/openCV/Source.cpp
   DEFINES = -Dopenlib_EXPORTS
   DEP_FILE = CMakeFiles\openlib.dir\src\main\openCV\Source.cpp.o.d
   FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC   -Wall -O2 -fexceptions
   INCLUDES = -isystem C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/jni/include/opencv -isystem C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/jni/include -I"C:/Program Files/boost/boost_1_60_0" -isystem C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
-  IN_ABS = C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\src\main\openCV\Source.cpp
+  IN_ABS = C:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app\src\main\openCV\Source.cpp
   OBJECT_DIR = CMakeFiles\openlib.dir
   OBJECT_FILE_DIR = CMakeFiles\openlib.dir\src\main\openCV
-build CMakeFiles/openlib.dir/src/main/openCV/Markup.cpp.o: CXX_COMPILER__openlib ../../../../src/main/openCV/Markup.cpp
+build CMakeFiles/openlib.dir/C_/Users/Hakan/Desktop/Mushroom-Identifier/common/Source.cpp.o: CXX_COMPILER__openlib C$:/Users/Hakan/Desktop/Mushroom-Identifier/common/Source.cpp
   DEFINES = -Dopenlib_EXPORTS
-  DEP_FILE = CMakeFiles\openlib.dir\src\main\openCV\Markup.cpp.o.d
+  DEP_FILE = CMakeFiles\openlib.dir\C_\Users\Hakan\Desktop\Mushroom-Identifier\common\Source.cpp.o.d
   FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC   -Wall -O2 -fexceptions
   INCLUDES = -isystem C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/jni/include/opencv -isystem C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/jni/include -I"C:/Program Files/boost/boost_1_60_0" -isystem C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
-  IN_ABS = C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\src\main\openCV\Markup.cpp
+  IN_ABS = C:\Users\Hakan\Desktop\Mushroom-Identifier\common\Source.cpp
   OBJECT_DIR = CMakeFiles\openlib.dir
-  OBJECT_FILE_DIR = CMakeFiles\openlib.dir\src\main\openCV
-build CMakeFiles/openlib.dir/src/main/includes/android_util.cpp.o: CXX_COMPILER__openlib ../../../../src/main/includes/android_util.cpp
-  DEFINES = -Dopenlib_EXPORTS
-  DEP_FILE = CMakeFiles\openlib.dir\src\main\includes\android_util.cpp.o.d
-  FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC   -Wall -O2 -fexceptions
-  INCLUDES = -isystem C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/jni/include/opencv -isystem C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/jni/include -I"C:/Program Files/boost/boost_1_60_0" -isystem C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
-  IN_ABS = C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\src\main\includes\android_util.cpp
-  OBJECT_DIR = CMakeFiles\openlib.dir
-  OBJECT_FILE_DIR = CMakeFiles\openlib.dir\src\main\includes
+  OBJECT_FILE_DIR = CMakeFiles\openlib.dir\C_\Users\Hakan\Desktop\Mushroom-Identifier\common
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target openlib
@@ -101,7 +85,7 @@ build CMakeFiles/openlib.dir/src/main/includes/android_util.cpp.o: CXX_COMPILER_
 #############################################
 # Link the shared library ..\..\..\..\build\intermediates\cmake\release\obj\x86\libopenlib.so
 
-build ../../../../build/intermediates/cmake/release/obj/x86/libopenlib.so: CXX_SHARED_LIBRARY_LINKER__openlib CMakeFiles/openlib.dir/src/main/cpp/native-lib.cpp.o CMakeFiles/openlib.dir/src/main/openCV/Source.cpp.o CMakeFiles/openlib.dir/src/main/openCV/Markup.cpp.o CMakeFiles/openlib.dir/src/main/includes/android_util.cpp.o | C$:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib/liblog.so C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_videostab.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_videoio.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_video.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_superres.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_stitching.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_shape.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_photo.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_objdetect.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_ml.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgproc.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgcodecs.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_highgui.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_flann.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_features2d.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_core.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_calib3d.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_features2d.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_ml.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_highgui.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_videoio.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgcodecs.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibjpeg.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibwebp.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibpng.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibtiff.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibjasper.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/libIlmImf.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_flann.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_video.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgproc.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_core.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/libtbb.a
+build ../../../../build/intermediates/cmake/release/obj/x86/libopenlib.so: CXX_SHARED_LIBRARY_LINKER__openlib CMakeFiles/openlib.dir/src/main/openCV/Source.cpp.o CMakeFiles/openlib.dir/C_/Users/Hakan/Desktop/Mushroom-Identifier/common/Source.cpp.o | C$:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib/liblog.so C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_videostab.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_videoio.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_video.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_superres.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_stitching.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_shape.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_photo.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_objdetect.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_ml.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgproc.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgcodecs.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_highgui.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_flann.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_features2d.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_core.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_calib3d.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_features2d.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_ml.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_highgui.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_videoio.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgcodecs.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibjpeg.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibwebp.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibpng.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibtiff.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibjasper.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/libIlmImf.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_flann.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_video.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgproc.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_core.a C$:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/libtbb.a
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O2 -DNDEBUG -O2 -DNDEBUG
   LINK_FLAGS = -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--no-undefined -Wl,-z,noexecstack -Qunused-arguments -Wl,-z,relro -Wl,-z,now -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--no-undefined -Wl,-z,noexecstack -Qunused-arguments -Wl,-z,relro -Wl,-z,now
   LINK_LIBRARIES = -llog C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_videostab.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_videoio.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_video.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_superres.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_stitching.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_shape.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_photo.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_objdetect.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_ml.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgproc.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgcodecs.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_highgui.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_flann.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_features2d.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_core.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_calib3d.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_features2d.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_ml.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_highgui.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_videoio.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgcodecs.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibjpeg.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibwebp.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibpng.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibtiff.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibjasper.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/libIlmImf.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_flann.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_video.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgproc.a C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_core.a -lz -llog C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/libtbb.a -lc -ldl -lm -lm "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/libgnustl_static.a"
@@ -117,7 +101,7 @@ build ../../../../build/intermediates/cmake/release/obj/x86/libopenlib.so: CXX_S
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\.externalNativeBuild\cmake\release\x86 && C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\cmake.exe -HC:\Users\Hakan\AndroidStudioProjects\CameraApp\app -BC:\Users\Hakan\AndroidStudioProjects\CameraApp\app\.externalNativeBuild\cmake\release\x86"
+  COMMAND = cmd.exe /C "cd /D C:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app\.externalNativeBuild\cmake\release\x86 && C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\cmake.exe -HC:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app -BC:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app\.externalNativeBuild\cmake\release\x86"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -132,14 +116,14 @@ build list_install_components: phony
 # Utility command for install/strip
 
 build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\.externalNativeBuild\cmake\release\x86 && C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app\.externalNativeBuild\cmake\release\x86 && C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 build install/strip: phony CMakeFiles/install/strip.util
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/CMakeLists.txt
+# C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -150,7 +134,7 @@ build libiconv/CMakeFiles/libcharset.dir/libcharset/lib/relocatable.c.o: C_COMPI
   DEP_FILE = libiconv\CMakeFiles\libcharset.dir\libcharset\lib\relocatable.c.o.d
   FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC   -Wall -O2 -fexceptions
   INCLUDES = -I../../../../libiconv -Ilibiconv
-  IN_ABS = C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\libiconv\libcharset\lib\relocatable.c
+  IN_ABS = C:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app\libiconv\libcharset\lib\relocatable.c
   OBJECT_DIR = libiconv\CMakeFiles\libcharset.dir
   OBJECT_FILE_DIR = libiconv\CMakeFiles\libcharset.dir\libcharset\lib
 build libiconv/CMakeFiles/libcharset.dir/libcharset/lib/localcharset.c.o: C_COMPILER__libcharset ../../../../libiconv/libcharset/lib/localcharset.c
@@ -158,7 +142,7 @@ build libiconv/CMakeFiles/libcharset.dir/libcharset/lib/localcharset.c.o: C_COMP
   DEP_FILE = libiconv\CMakeFiles\libcharset.dir\libcharset\lib\localcharset.c.o.d
   FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC   -Wall -O2 -fexceptions
   INCLUDES = -I../../../../libiconv -Ilibiconv
-  IN_ABS = C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\libiconv\libcharset\lib\localcharset.c
+  IN_ABS = C:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app\libiconv\libcharset\lib\localcharset.c
   OBJECT_DIR = libiconv\CMakeFiles\libcharset.dir
   OBJECT_FILE_DIR = libiconv\CMakeFiles\libcharset.dir\libcharset\lib
 
@@ -193,7 +177,7 @@ build libiconv/CMakeFiles/libiconv.dir/lib/iconv.c.o: C_COMPILER__libiconv ../..
   DEP_FILE = libiconv\CMakeFiles\libiconv.dir\lib\iconv.c.o.d
   FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC   -Wall -O2 -fexceptions
   INCLUDES = -I../../../../libiconv -Ilibiconv
-  IN_ABS = C:\Users\Hakan\AndroidStudioProjects\CameraApp\app\libiconv\lib\iconv.c
+  IN_ABS = C:\Users\Hakan\Desktop\Mushroom-Identifier\Android\CameraApp\app\libiconv\lib\iconv.c
   OBJECT_DIR = libiconv\CMakeFiles\libiconv.dir
   OBJECT_FILE_DIR = libiconv\CMakeFiles\libiconv.dir\lib
 
@@ -231,7 +215,7 @@ build openlib: phony ../../../../build/intermediates/cmake/release/obj/x86/libop
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv
+# Folder: C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/libiconv
 
 build  libiconv/all: phony libcharset libiconv
 # =============================================================================

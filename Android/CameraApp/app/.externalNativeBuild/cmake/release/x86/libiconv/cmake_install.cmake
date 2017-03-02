@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv
+# Install script for directory: C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/libiconv
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,7 +33,7 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/release/obj/x86/liblibcharset.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/build/intermediates/cmake/release/obj/x86/liblibcharset.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblibcharset.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblibcharset.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -43,7 +43,7 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/release/obj/x86/liblibiconv.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/build/intermediates/cmake/release/obj/x86/liblibiconv.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblibiconv.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblibiconv.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -54,8 +54,8 @@ endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/x86/libiconv/localcharset.h"
-    "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/x86/libiconv/iconv.h"
+    "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/x86/libiconv/localcharset.h"
+    "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/x86/libiconv/iconv.h"
     )
 endif()
 
