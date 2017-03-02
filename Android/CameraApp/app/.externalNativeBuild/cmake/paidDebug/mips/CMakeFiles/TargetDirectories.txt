@@ -1,3 +1,0 @@
-C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/paidDebug/mips/CMakeFiles/edit_cache.dir
-C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/paidDebug/mips/CMakeFiles/openlib.dir
-C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/paidDebug/mips/CMakeFiles/rebuild_cache.dir
