@@ -1,0 +1,474 @@
+#include "opencv2/opencv.hpp"
+#include "Markup.h"
+
+
+using namespace cv;
+using namespace std;
+//PILZ KLASSE///////////////////////////////////////////////////////////////////////////////////////////////////
+class Pilz { //Pilzklasse
+public:
+	Vec3b bgr; //BGR Farbe
+	Vec3b hsv_v; //HSV Bereich Begin (von)
+	Vec3b hsv_b; //HSV Bereich Ende (bis)
+	Vec3b hsv_v2;//HSV Bereich Begin (von) f�r Rott�ne
+	Vec3b hsv_b2;//HSV Bereich Ende (bis) f�r Rott�ne
+	string name; //Name des Pilzes
+	string wiki; //Wikipedia Link
+	string lamell; //1 f�r es gibt Lamellen, 0 f�r es gibt keine Lamellen, Eigenschaftswort f�r "Hat der pilz ... Lamellen?"
+	int roud; //ist der Pilz Rund, 1 ja, 0 nein
+	int poisonous; //ist der Pilz giftig, 1 ja, 0 nein
+	string nodule; //= Knolle, Eigenschaftswort (z. B. dicke, rundliche etc.)
+	string stalk;
+};
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/** Function Headers */
+int detectAndDisplay(Mat frame); //Maschinelles Lernen; Fliegenpilzerkennung
+vector<Pilz> readxml(); //Lesen der PilzXML
+void CannyThreshold(int, void*); //Umrisse werden erkannt
+vector<Pilz> oneornull(vector<Pilz> mushlist2, string question); // 1/0 Entscheidungsfragen
+vector <Pilz> roundornot(vector <Pilz> mushlist, int amountofcircles); //ist der Pilz Rund oder nicht?
+vector <Pilz> questions(vector <Pilz>mushlist); //Ausf�hrliche Entscheidungsfragen
+int HoughDetection(const Mat& src_gray, const Mat& src_display, int cannyThreshold, int accumulatorThreshold); //Hough Circle Detection
+
+																											   /** Globale Variablen f�r Maschinelles Lernen*/
+String face_cascade_name = "..\\data\\mushroom_cascade.xml";
+CascadeClassifier face_cascade;
+RNG rng(12345);
+
+//globale Variablen f�r Canny Edge Detector
+Mat src, src_gray;
+Mat dst, detected_edges;
+int edgeThresh = 1;
+int lowThreshold = 70;
+int const max_lowThreshold = 70;
+int ratio = 3;
+int kernel_size = 3;
+char* window_name = "Canny Edge Detector";
+
+
+
+
+
+vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadePath, cv::Mat image)
+{
+	Mat image_gray;
+
+
+	vector<Pilz>mushlist = readxml(xmlReadMushPath); //Liste aller gelesenen Pilze
+	vector<Pilz>mushlist2;
+	vector<Pilz>mushlist3;
+
+	Vec3b eier_c;  //Eierschwammerl Farbe
+	Vec3b stein_c; //Steinpilz Farbe 
+	Vec3b flig_c;  //Fliegenpilz Farbe
+	int schw = 30; //Schwelle
+	Vec3b eier_c_hsv;
+	int array2[3];
+	array2[0] = 0;
+	array2[1] = 0;
+	array2[2] = 0;
+	int rows_mid;
+	int cols_mid;
+	Vec3b pix;
+	cv::Mat hsv_first;
+	cv::Mat hsvhelp;
+
+
+	
+	src = image;
+
+	//Mitte des Bildes herausfinden
+	rows_mid = image.rows / 2;
+	cols_mid = image.cols / 2;
+
+	//Mehrere (100) Pixel in der Mitte durchsuchen
+	double pixels = 0;
+
+	if (rows_mid > cols_mid) pixels = cols_mid / 1.5;
+	else pixels = rows_mid / 1.5;
+
+	int range = sqrt(pixels) / 2 + 1;
+	pixels = range * range * 4;
+
+	for (int i = -1 * (range); i < range; i++) {
+		for (int j = -1 * (range); j < range; j++) {
+			array2[0] += image.at<Vec3b>(rows_mid +i, cols_mid + j)[0];
+			array2[1] += image.at<Vec3b>(rows_mid + i, cols_mid + j)[1];
+			array2[2] += image.at<Vec3b>(rows_mid + i, cols_mid + j)[2];
+			//cout � "yey" � array2[0];
+		}
+	}
+
+
+	cout << " rows: " << rows_mid;
+	cout << " cols: " << cols_mid;
+
+	//Durchschnittswert der Pixelfarben errechnen
+	pix[0] = array2[0] / pixels;
+	pix[1] = array2[1] / pixels;
+	pix[2] = array2[2] / pixels;
+
+	cout << "bgr: " << pix;
+
+	cv::Mat hsv_image;
+
+	//umwandlung von BGR in HSV
+	cv::cvtColor(image, hsv_image, cv::COLOR_BGR2HSV);
+
+	//Errechnen, ob der Pilz von der Farbe her mit einem oder mehrerem aus dem xml-File �bereinstimmt
+	for (int i = 0; i<mushlist.size(); i++)
+	{
+
+		if (pix[0]<mushlist[i].bgr[0] + schw && pix[0]>mushlist[i].bgr[0] - schw && pix[1]<mushlist[i].bgr[1] + schw && pix[1]>mushlist[i].bgr[1] - schw && pix[2]<mushlist[i].bgr[2] + schw && pix[2]>mushlist[i].bgr[2] - schw) {
+			mushlist2.push_back(mushlist[i]);
+			cout << "\n\nSchwammerlname: " << mushlist[i].name;
+			inRange(hsv_image, Scalar(mushlist[i].hsv_v[0], mushlist[i].hsv_v[1], mushlist[i].hsv_v[2]), Scalar(mushlist[i].hsv_b[0], mushlist[i].hsv_b[1], mushlist[i].hsv_b[2]), hsv_first);
+			inRange(hsv_image, Scalar(mushlist[i].hsv_v2[0], mushlist[i].hsv_v2[1], mushlist[i].hsv_v2[2]), Scalar(mushlist[i].hsv_b2[0], mushlist[i].hsv_b2[1], mushlist[i].hsv_b2[2]), hsvhelp);
+			cv::addWeighted(hsv_first, 1.0, hsvhelp, 1.0, 0.0, hsv_first);
+
+		}
+	}
+	if (mushlist2.size() == 0) {
+		return mushlist2;
+	}
+
+	cvtColor(image, image_gray, CV_BGR2GRAY);
+
+
+
+	cv::Mat hsv_secund, hsv_third;
+	cv::addWeighted(hsv_first, 1.0, hsv_first, 1.0, 0.0, hsv_secund);
+	cv::GaussianBlur(hsv_secund, hsv_third, cv::Size(9, 9), 0, 0);
+	src = hsv_secund;
+	src_gray = hsv_secund;
+
+
+	// Gasusscher Weichzeichner
+	GaussianBlur(src_gray, src_gray, Size(9, 9), 2, 2);
+
+
+
+
+
+
+	int amountofcircles = HoughDetection(src_gray, src_gray, 99, 41);
+	cout << "\nAnzahl der Kreise: " << amountofcircles;
+	int fliegennull = 0;
+
+	//Hier sage ich: wenn ein Pilz von der Farbe her ein Fliegenpilz sein k�nnte und noch mehrere Kreise erkannt werden, dann ist es verdammt nochmal ein Fliegenpilz, danke aus.
+	for (int i = 0; i < mushlist2.size(); i++) {
+		string fliegen;
+		fliegen = ("Fliegenpilz");
+		if (mushlist2[i].name.compare(fliegen) == 0) {
+			CvCapture* capture;
+			Mat frame;
+
+			frame = image;
+
+			//-- 1. Load the cascades
+			if (!face_cascade.load(face_cascade_name)) { printf("--(!)Error loading\n"); 
+			return -1; 
+		};
+
+			if (detectAndDisplay(frame) > 0) {
+				mushlist3.push_back(mushlist2[i]);
+				fliegennull = 1;
+				cout << "ich bin hier...Fliegenpilz";
+				mushlist2 = mushlist3;
+			}
+
+		}
+	}
+	/*
+	//Ist der Pilz Rund?
+	if (mushlist2.size() > 1) {
+		mushlist2 = roundornot(mushlist2, amountofcircles);
+	}
+	//Hat der Pilz Lamellen?
+	string question;
+	if (mushlist2.size() > 1) {
+		question = (" Lamellen");
+		mushlist2 = oneornull(mushlist2, question);
+	}
+
+	////////////////////////////////////////////////////////////
+
+	//Hat der Pilz eine Knolle?
+	if (mushlist2.size() > 1) {
+		question = (" eine Knolle");
+		mushlist2 = oneornull(mushlist2, question);
+	}
+	//Hat der Pilz einen Stiel der folgenderma�en aussieht (oder so)
+	if (mushlist2.size() > 1) {
+		mushlist2 = questions(mushlist2);
+	}
+	if (mushlist2.size() == 0) {
+		cout << "es konnte leider Kein passender Pilz gefunden werden.";
+
+	}
+	///////////////////////////////////////////////////////////
+	*/
+
+
+
+	//Schwarz Wei� Bin�res Bild
+	cv::Mat grayscaleMat(image.size(), CV_8U);
+	cv::cvtColor(image, grayscaleMat, CV_BGR2GRAY);
+	cv::Mat binaryMat(grayscaleMat.size(), grayscaleMat.type());
+	cv::threshold(grayscaleMat, binaryMat, 100, 255, cv::THRESH_BINARY);
+
+	return 0;
+}
+
+/** @function detectAndDisplay */
+int detectAndDisplay(Mat frame) //Markus�ss Maschinelles Lernen Algorithmus 
+{
+	std::vector<Rect> faces;
+	Mat frame_gray;
+
+	cvtColor(frame, frame_gray, CV_BGR2GRAY);
+	equalizeHist(frame_gray, frame_gray);
+
+	//-- Detect faces
+	face_cascade.detectMultiScale(frame_gray, faces, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, Size(30, 30));
+
+	for (size_t i = 0; i < faces.size(); i++)
+	{
+		Point center(faces[i].x + faces[i].width*0.5, faces[i].y + faces[i].height*0.5);
+		ellipse(frame, center, Size(faces[i].width*0.5, faces[i].height*0.5), 0, 0, 360, Scalar(255, 0, 255), 4, 8, 0);
+
+		Mat faceROI = frame_gray(faces[i]);
+	}
+
+	return faces.size();
+}
+
+
+//XML LESEN/////////////////////////////////////////////////////////////////////////////////////////////////////
+vector<Pilz> readxml(string path) {
+	Pilz mush;
+	vector<Pilz>mushlist;
+	CMarkup xml;
+	xml.Load(MCD_T("schwammerl.xml")); //XML Datei Laden
+
+
+	int counter = 1;
+	std::string counter_str = to_string(counter);
+	std::string s("P");
+	std::string ws;
+	std::string pilz;
+	ws.assign(s.begin(), s.end());
+	try
+	{
+		while (xml.FindElem(MCD_T("Schwammerl")))
+		{
+			xml.IntoElem();
+			counter_str = to_string(counter);
+			pilz = ws + counter_str;
+			//cout << "pilz: " << pilz;
+			xml.FindElem(pilz);  //z. B. P1, P2, P3, ...
+			xml.IntoElem();
+			Vec3b bgr;
+
+			//Farbe (BGR)
+			xml.FindElem(MCD_T("Farbe"));
+			mush.bgr[0] = std::stoi(xml.GetAttrib(MCD_T("b")));
+			mush.bgr[1] = std::stoi(xml.GetAttrib(MCD_T("g")));
+			mush.bgr[2] = std::stoi(xml.GetAttrib(MCD_T("r")));
+
+			//Name
+			xml.FindElem(MCD_T("Name"));
+			mush.name = xml.GetData();
+
+			//HSV-von
+			xml.FindElem(MCD_T("HSV-von"));
+			mush.hsv_v[0] = std::stoi(xml.GetAttrib(MCD_T("h")));
+			mush.hsv_v[1] = std::stoi(xml.GetAttrib(MCD_T("s")));
+			mush.hsv_v[2] = std::stoi(xml.GetAttrib(MCD_T("v")));
+
+			//HSV-bis
+			xml.FindElem(MCD_T("HSV-bis"));
+			mush.hsv_b[0] = std::stoi(xml.GetAttrib(MCD_T("h")));
+			mush.hsv_b[1] = std::stoi(xml.GetAttrib(MCD_T("s")));
+			mush.hsv_b[2] = std::stoi(xml.GetAttrib(MCD_T("v")));
+
+			//HSV-von2
+			xml.FindElem(MCD_T("HSV-von2"));
+			mush.hsv_v2[0] = std::stoi(xml.GetAttrib(MCD_T("h")));
+			mush.hsv_v2[1] = std::stoi(xml.GetAttrib(MCD_T("s")));
+			mush.hsv_v2[2] = std::stoi(xml.GetAttrib(MCD_T("v")));
+
+			//HSV-bis2
+			xml.FindElem(MCD_T("HSV-bis2"));
+			mush.hsv_b2[0] = std::stoi(xml.GetAttrib(MCD_T("h")));
+			mush.hsv_b2[1] = std::stoi(xml.GetAttrib(MCD_T("s")));
+			mush.hsv_b2[2] = std::stoi(xml.GetAttrib(MCD_T("v")));
+
+			//Wiki
+			xml.FindElem(MCD_T("Wiki"));
+			mush.wiki = xml.GetData();
+
+			//Giftigkeit
+			xml.FindElem(MCD_T("Giftigkeit"));
+			mush.poisonous = std::stoi(xml.GetData());
+
+			//Rund
+			xml.FindElem(MCD_T("Rund"));
+			mush.roud = std::stoi(xml.GetData());
+
+			//Lamellen
+			//Knolle
+			xml.FindElem(MCD_T("Lamellen"));
+			mush.lamell = xml.GetData();
+
+			xml.FindElem(MCD_T("Knolle"));
+			mush.nodule = xml.GetData();
+
+			xml.FindElem(MCD_T("Stiel"));
+			mush.stalk = xml.GetData();
+
+			mushlist.push_back(mush);
+
+			counter++;
+			xml.ResetPos();
+		}
+	}
+	catch (const std::exception)
+	{
+		return mushlist;
+	}
+	return mushlist;
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//Canny Algorithmus/////////////////////////////////////////////////////////////////////////////////////////////
+void CannyThreshold(int, void*)
+{
+	/// Reduce noise with a kernel 3x3
+	blur(src_gray, detected_edges, Size(3, 3));
+
+	/// Canny detector
+	Canny(detected_edges, detected_edges, lowThreshold, lowThreshold*ratio, kernel_size);
+
+	/// Using Canny's output as a mask, we display our result
+	dst = Scalar::all(0);
+
+	src.copyTo(dst, detected_edges);
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+int counter = 0;
+vector<Pilz> oneornull(vector<Pilz> mushlist2, string question) {
+	cout << "\n\n\nHat Ihr Pilz" << question << "? 0=NEIN, 1=JA\n";
+	int dessicion; //hier bitte Ergebniss speichern
+	cin >> dessicion;
+	std::ostringstream ws;
+	ws << dessicion;
+	const std::string dessicion_wstr(ws.str());
+	vector<Pilz> mushlist3;
+	if (counter == 0) {
+		for (int i = 0; i < mushlist2.size(); i++) {
+
+			if (mushlist2[i].lamell == dessicion_wstr) {
+				mushlist3.push_back(mushlist2[i]);
+				cout << mushlist2[i].name << "\n";
+			}
+		}
+		counter++;
+	}
+	else {
+		for (int i = 0; i < mushlist2.size(); i++) {
+
+			if (mushlist2[i].nodule == dessicion_wstr) {
+				mushlist3.push_back(mushlist2[i]);
+				cout << mushlist2[i].name << "\n";
+			}
+		}
+
+	}
+
+	return mushlist3;
+}
+
+vector <Pilz> roundornot(vector <Pilz> mushlist, int amountofcircles) {
+	vector<Pilz> mushlist2;
+	for (int i = 0; i < mushlist.size(); i++) {
+		if (amountofcircles >= mushlist[i].roud) {
+			mushlist2.push_back(mushlist[i]);
+		}
+	}
+	return mushlist2;
+}
+
+vector <Pilz> questions(vector <Pilz>mushlist) {
+	vector<Pilz> mushlist2;
+
+	int dessicion; //hier bitte Ergebniss speichern
+
+	for (int i = 0; i < mushlist.size() && counter != -1; i++) {
+		cout << "\n\n\nHat Ihr Pilz " << mushlist[i].stalk << "? 0=NEIN, 1=JA\n";
+		cin >> dessicion;
+		std::ostringstream ws;
+		ws << dessicion;
+		const std::string dessicion_wstr(ws.str());
+		if (dessicion == 1) {
+			mushlist2.push_back(mushlist[i]);
+			counter = -1;
+		}
+	}
+	for (int i = 0; i < mushlist2.size(); i++) {
+		cout << mushlist2[i].name;
+	}
+	return mushlist2;
+}
+
+*/
+
+
+/*
+// windows and trackbars name
+const std::string windowName = "Hough Circle Detection Demo";
+const std::string cannyThresholdTrackbarName = "Canny threshold";
+const std::string accumulatorThresholdTrackbarName = "Accumulator Threshold";
+*/
+// initial and max values of the parameters of interests.
+const int cannyThresholdInitialValue = 200;
+const int accumulatorThresholdInitialValue = 50;
+const int maxAccumulatorThreshold = 200;
+const int maxCannyThreshold = 255;
+
+int HoughDetection(const Mat& src_gray, const Mat& src_display, int cannyThreshold, int accumulatorThreshold)
+{
+	// will hold the results of the detection
+	std::vector<Vec3f> circles;
+	// runs the actual detection
+	HoughCircles(src_gray, circles, HOUGH_GRADIENT, 1, src_gray.rows / 8, cannyThreshold, accumulatorThreshold, 0, 0);
+
+	// clone the colour, input image for displaying purposes
+	Mat display = src_display.clone();
+	for (size_t i = 0; i < circles.size(); i++)
+	{
+		Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
+		int radius = cvRound(circles[i][2]);
+		// circle center
+		circle(display, center, 3, Scalar(0, 255, 0), -1, 8, 0);
+		// circle outline
+		circle(display, center, radius, Scalar(0, 0, 255), 3, 8, 0);
+	}
+
+	// shows the results
+
+	return (circles.size());
+}
+
+
+
+//https://solarianprogrammer.com/2015/05/08/detect-red-circles-image-using-opencv/
+
+//http://www.firstobject.com/fast-start-to-xml-in-c++.htm
+
+//Canny Edge Detector
+
+
+//Expertensystem, Engtscheidungsbaum

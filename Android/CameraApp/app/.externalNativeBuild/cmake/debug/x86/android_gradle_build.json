@@ -1,0 +1,295 @@
+
+{
+	"buildFiles" : 
+	[
+		"C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/CMakeLists.txt",
+		"C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv/CMakeLists.txt"
+	],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\debug\\x86 --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"IlmImf-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "IlmImf",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/libIlmImf.a",
+			"toolchain" : "1236082521"
+		},
+		"libcharset-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "libcharset",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\debug\\x86 --target libcharset",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  -target i686-none-linux-android -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86 -Dlibcharset_EXPORTS -I..\\..\\..\\..\\libiconv -Ilibiconv  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions    -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv/libcharset/lib/relocatable.c",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/x86"
+				},
+				
+				{
+					"flags" : "  -target i686-none-linux-android -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86 -Dlibcharset_EXPORTS -I..\\..\\..\\..\\libiconv -Ilibiconv  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions    -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv/libcharset/lib/localcharset.c",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/x86"
+				}
+			],
+			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/debug/obj/x86/liblibcharset.so",
+			"toolchain" : "1236082521"
+		},
+		"libiconv-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "libiconv",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\debug\\x86 --target libiconv",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  -target i686-none-linux-android -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86 -Dlibiconv_EXPORTS -I..\\..\\..\\..\\libiconv -Ilibiconv  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -D_EXAMPLE_C_FLAG1 -D_EXAMPLE_C_FLAG2 -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions    -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/libiconv/lib/iconv.c",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/x86"
+				}
+			],
+			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/debug/obj/x86/liblibiconv.so",
+			"toolchain" : "1236082521"
+		},
+		"libjasper-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "libjasper",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibjasper.a",
+			"toolchain" : "1236082521"
+		},
+		"libjpeg-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "libjpeg",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibjpeg.a",
+			"toolchain" : "1236082521"
+		},
+		"libpng-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "libpng",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibpng.a",
+			"toolchain" : "1236082521"
+		},
+		"libtiff-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "libtiff",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibtiff.a",
+			"toolchain" : "1236082521"
+		},
+		"libwebp-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "libwebp",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/liblibwebp.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_calib3d-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_calib3d",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_calib3d.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_core-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_core",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_core.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_features2d-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_features2d",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_features2d.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_flann-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_flann",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_flann.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_highgui-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_highgui",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_highgui.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_imgcodecs-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_imgcodecs",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgcodecs.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_imgproc-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_imgproc",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_imgproc.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_java-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_java",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_java3.so",
+			"toolchain" : "1236082521"
+		},
+		"opencv_ml-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_ml",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_ml.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_objdetect-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_objdetect",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_objdetect.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_photo-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_photo",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_photo.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_shape-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_shape",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_shape.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_stitching-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_stitching",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_stitching.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_superres-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_superres",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_superres.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_video-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_video",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_video.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_videoio-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_videoio",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_videoio.a",
+			"toolchain" : "1236082521"
+		},
+		"opencv_videostab-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "opencv_videostab",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/libs/x86/libopencv_videostab.a",
+			"toolchain" : "1236082521"
+		},
+		"openlib-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "openlib",
+			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\AndroidStudioProjects\\CameraApp\\app\\.externalNativeBuild\\cmake\\debug\\x86 --target openlib",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  -target i686-none-linux-android -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions  -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/x86"
+				},
+				
+				{
+					"flags" : "  -target i686-none-linux-android -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions  -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/openCV/Source.cpp",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/x86"
+				},
+				
+				{
+					"flags" : "  -target i686-none-linux-android -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions  -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/openCV/Markup.cpp",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/x86"
+				},
+				
+				{
+					"flags" : "  -target i686-none-linux-android -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC   -Wall -O2 -fexceptions  -c ",
+					"src" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/src/main/includes/android_util.cpp",
+					"workingDirectory" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/x86"
+				}
+			],
+			"output" : "C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/build/intermediates/cmake/debug/obj/x86/libopenlib.so",
+			"toolchain" : "1236082521"
+		},
+		"tbb-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "tbb",
+			"buildType" : "debug",
+			"output" : "C:/Users/Hakan/Downloads/OpenCV-android-sdk/sdk/native/3rdparty/libs/x86/libtbb.a",
+			"toolchain" : "1236082521"
+		}
+	},
+	"toolchains" : 
+	{
+		"1236082521" : 
+		{
+			"cCompilerExecutable" : "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}

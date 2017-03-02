@@ -1,0 +1,15 @@
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/edit_cache.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/install.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/install/local.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/openlib.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/rebuild_cache.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/list_install_components.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/install/strip.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/libiconv/CMakeFiles/edit_cache.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/libiconv/CMakeFiles/install.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/libiconv/CMakeFiles/install/local.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/libiconv/CMakeFiles/libcharset.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/libiconv/CMakeFiles/install/strip.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/libiconv/CMakeFiles/libiconv.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/libiconv/CMakeFiles/rebuild_cache.dir
+C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/release/mips/libiconv/CMakeFiles/list_install_components.dir

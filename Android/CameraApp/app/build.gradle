@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        externalNativeBuild {
+
+            // For ndk-build, instead use ndkBuild {}
+            cmake {
+
+                cppFlags "-std=c++11"
+
+                // Passes optional arguments to CMake.
+                arguments "-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=clang"
+
+                // Sets optional flags for the C compiler.
+                cFlags "-D_EXAMPLE_C_FLAG1", "-D_EXAMPLE_C_FLAG2"
+
+                // Sets a flag to enable format macro constants for the C++ compiler.
+                cppFlags "-D__STDC_FORMAT_MACROS"
+            }
+        }
+
+        ndk {
+            abiFilters 'x86', 'armeabi', 'armeabi-v7a', 'mips'
+
+            moduleName "CameraApp"
+        }
+    }
+
+    sourceSets.main {
+        jniLibs.srcDir 'src/main/libs'
+        jni.srcDirs = [] //disable automatic ndk-build call
+    }
+
+/*
+    // call regular ndk-build(.cmd) script from app directory
+    task ndkBuild(type: Exec) {
+
+        File ndkDir = project.getPlugins().getPlugin('com.android.library').sdkHandler.getNdkFolder()
+        if (ndkDir == null) {
+            ndkDir = file(System.getenv('NDK_ROOT'))
+        }
+
+        if (ndkDir == null) {
+            def gradle_project_root = project.rootProject.rootDir
+            throw new GradleException("NDK is not configured. Make sure there is a local.properties " +
+                    "file with an ndk.dir entry in the directory ${gradle_project_root}, or set the " +
+                    "ANDROID_NDK envrionment variable")
+        }
+
+        def ndkBuildExecutable = new File(ndkDir, 'ndk-build')
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            ndkBuildExecutable += '.cmd'
+        }
+        if (!ndkBuildExecutable.exists()) {
+            throw new GradleException("Could not find ndk-build. The configured NDK directory ${ndkDir} may not be correct.")
+        }
+        commandLine(ndkBuildExecutable, '-j8', '-C', file('src/main').absolutePath)
+    }
+
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn ndkBuild
+    }*/
+/*
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }*/
+    externalNativeBuild {
+        cmake {
+
+            path 'CMakeLists.txt'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile project(':openCVLibrary310')
+}
