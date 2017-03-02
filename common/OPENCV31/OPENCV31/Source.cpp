@@ -27,7 +27,7 @@ public:
 
 /** Function Headers */
 int detectAndDisplay(Mat frame); //Maschinelles Lernen; Fliegenpilzerkennung
-vector<Pilz> readxml(); //Lesen der PilzXML
+vector<Pilz> readxml(std::string path); //Lesen der PilzXML
 void CannyThreshold(int, void*); //Umrisse werden erkannt
 vector<Pilz> oneornull(vector<Pilz> mushlist2, string question); // 1/0 Entscheidungsfragen
 vector <Pilz> roundornot(vector <Pilz> mushlist, int amountofcircles); //ist der Pilz Rund oder nicht?
@@ -171,8 +171,7 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 
 			//-- 1. Load the cascades
 			if (!face_cascade.load(face_cascade_name)) { printf("--(!)Error loading\n"); 
-			return -1; 
-		};
+			};
 
 			if (detectAndDisplay(frame) > 0) {
 				mushlist3.push_back(mushlist2[i]);
@@ -183,36 +182,6 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 
 		}
 	}
-	/*
-	//Ist der Pilz Rund?
-	if (mushlist2.size() > 1) {
-		mushlist2 = roundornot(mushlist2, amountofcircles);
-	}
-	//Hat der Pilz Lamellen?
-	string question;
-	if (mushlist2.size() > 1) {
-		question = (" Lamellen");
-		mushlist2 = oneornull(mushlist2, question);
-	}
-
-	////////////////////////////////////////////////////////////
-
-	//Hat der Pilz eine Knolle?
-	if (mushlist2.size() > 1) {
-		question = (" eine Knolle");
-		mushlist2 = oneornull(mushlist2, question);
-	}
-	//Hat der Pilz einen Stiel der folgendermaßen aussieht (oder so)
-	if (mushlist2.size() > 1) {
-		mushlist2 = questions(mushlist2);
-	}
-	if (mushlist2.size() == 0) {
-		cout << "es konnte leider Kein passender Pilz gefunden werden.";
-
-	}
-	///////////////////////////////////////////////////////////
-	*/
-
 
 
 	//Schwarz Weiß Binäres Bild
@@ -221,7 +190,7 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 	cv::Mat binaryMat(grayscaleMat.size(), grayscaleMat.type());
 	cv::threshold(grayscaleMat, binaryMat, 100, 255, cv::THRESH_BINARY);
 
-	return 0;
+	return mushlist2;
 }
 
 /** @function detectAndDisplay */
@@ -249,11 +218,11 @@ int detectAndDisplay(Mat frame) //Markus´ss Maschinelles Lernen Algorithmus
 
 
 //XML LESEN/////////////////////////////////////////////////////////////////////////////////////////////////////
-vector<Pilz> readxml(string path) {
+vector<Pilz> readxml(std::string path) {
 	Pilz mush;
 	vector<Pilz>mushlist;
 	CMarkup xml;
-	xml.Load(MCD_T("schwammerl.xml")); //XML Datei Laden
+	xml.Load(path); //XML Datei Laden
 
 
 	int counter = 1;
