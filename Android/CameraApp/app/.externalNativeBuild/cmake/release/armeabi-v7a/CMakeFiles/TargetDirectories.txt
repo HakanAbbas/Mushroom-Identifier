@@ -1,15 +1,3 @@
 C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/install.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/install/local.dir
 C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/openlib.dir
 C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/list_install_components.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/install/strip.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/libiconv/CMakeFiles/edit_cache.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/libiconv/CMakeFiles/install.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/libiconv/CMakeFiles/install/local.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/libiconv/CMakeFiles/libcharset.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/libiconv/CMakeFiles/install/strip.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/libiconv/CMakeFiles/libiconv.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/libiconv/CMakeFiles/rebuild_cache.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/libiconv/CMakeFiles/list_install_components.dir

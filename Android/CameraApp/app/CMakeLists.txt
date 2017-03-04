@@ -14,8 +14,6 @@
 
 # ERKLÄRUNG FÜR EINZELNE SCHRITTE ALLE UNTER https://developer.android.com/studio/projects/add-native-code.html#create-cmake-script ZU FINDEN
 
-add_subdirectory( libiconv )
-
 add_library( # Sets the name of the library.
              openlib
 
@@ -25,7 +23,7 @@ add_library( # Sets the name of the library.
              # Provides a relative path to your source file(s).
              # Associated headers in the same location as their source
              # file are automatically included.
-             src/main/openCV/Source.cpp C:/Users/Hakan/Desktop/Mushroom-Identifier/common/Source.cpp )
+             src/main/openCV/Source.cpp )
 
 
 include("$ENV{OpenCV_DIR}/OpenCVConfig.cmake")

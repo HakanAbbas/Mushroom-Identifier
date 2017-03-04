@@ -11,6 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:screenOrientation="portrait" android:name=".MainActivity">
+            android:name=".Mushroom Identifier"
+            android
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
