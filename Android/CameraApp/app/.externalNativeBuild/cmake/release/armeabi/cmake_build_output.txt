@@ -13,5 +13,4 @@
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi
-You have called ADD_LIBRARY for library openlib without any source files. This typically indicates a problem with your CMakeLists.txt file
 WARNING: Target "openlib" requests linking to directory "C:/Program Files/boost/boost_1_60_0/stage/lib".  Targets may link only to libraries.  CMake is dropping the item.
