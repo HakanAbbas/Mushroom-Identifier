@@ -8,6 +8,7 @@
 	[
 		"C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\Desktop\\Mushroom-Identifier\\Android\\CameraApp\\app\\.externalNativeBuild\\cmake\\release\\mips --target clean"
 	],
+	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
 	{
 		"IlmImf-Release-mips" : 
@@ -200,6 +201,15 @@
 			"artifactName" : "openlib",
 			"buildCommand" : "C:\\Users\\Hakan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.3155560\\bin\\cmake.exe --build C:\\Users\\Hakan\\Desktop\\Mushroom-Identifier\\Android\\CameraApp\\app\\.externalNativeBuild\\cmake\\release\\mips --target openlib",
 			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  -target mipsel-none-linux-android -gcc-toolchain C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-mips  -Dopenlib_EXPORTS -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include\\opencv -isystem C:\\Users\\Hakan\\Downloads\\OpenCV-android-sdk\\sdk\\native\\jni\\include -I\"C:\\Program Files\\boost\\boost_1_60_0\" -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\mips\\include -isystem C:\\Users\\Hakan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -std=c++11 -D__STDC_FORMAT_MACROS -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC   -Wall -O2 -fexceptions  -c ",
+					"src" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/src/main/openCV/Source.cpp",
+					"workingDirectory" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/mips"
+				}
+			],
 			"output" : "C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/build/intermediates/cmake/release/obj/mips/libopenlib.so",
 			"toolchain" : "1236082521"
 		},
