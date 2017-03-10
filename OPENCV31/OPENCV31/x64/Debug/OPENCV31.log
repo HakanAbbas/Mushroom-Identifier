@@ -9,4 +9,6 @@ c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(210): warning C4244
 c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(215): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(226): warning C4102: 'std': unreferenced label
 c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(449): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+  LINK : C:\Users\Hakan\Desktop\Mushroom-Identifier\OPENCV31\x64\Debug\OPENCV31.exe not found or not built by the last incremental link; performing full link
   OPENCV31.vcxproj -> C:\Users\Hakan\Desktop\Mushroom-Identifier\OPENCV31\x64\Debug\OPENCV31.exe
