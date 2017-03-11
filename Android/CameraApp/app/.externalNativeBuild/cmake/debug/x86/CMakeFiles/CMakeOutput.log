@@ -3,17 +3,17 @@ The host system is: Windows - 6.3.9600 - AMD64
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_6a2c7"
-[1/2] Building C object CMakeFiles/cmTC_6a2c7.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_6a2c7
+Run Build Command:"C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_63ba7"
+[1/2] Building C object CMakeFiles/cmTC_63ba7.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_63ba7
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_089b8"
-[1/2] Building C object CMakeFiles/cmTC_089b8.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_089b8
+Run Build Command:"C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_7fd3c"
+[1/2] Building C object CMakeFiles/cmTC_7fd3c.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_7fd3c
 Android clang version 3.8.256229  (based on LLVM 3.8.256229)
 Target: i686-none-linux-android
 Thread model: posix
@@ -22,16 +22,16 @@ Found candidate GCC installation: C:/Users/Hakan/AppData/Local/Android/sdk/ndk-b
 Selected GCC installation: C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x
 Candidate multilib: .;@m32
 Selected multilib: .;@m32
- "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/bin\\ld" --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86 --eh-frame-hdr -m elf_i386 -dynamic-linker /system/bin/linker -o cmTC_089b8 "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtbegin_dynamic.o" -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_089b8.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtend_android.o"
+ "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/bin\\ld" --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86 --eh-frame-hdr -m elf_i386 -dynamic-linker /system/bin/linker -o cmTC_7fd3c "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtbegin_dynamic.o" -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_7fd3c.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtend_android.o"
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(i686-linux-android-ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_089b8"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_089b8.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_089b8]
+  ignore line: [Run Build Command:"C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_7fd3c"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_7fd3c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_7fd3c]
   ignore line: [Android clang version 3.8.256229  (based on LLVM 3.8.256229)]
   ignore line: [Target: i686-none-linux-android]
   ignore line: [Thread model: posix]
@@ -42,7 +42,7 @@ Parsed C implicit link information from above output:
   ignore line: [@m32]
   ignore line: [Selected multilib: .]
   ignore line: [@m32]
-  link line: [ "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/bin\\ld" --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86 --eh-frame-hdr -m elf_i386 -dynamic-linker /system/bin/linker -o cmTC_089b8 "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtbegin_dynamic.o" -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_089b8.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtend_android.o"]
+  link line: [ "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/bin\\ld" --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86 --eh-frame-hdr -m elf_i386 -dynamic-linker /system/bin/linker -o cmTC_7fd3c "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtbegin_dynamic.o" -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_7fd3c.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtend_android.o"]
     arg [C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/bin\ld] ==> ignore
     arg [--sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
@@ -51,7 +51,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_089b8] ==> ignore
+    arg [cmTC_7fd3c] ==> ignore
     arg [C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\crtbegin_dynamic.o] ==> ignore
     arg [-LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x] ==> dir [C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x]
     arg [-LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib] ==> dir [C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib]
@@ -74,7 +74,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [--gc-sections] ==> ignore
     arg [-znocopyreloc] ==> ignore
-    arg [CMakeFiles/cmTC_089b8.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_7fd3c.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [-ldl] ==> lib [dl]
     arg [-lc] ==> lib [c]
@@ -94,17 +94,17 @@ Parsed C implicit link information from above output:
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_cd555"
-[1/2] Building CXX object CMakeFiles/cmTC_cd555.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_cd555
+Run Build Command:"C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_2f5e8"
+[1/2] Building CXX object CMakeFiles/cmTC_2f5e8.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_2f5e8
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_1528e"
-[1/2] Building CXX object CMakeFiles/cmTC_1528e.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_1528e
+Run Build Command:"C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_594d0"
+[1/2] Building CXX object CMakeFiles/cmTC_594d0.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_594d0
 Android clang version 3.8.256229  (based on LLVM 3.8.256229)
 Target: i686-none-linux-android
 Thread model: posix
@@ -113,16 +113,16 @@ Found candidate GCC installation: C:/Users/Hakan/AppData/Local/Android/sdk/ndk-b
 Selected GCC installation: C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x
 Candidate multilib: .;@m32
 Selected multilib: .;@m32
- "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/bin\\ld" --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86 --eh-frame-hdr -m elf_i386 -dynamic-linker /system/bin/linker -o cmTC_1528e "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtbegin_dynamic.o" -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_1528e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtend_android.o"
+ "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/bin\\ld" --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86 --eh-frame-hdr -m elf_i386 -dynamic-linker /system/bin/linker -o cmTC_594d0 "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtbegin_dynamic.o" -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_594d0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtend_android.o"
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(i686-linux-android-ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_1528e"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_1528e.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_1528e]
+  ignore line: [Run Build Command:"C:\Users\Hakan\AppData\Local\Android\Sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_594d0"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_594d0.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_594d0]
   ignore line: [Android clang version 3.8.256229  (based on LLVM 3.8.256229)]
   ignore line: [Target: i686-none-linux-android]
   ignore line: [Thread model: posix]
@@ -133,7 +133,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [@m32]
   ignore line: [Selected multilib: .]
   ignore line: [@m32]
-  link line: [ "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/bin\\ld" --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86 --eh-frame-hdr -m elf_i386 -dynamic-linker /system/bin/linker -o cmTC_1528e "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtbegin_dynamic.o" -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_1528e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtend_android.o"]
+  link line: [ "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/bin\\ld" --sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86 --eh-frame-hdr -m elf_i386 -dynamic-linker /system/bin/linker -o cmTC_594d0 "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtbegin_dynamic.o" -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib -LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_594d0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl "C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\\crtend_android.o"]
     arg [C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/bin\ld] ==> ignore
     arg [--sysroot=C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
@@ -142,7 +142,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1528e] ==> ignore
+    arg [cmTC_594d0] ==> ignore
     arg [C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-x86/usr/lib\crtbegin_dynamic.o] ==> ignore
     arg [-LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x] ==> dir [C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x]
     arg [-LC:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib] ==> dir [C:/Users/Hakan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib]
@@ -165,7 +165,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [--gc-sections] ==> ignore
     arg [-znocopyreloc] ==> ignore
-    arg [CMakeFiles/cmTC_1528e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_594d0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc] ==> lib [gcc]

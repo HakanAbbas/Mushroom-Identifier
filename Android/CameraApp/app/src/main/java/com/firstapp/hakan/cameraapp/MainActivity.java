@@ -32,19 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private static final String TAG = "MainActivity" ;
-/*
-    static {
-        if(!OpenCVLoader.initDebug()){
-            Log.d(TAG, "OpenCV not loaded");
-        } else {
-            Log.d(TAG, "OpenCV loaded");
-        }
-    }
-
-    static {
-        // If you use opencv 2.4, System.loadLibrary("opencv_java")
-        System.loadLibrary("opencv_java3");
-    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,5 +104,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putParcelable("BitmapImage", bitmap);
+    }
+
+    public void showPilzList (View view) {
+        Intent intent = new Intent(this, DisplayListActivity.class);
+        startActivity(intent);
     }
 }

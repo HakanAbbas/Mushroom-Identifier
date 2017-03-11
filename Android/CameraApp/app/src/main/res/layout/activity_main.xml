@@ -42,4 +42,17 @@
         android:layout_alignRight="@+id/imageView"
         android:layout_alignEnd="@+id/imageView"
         android:onClick="onImageGalleryClicked" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cameraButton"
+        android:layout_toRightOf="@+id/cameraButton"
+        android:layout_toEndOf="@+id/cameraButton"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:id="@+id/listButton"
+        android:onClick="showPilzList"
+        tools:text="PilzListe" />
 </RelativeLayout>
