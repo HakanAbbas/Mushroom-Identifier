@@ -30,6 +30,7 @@
 		C08A57FD1E5CE67D00AE46B8 /* mushroom_cascade.xml in Resources */ = {isa = PBXBuildFile; fileRef = C08A57FC1E5CE67D00AE46B8 /* mushroom_cascade.xml */; };
 		C08A57FF1E5CECC700AE46B8 /* Pilz.mm in Sources */ = {isa = PBXBuildFile; fileRef = C08A57FE1E5CECC700AE46B8 /* Pilz.mm */; };
 		C08A580C1E5D14B000AE46B8 /* PilzC.m in Sources */ = {isa = PBXBuildFile; fileRef = C08A580B1E5D14B000AE46B8 /* PilzC.m */; };
+		C0912BD71E701ACF005CB823 /* Source.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0912BD61E701ACF005CB823 /* Source.cpp */; };
 		C092591C1DDF1FDD00057E51 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C092591B1DDF1FDD00057E51 /* opencv2.framework */; };
 		C09259251DDF217300057E51 /* Markup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C09259231DDF217300057E51 /* Markup.cpp */; };
 		C09259271DDF2EDE00057E51 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C09259261DDF2EDE00057E51 /* libjpeg.a */; };
@@ -90,6 +91,7 @@
 		C08A57FE1E5CECC700AE46B8 /* Pilz.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Pilz.mm; sourceTree = "<group>"; };
 		C08A580A1E5D146400AE46B8 /* PilzC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PilzC.h; sourceTree = "<group>"; };
 		C08A580B1E5D14B000AE46B8 /* PilzC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PilzC.m; sourceTree = "<group>"; };
+		C0912BD61E701ACF005CB823 /* Source.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Source.cpp; sourceTree = "<group>"; };
 		C092591B1DDF1FDD00057E51 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../opencv2.framework; sourceTree = "<group>"; };
 		C092591D1DDF204300057E51 /* CamApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CamApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C09259231DDF217300057E51 /* Markup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Markup.cpp; path = ../Markup.cpp; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		C05F68231D65DE4C000932F6 /* CamApp */ = {
 			isa = PBXGroup;
 			children = (
+				C0912BD61E701ACF005CB823 /* Source.cpp */,
 				C09259261DDF2EDE00057E51 /* libjpeg.a */,
 				C09259231DDF217300057E51 /* Markup.cpp */,
 				C09259241DDF217300057E51 /* Markup.h */,
@@ -378,6 +381,7 @@
 				C05F68251D65DE4C000932F6 /* AppDelegate.swift in Sources */,
 				C0F068031E585AFC00F06118 /* Pilz.swift in Sources */,
 				C08A00A71E51F9EC00AD23AB /* Theme.swift in Sources */,
+				C0912BD71E701ACF005CB823 /* Source.cpp in Sources */,
 				C054AF2C1DE22520009F5360 /* OpenCVWrapper.mm in Sources */,
 				C09259251DDF217300057E51 /* Markup.cpp in Sources */,
 				C0D97E561E576C9C00603A31 /* InfoController.swift in Sources */,
