@@ -23,7 +23,7 @@ add_library( # Sets the name of the library.
              # Provides a relative path to your source file(s).
              # Associated headers in the same location as their source
              # file are automatically included.
-             #src/main/openCV/Source.cpp
+             "src/main/openCV/Source.cpp"
              )
 
 
@@ -36,11 +36,11 @@ find_library( # Sets the name of the path variable.
               # you want CMake to locate.
               log )
 
-target_include_directories ( openlib PUBLIC ${OpenCV_INCLUDE_DIRS} "C:/Program Files/boost/boost_1_60_0" )
+target_include_directories ( openlib PUBLIC ${OpenCV_INCLUDE_DIRS} )
 
 target_link_libraries( # Specifies the target library.
                        openlib
 
                        # Links the target library to the log library
                        # included in the NDK.
-                       ${log-lib} ${OpenCV_LIBS} "C:/Program Files/boost/boost_1_60_0/stage/lib" )
+                       ${log-lib} ${OpenCV_LIBS})
