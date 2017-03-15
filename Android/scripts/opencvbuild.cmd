@@ -1,5 +1,5 @@
 
-SET OPENCV_DIR=%HOMEPATH%\Downloads\opencv-3.2.0
+SET OPENCV_DIR=C:\Users\Hakan\Desktop\5AHIF\Diplomarbeit_MushroomIdentifier\opencv-3.2.0
 
 pushd %OPENCV_DIR%
 mkdir build
