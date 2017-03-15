@@ -2,10 +2,10 @@ SET CURDIR=%~dp0
 call %CURDIR%\env.cmd
 
 %HOMEDRIVE%
-pushd %HOMEPATH%\Documents\git
+pushd %HOMEPATH%\Downloads
 
 start powershell.exe
-rem start cmd
+start cmd
 popd
 
 
