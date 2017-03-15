@@ -1,14 +1,9 @@
 
-SET ANDROID_SDK=%HOMEDRIVE%\Android\sdk\
-SET ANDROID_NDK=%HOMEDRIVE%%HOMEPATH%\Documents\swdev\ndk\android-ndk-r14
+SET ANDROID_SDK=C:\Users\Hakan\AppData\Local\Android\sdk
+SET ANDROID_NDK=C:\Users\Hakan\Documents\Android\ndk\android-ndk-r14
 SET NDK=%ANDROID_NDK%
-<<<<<<< HEAD
-SET PYTHON_HOME=C:\Users\aberger\AppData\Local\Programs\Python\Python36
-SET STANDALONE_TOOLCHAIN=%HOMEPATH%\Desktop\ndk
-=======
 SET PYTHON_HOME=C:\Users\Hakan\AppData\Local\Programs\Python\Python36-32
 SET STANDALONE_TOOLCHAIN=C:\Users\Hakan\Desktop\ndk
->>>>>>> env variable changes
 SET CMAKE_HOME=C:\Program Files\CMake
 
 SET CC=clang
