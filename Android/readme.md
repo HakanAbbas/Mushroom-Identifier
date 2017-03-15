@@ -13,5 +13,6 @@ opencv aus dem Source Code in der Android Native Toolchain kompilieren
 4. Die Datei ```scripts\env.cmd``` auf die Pfade am eigenen Rechner anpassen.
 4. eine Shell öffnen durch das Doppelklicken der Datei ```shell.cmd``` im Unterverzeichnis ```scripts```, dorthin wechseln und dann von dieser Commandline aus maketoolchain.cmd ausführen, dies erstellt auf dem Desktop ein Toolchain -Verzeichnis ```ndk```
 7. im immer noch offenen Command - Prompt eingeben: opencvbuild.cmd
-13. dieses neu installierte install Verzeichnis enthält jetzt die include und library - Dateien für die in der Toolchain gewählte Architektur.
+13. dieses so bebaute neuim Build - Vorgang neu erstelle ```install``` Verzeichnis enthält jetzt die include und library - Dateien für die in der Toolchain gewählte Architektur.
+8. Wenn Sie opencv Funktionen hinzufügen oder entfernen wollen, verwenden Sie dazu cmake-gui anstatt opencv-build
 
