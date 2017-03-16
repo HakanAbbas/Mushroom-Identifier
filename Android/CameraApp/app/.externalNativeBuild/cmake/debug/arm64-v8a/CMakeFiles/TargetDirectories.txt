@@ -1,6 +1,0 @@
-C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/edit_cache.dir
-C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/source.dir
-C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/rebuild_cache.dir
-C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/markup.dir
-C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/native-lib.dir
-C:/Users/Hakan/AndroidStudioProjects/CameraApp/app/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/app-glue.dir

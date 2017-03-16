@@ -1,3 +1,0 @@
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/openlib.dir
-C:/Users/Hakan/Desktop/Mushroom-Identifier/Android/CameraApp/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir
