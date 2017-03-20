@@ -9,50 +9,84 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.firstapp.hakan.cameraapp.MainActivity">
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Foto schießen"
-        android:id="@+id/cameraButton"
-        android:layout_marginBottom="58dp"
-        android:onClick="dispatchTakePictureIntent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentBottom="true" >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:minHeight="300dp"
-        android:minWidth="300dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Galerie"
-        android:id="@+id/ImageGbutton"
-        android:layout_alignTop="@+id/cameraButton"
-        android:layout_alignRight="@+id/imageView"
-        android:layout_alignEnd="@+id/imageView"
-        android:onClick="onImageGalleryClicked" />
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Foto schießen"
+            android:id="@+id/cameraButton"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:onClick="dispatchTakePictureIntent" />
 
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/cameraButton"
-        android:layout_toRightOf="@+id/cameraButton"
-        android:layout_toEndOf="@+id/cameraButton"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp"
-        android:id="@+id/listButton"
-        android:onClick="showPilzList"
-        tools:text="PilzListe" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Galerie"
+            android:id="@+id/ImageGbutton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:onClick="onImageGalleryClicked" />
+
+        <Button
+            android:text="Pilzliste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/cameraButton"
+            android:id="@+id/listButton"
+            android:onClick="showPilzList"
+            tools:text="PilzListe" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:minHeight="250dp"
+            android:minWidth="250dp"
+            android:maxHeight="250dp"
+            android:maxWidth="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:id="@+id/Fragen"
+            android:layout_marginTop="40dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:text=""
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickedJa"
+            android:id="@+id/Ja"
+            android:text="Ja"
+            android:layout_below="@+id/Fragen"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Fragen"
+            android:onClick="clickedNein"
+            android:id="@+id/Nein"
+            android:text="Nein"
+            android:layout_toRightOf="@+id/Ja"/>
+    </RelativeLayout>
+
+
+
 </RelativeLayout>
