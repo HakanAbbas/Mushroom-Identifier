@@ -1,4 +1,5 @@
-SET CURDIR=%~dp0
-call %CURDIR%env.cmd
+SET ARCH=x86_64
+mkdir ndk
+pushd ndk
 
-python %NDK%\build\tools\make_standalone_toolchain.py --arch x86_64 --api 24 --stl=stlport --unified-headers --install-dir %STANDALONE_TOOLCHAIN%
+python %NDK%\build\tools\make_standalone_toolchain.py --arch %ARCH% --api 24 --stl=gnustl --unified-headers --install-dir %STANDALONE_TOOLCHAIN%
