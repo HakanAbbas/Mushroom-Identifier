@@ -240,7 +240,7 @@ vector<Pilz> readxml(std::string path) {
 	ws.assign(s.begin(), s.end());
 	try
 	{
-		while (xml.FindElem(MCD_T("Schwammerl")))
+		while (xml.FindElem(MCD_T("Pilz")))
 		{
 			xml.IntoElem();
 			help << counter;
