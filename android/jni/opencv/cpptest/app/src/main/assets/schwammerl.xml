@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+
+    <Pilze>
+	
+		<Pilz>
+			<Farbe blue="13" green="138" red="208"/>
+			<Name>Eierschwammerl</Name>
+			<HSV-von hue="11" saturation="145" value="145"/>
+			<HSV-bis hue="27" saturation="255" value="255"/>
+			<HSV-von2 hue="0" saturation="0" value="0"/>
+			<HSV-bis2 hue="0" saturation="0" value="0"/>
+			<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>0</Rund>
+			<Lamellen>1</Lamellen>
+			<Knolle>0</Knolle>
+			<Stiel> einen Stiel der 3-6 cm lang, 1-2cm dick, hellgelb, feinfaserig-schuppig und an der Basis zugespitzt ist</Stiel>
+		</Pilz>
+			
+		<Pilz>
+			<Farbe blue="121" green="95" red="209"/>
+			<Name>Fliegenpilz</Name>
+			<HSV-von hue="0" saturation="100" value="100"/>
+			<HSV-bis hue="8" saturation="255" value="255"/>
+			<HSV-von2 hue="170" saturation="100" value="100"/>
+			<HSV-bis2 hue="180" saturation="255" value="255"/>
+			<Wiki>https://de.wikipedia.org/wiki/Fliegenpilz</Wiki>
+			<Giftigkeit>1</Giftigkeit>
+			<Rund>1</Rund>
+			<Lamellen>0</Lamellen>
+			<Knolle>0</Knolle>
+			<Stiel> 13</Stiel>
+		</Pilz>
+		
+		<Pilz>
+			<Farbe   blue="55" green="63" red="91"/>
+			<Name>Steinpilz</Name>
+			<HSV-von hue="6" saturation="0" value="0"/>
+			<HSV-bis hue="21" saturation="255" value="211"/>
+			<HSV-von2 hue="0" saturation="0" value="0"/>
+			<HSV-bis2 hue="0" saturation="0" value="0"/>
+			<Wiki>https://de.wikipedia.org/wiki/Steinpilze</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>1</Rund>
+			<Lamellen>0</Lamellen>
+			<Knolle>0</Knolle>
+			<Stiel> einen Stiel bis 15cm lang; 3-4cm dick; wei�lich bis blassbraun; jung knollig, dann schlank und hat ein wei�es Netz an der Spitze hat</Stiel>
+		</Pilz>
+		
+		<Pilz>
+			<Farbe blue="13" green="138" red="208"/>
+			<Name>Ballschwammerl</Name>
+			<HSV-von hue="11" saturation="145" value="145"/>
+			<HSV-bis hue="27" saturation="255" value="255"/>
+			<HSV-von2 hue="0" saturation="0" value="0"/>
+			<HSV-bis2 hue="0" saturation="0" value="0"/>
+			<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>1</Rund>
+			<Lamellen>1</Lamellen>
+			<Knolle>1</Knolle>
+			<Stiel> einen Stiel, der aussieht wie der eines Ballschwammerls</Stiel>
+		</Pilz>
+		
+		<Pilz>
+			<Farbe blue="13" green="138" red="208"/>
+			<Name>Gurkenschwammerl</Name>
+			<HSV-von hue="11" saturation="145" value="145"/>
+			<HSV-bis hue="27" saturation="255" value="255"/>
+			<HSV-von2 hue="0" saturation="0" value="0"/>
+			<HSV-bis2 hue="0" saturation="0" value="0"/>
+			<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>1</Rund>
+			<Lamellen>0</Lamellen>
+			<Knolle>1</Knolle>
+			<Stiel> einen Stiel, der aussieht wie der eines Gurkenschwammerls</Stiel>
+		</Pilz>
+		
+		<Pilz>
+			<Farbe blue="2" green="225" red="253"/>
+			<Name>gelb</Name>
+			<HSV-von hue="26" saturation="164" value="166"/>
+			<HSV-bis hue="34" saturation="255" value="255"/>
+			<HSV-von2 hue="0" saturation="0" value="0"/>
+			<HSV-bis2 hue="0" saturation="0" value="0"/>
+			<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>0</Rund>
+			<Lamellen>1</Lamellen>
+			<Knolle>0</Knolle>
+			<Stiel>gelb</Stiel>
+		</Pilz>
+		
+		<Pilz>
+			<Farbe blue="13" green="138" red="208"/>
+			<Name>Treeschwammerl</Name>
+			<HSV-von hue="11" saturation="145" value="145"/>
+			<HSV-bis hue="27" saturation="255" value="255"/>
+			<HSV-von2 hue="0" saturation="0" value="0"/>
+			<HSV-bis2 hue="0" saturation="0" value="0"/>
+			<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>0</Rund>
+			<Lamellen>1</Lamellen>
+			<Knolle>0</Knolle>
+			<Stiel>einen Stiel, der aussieht wie der eines Treeschwammerls</Stiel>
+		</Pilz>
+		
+		<Pilz>
+			<Farbe blue="70" green="60" red="50"/>
+			<Name>schwarz3</Name>
+			<HSV-von hue="25" saturation="24" value="24"/>
+			<HSV-bis hue="220" saturation="35" value="30"/>
+			<HSV-von2 hue="0" saturation="0" value="0"/>
+			<HSV-bis2 hue="0" saturation="0" value="0"/>
+			<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>0</Rund>
+			<Lamellen>1</Lamellen>
+			<Knolle>0</Knolle>
+			<Stiel>schwarz</Stiel>
+		</Pilz>
+		
+		<Pilz>
+			<Farbe blue="13" green="138" red="208"/>
+			<Name>Baumschwammerl</Name>
+			<HSV-von hue="11" saturation="145" value="145"/>
+			<HSV-bis hue="27" saturation="255" value="255"/>
+			<HSV-von2 hue="0" saturation="0" value="0"/>
+			<HSV-bis2 hue="0" saturation="0" value="0"/>
+			<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>0</Rund>
+			<Lamellen>1</Lamellen>
+			<Knolle>1</Knolle>
+			<Stiel>einen Stiel, der aussieht wie der eines Baumschwammerls</Stiel>
+		</Pilz>
+		<Pilz>
+			<Farbe blue="24" green="88" red="142"/>
+			<Name>Fuchsiger Roetelritterling</Name>
+			<HSV-von hue="11" saturation="145" value="145"/>
+			<HSV-bis hue="27" saturation="255" value="255"/>
+			<HSV-von2 hue="0" saturation="0" value="0"/>
+			<HSV-bis2 hue="0" saturation="0" value="0"/>
+			<Wiki>https://de.wikipedia.org/wiki/Fuchsiger_R%C3%B6telritterling</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>1</Rund>
+			<Lamellen>1</Lamellen>
+			<Knolle>0</Knolle>
+			<Stiel>leicht abloesbare Lamellen</Stiel>
+		</Pilz>
+		<Pilz>
+			<Farbe blue="217" green="223" red="222"/>
+			<Name>Flaschenbovist</Name>
+			<HSV-von hue="0" saturation="0" value="50"/>
+			<HSV-bis hue="255" saturation="30" value="255"/>
+			<HSV-von2 hue="0" saturation="0" value="0"/>
+			<HSV-bis2 hue="0" saturation="0" value="0"/>
+			<Wiki>https://de.wikipedia.org/wiki/Fuchsiger_R%C3%B6telritterling</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>1</Rund>
+			<Lamellen>1</Lamellen>
+			<Knolle>0</Knolle>
+			<Stiel>leicht abloesbare Lamellen</Stiel>
+		</Pilz>
+		<Pilz>
+			<Farbe blue="195" green="196" red="184"/>
+			<Name>Gruenspantraeuschling</Name>
+			<HSV-von hue="30" saturation="0" value="30"/>
+			<HSV-bis hue="110" saturation="255" value="255"/>
+			<HSV-von2 hue="0" saturation="0" value="0"/>
+			<HSV-bis2 hue="0" saturation="0" value="0"/>
+			<Wiki>https://de.wikipedia.org/wiki/Fuchsiger_R%C3%B6telritterling</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>1</Rund>
+			<Lamellen>1</Lamellen>
+			<Knolle>0</Knolle>
+			<Stiel>leicht abloesbare Lamellen</Stiel>
+		</Pilz>
+		
+		<Pilz>
+			<Farbe blue="13" green="138" red="208"/>
+			<Name>Falscher Pfifferling</Name>
+			<HSV-von hue="9" saturation="115" value="115"/>
+			<HSV-bis hue="30" saturation="255" value="255"/>
+			<HSV-von2 hue="0" saturation="0" value="0"/>
+			<HSV-bis2 hue="0" saturation="0" value="0"/>
+			<Wiki>https://de.wikipedia.org/wiki/Fuchsiger_R%C3%B6telritterling</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>0</Rund>
+			<Lamellen>1</Lamellen>
+			<Knolle>0</Knolle>
+			<Stiel>auch unter der Oberflaeche orange</Stiel>
+		</Pilz>
+	</Pilze>

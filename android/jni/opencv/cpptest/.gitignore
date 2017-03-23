@@ -1,0 +1,11 @@
+*.iml
+gradle
+.gradle
+gradlew
+gradlew.bat
+.DS_Store
+.externalNativeBuild
+.idea
+local.properties
+build
+MushroomDetector.h

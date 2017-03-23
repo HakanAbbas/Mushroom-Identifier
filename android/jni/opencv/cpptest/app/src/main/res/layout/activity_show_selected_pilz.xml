@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_show_selected_pilz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.christianaberger.cpptest.showSelectedPilzActivity">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilz: \n \n"
+     />
+
+    <TextView
+        android:id="@+id/giftigkeit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:text="Ist der Pilz giftig? \n \n"
+    />
+
+    <TextView
+        android:id="@+id/rund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/giftigkeit"
+        android:text="Ist der Pilz rund?  \n \n"
+     />
+
+    <TextView
+        android:id="@+id/lamellen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rund"
+        android:text="Hat der Pilz Lamellen? \n \n"
+   />
+
+    <TextView
+        android:id="@+id/knolle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lamellen"
+        android:text="Hat der Pilz eine Knolle? \n \n"
+    />
+
+    <TextView
+        android:id="@+id/stiel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/knolle"
+        android:text="Wie schaut der Stiel aus? \n \n"
+    />
+
+    <TextView
+        android:id="@+id/wiki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/stiel"
+        android:text="Für mehr Informationen klicken Sie bitte auf diesen Wikipedia link: "
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fliegenpilz"
+        android:id="@+id/imageViewPilz"
+        android:layout_above="@+id/lamellen"
+        android:layout_toRightOf="@id/lamellen"
+        android:layout_marginRight="20dp"/>
+
+
+</RelativeLayout>
