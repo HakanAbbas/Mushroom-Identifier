@@ -5,6 +5,7 @@
 #ifndef _Included_com_firstapp_hakan_cameraapp_Mushroom
 #define _Included_com_firstapp_hakan_cameraapp_Mushroom
 #ifdef __cplusplus
+
 extern "C" {
 #endif
 /*
