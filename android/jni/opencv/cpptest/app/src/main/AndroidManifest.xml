@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.christianaberger.cpptest">
+    package="com.mushroom.android.cpptest">
 
     <uses-feature
         android:name="android.hardware.Camera"
@@ -17,7 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.christianaberger.cpptest.MainActivity"
+        <activity android:name="com.mushroom.android.cpptest.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
 
@@ -27,17 +27,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.christianaberger.cpptest.DisplayListActivity"
+            android:name="com.mushroom.android.cpptest.DisplayListActivity"
 
             android:screenOrientation="portrait"
-            android:parentActivityName="com.example.christianaberger.cpptest.MainActivity">
+            android:parentActivityName="com.mushroom.android.cpptest.MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.christianaberger.cpptest.MainActivity" />
+                android:value="com.mushroom.android.cpptest.MainActivity" />
         </activity>
-        <activity android:name="com.example.christianaberger.cpptest.showSelectedPilzActivity"
+        <activity android:name="com.mushroom.android.cpptest.showSelectedPilzActivity"
             android:screenOrientation="portrait">
 
         </activity>

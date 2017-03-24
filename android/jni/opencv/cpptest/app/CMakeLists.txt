@@ -6,7 +6,7 @@ set(MAIN_CPP_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/main/cpp")
 set(JNI_HEADER_FILE "${MAIN_CPP_SOURCE_DIR}/MushroomDetector.h")
 set(JNI_SIGNATURE_FILE "${MAIN_CPP_SOURCE_DIR}/MushroomDetector_signature.txt")
 # set(JAVA_H "\"${JAVA_HOME}/javah\"")
-set(INTERFACE_FILE "${MAIN_JAVA_SOURCE_DIR}/com/example/christianaberger/cpptest/MushroomDetector.java")
+set(INTERFACE_FILE "${MAIN_JAVA_SOURCE_DIR}/com/mushroom/android/cpptest/MushroomDetector.java")
 
 set(OPENCV_SRC_DIR "$ENV{OPENCV_SOURCE_CODE_DIR}")
 set(OPENCV_SDK_DIR "${OPENCV_SRC_DIR}/install/sdk/native")
@@ -47,7 +47,7 @@ add_library(mushroomlib SHARED
 # execute the javah command and create the header file for the jni implementation:
 add_custom_command(
 	OUTPUT "${JNI_HEADER_FILE}"
-	COMMAND ${CMAKE_COMMAND} -E env "PATH=${JAVA_HOME}/bin;$ENV{PATH}" javah -o ${JNI_HEADER_FILE} com.example.christianaberger.cpptest.MushroomDetector
+	COMMAND ${CMAKE_COMMAND} -E env "PATH=${JAVA_HOME}/bin;$ENV{PATH}" javah -o ${JNI_HEADER_FILE} com.mushroom.android.cpptest.MushroomDetector
 	WORKING_DIRECTORY "${MAIN_JAVA_SOURCE_DIR}"
 	DEPENDS	"${INTERFACE_FILE}"
 )
@@ -61,4 +61,5 @@ find_library(stl-lib gnustl_shared
 )
 find_library(z-lib z)
 message(STATUS "stlport lib: ${stl-lib}, toolchain: ${TOOLCHAIN_LIB64}")
-target_link_libraries(mushroomlib ${log-lib} ${LIBS} ${stl-lib} ${z-lib})
+target_include_directories ( mushroomlib PUBLIC "C:/Users/Hakan/Desktop/mushtest")
+target_link_libraries(mushroomlib ${log-lib} ${LIBS} ${stl-lib} ${z-lib} "C:/Users/Hakan/Desktop/mushtest/Source.cpp")

@@ -26,6 +26,15 @@ vector<unsigned char> JniUtil::getByteArrayField(jobject obj, const char *name) 
     return bytes;
 }
 
+void JniUtil::setBytearrayField(jobject object, const char *name, char *bytes, int length) {
+    jclass klass = env->GetObjectClass(object);
+
+    jbyteArray byteArray = env->NewByteArray(length);
+    env->SetByteArrayRegion(byteArray, 0, length, (jbyte *)bytes);
+
+    jfieldID fid = env->GetFieldID(klass, name, "[B");
+    env->SetObjectField(object, fid, byteArray);
+}
 
 string JniUtil::getStringField(jobject obj, const char *name) {
     jclass klass = env->GetObjectClass(obj);
@@ -33,7 +42,15 @@ string JniUtil::getStringField(jobject obj, const char *name) {
     jstring stringObject = (jstring)env->GetObjectField(obj, fid);
     return stringObject ? toString(stringObject) : "";
 }
-int JniUtil::getBooleanFields(jobject object, const char *name) {
+void JniUtil::setStringField(jobject object, const char *name, const char *value) {
+    jclass klass = env->GetObjectClass(object);
+    jfieldID fieldId = env->GetFieldID(klass, name, "Ljava/lang/String;");
+    jstring val = env->NewStringUTF(value);
+    env->SetObjectField(object, fieldId, val);
+}
+
+
+int JniUtil::getBooleanField(jobject object, const char *name) {
     jclass klass = env->GetObjectClass(object);
     jfieldID fid = env->GetFieldID(klass, name, "Z");
     jboolean val = env->GetBooleanField(object, fid);
@@ -45,9 +62,13 @@ int JniUtil::getBooleanFields(jobject object, const char *name) {
     return val ? true : false;
 }
 
-bool JniUtil::getBooleanField(jobject object, const char *name) {
+void JniUtil::setBooleanField(jobject object, const char *name, int value) {
     jclass klass = env->GetObjectClass(object);
     jfieldID fid = env->GetFieldID(klass, name, "Z");
-    jboolean val = env->GetBooleanField(object, fid);
-    return val ? true : false;
+    if(value == 1){
+        env->SetBooleanField(object, fid, JNI_TRUE);
+    }else{
+        env->SetBooleanField(object, fid, JNI_FALSE);
+    }
+
 }

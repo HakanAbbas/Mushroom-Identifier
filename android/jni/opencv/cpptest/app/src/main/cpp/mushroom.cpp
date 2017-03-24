@@ -11,16 +11,16 @@ Mushroom::Mushroom(const Mushroom& other) {
     *this = other;
 }
 Mushroom& Mushroom::operator=(const Mushroom& other) {
-    color = other.color;
-    hsvV = other.hsvV;
-    hsvB = other.hsvB;
-    hsvVS = other.hsvVS;
-    hsvBS = other.hsvBS;
+    bgr = other.bgr;
+    hsv_v = other.hsv_v;
+    hsv_b = other.hsv_b;
+    hsv_v2 = other.hsv_v2;
+    hsv_b2 = other.hsv_b2;
     wiki = other.wiki;
     lamell = other.lamell;
     poisonous = other.poisonous;
     nodule = other.nodule;
     round = other.round;
-    mushRoomName = other.mushRoomName;
+    name = other.name;
     return *this;
 }
