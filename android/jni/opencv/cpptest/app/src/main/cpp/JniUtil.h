@@ -17,7 +17,7 @@ public:
     }
     string toString(jstring jniString);
     vector<unsigned char> getByteArrayField(jobject object, const char *name);
-    void setBytearrayField(jobject, const char *name, char *bytes, int length);
+    void setByteArrayField(jobject, const char *name, char *bytes, int length);
 
     string getStringField(jobject object, const char *name);
     void setStringField(jobject object, const char *name, const char *value);

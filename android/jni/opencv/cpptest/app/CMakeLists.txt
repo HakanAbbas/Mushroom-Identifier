@@ -52,7 +52,7 @@ add_custom_command(
 	DEPENDS	"${INTERFACE_FILE}"
 )
 
-link_directories("/Users/aberger/Downloads/opencv-3.2.0/install/sdk/native/libs/x86_64/")
+link_directories("C:/Users/Hakan/Desktop/5AHIF/Diplomarbeit_MushroomIdentifier/opencv-3.2.0/install/sdk/native/libs/x86_64")
 find_library(log-lib log)
 
 set(TOOLCHAIN_LIB64 ${STANDALONE_TOOLCHAIN}/x86_64-linux-android/lib64)
@@ -61,5 +61,4 @@ find_library(stl-lib gnustl_shared
 )
 find_library(z-lib z)
 message(STATUS "stlport lib: ${stl-lib}, toolchain: ${TOOLCHAIN_LIB64}")
-target_include_directories ( mushroomlib PUBLIC "C:/Users/Hakan/Desktop/mushtest")
-target_link_libraries(mushroomlib ${log-lib} ${LIBS} ${stl-lib} ${z-lib} "C:/Users/Hakan/Desktop/mushtest/Source.cpp")
+target_link_libraries(mushroomlib ${log-lib} ${LIBS} ${stl-lib} ${z-lib})

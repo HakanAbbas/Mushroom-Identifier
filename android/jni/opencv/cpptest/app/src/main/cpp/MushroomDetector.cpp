@@ -2,12 +2,12 @@
 #include <cstring>
 #include <iostream>
 #include <opencv2/highgui/highgui.hpp>
-#include <Source.cpp>
 
 #include "JniUtil.h"
 #include "GrayScaler.h"
 #include "Mushroom.h"
 #include "MushroomDetector.h"
+#include "Source.h"
 
 using namespace cv;
 using namespace std;
@@ -54,7 +54,7 @@ Mushroom MushroomMarshaller::fromJavaObject(jobject obj) {
     for (int i = 0; i < bytes.size(); i++) {
         mushroom.hsv_b[i] = hsvBis[i];
     }
-    vector<unsigned char> hsvVonS = util.getByteArrayField(obj, "hsv_v2");
+    vector<unsigned char> hsvVonS = util.getByteArrayField(obj, "hsvVS");
     for (int i = 0; i < bytes.size(); i++) {
         mushroom.hsv_v2[i] = hsvVonS[i];
     }
@@ -78,31 +78,25 @@ jobject MushroomMarshaller::asJavaObject(jclass clazz, const Mushroom& mushroom)
     jobject object = env->NewObject(clazz, fid);
 
     util.setStringField(object, "name", mushroom.name.c_str());
-    util.setStringField(object, "stiel", mushroom.stalk.c_str());
+    util.setStringField(object, "nodule", mushroom.stalk.c_str());
     util.setStringField(object, "wiki", mushroom.wiki.c_str());
-    util.setBooleanField(object, "giftigkeit", mushroom.poisonous);
-    util.setBooleanField(object, "rund", mushroom.round);
-    util.setBooleanField(object, "lamellen", mushroom.lamell);
-    util.setBooleanField(object, "knollen", mushroom.nodule);
-
-    static const int dims = 3;
-    char bytes[dims];
-    /*for(int i = 0; i < dims; i++) {
-        bytes[i] = mushroom.bgr[i];
-    }
-    util.setBytearrayField(object, "color", bytes, dims);*/
+    util.setBooleanField(object, "poisonous", mushroom.poisonous);
+    util.setBooleanField(object, "round", mushroom.round);
+    util.setBooleanField(object, "lamell", mushroom.lamell);
+    util.setBooleanField(object, "stalk", mushroom.nodule);
 
     return object;
 }
 
 
 extern "C"
-JNIEXPORT jobjectArray JNICALL Java_com_example_christianaberger_cpptest_MushroomDetector_computeSchwammerlType
-        (JNIEnv *env, jobject mushroomDetector, jobjectArray templates, jstring filePath) {
+JNIEXPORT jobjectArray JNICALL Java_com_mushroom_android_cpptest_MushroomDetector_computeSchwammerlType
+        (JNIEnv *env, jobject mushroomDetector, jobjectArray templates, jstring imagePath) {
     JniUtil util(env);
     MushroomMarshaller marshaller(env);
 
-    string path = util.toString(filePath);
+    std::string imagePathString = util.toString(imagePath);
+
     int length = env->GetArrayLength(templates);
     vector<Mushroom> mushrooms;
     jclass elementClass = NULL;
@@ -114,9 +108,10 @@ JNIEXPORT jobjectArray JNICALL Java_com_example_christianaberger_cpptest_Mushroo
         Mushroom mushroom = marshaller.fromJavaObject(templateElement);
         mushrooms.push_back(mushroom);
     }
-    // the detected Mushrooms are stored in the detectedShrooms list
-    cv:Mat hello;
-    vector<Mushroom> detectedShrooms = detectMushroom("somePathtoXML", "somePathToCascadexml", hello);
+    cv::Mat image = readImageFromPath(imagePathString);
+
+    vector<Mushroom> detectedShrooms = detectMushroom(mushrooms, image);
+
     jobjectArray objs = env->NewObjectArray(mushrooms.size(), elementClass, NULL);
     jsize index = 0;
     for(vector<Mushroom>::iterator it = detectedShrooms.begin(); it != detectedShrooms.end(); it++) {

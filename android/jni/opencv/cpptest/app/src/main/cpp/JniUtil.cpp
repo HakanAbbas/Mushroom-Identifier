@@ -26,7 +26,7 @@ vector<unsigned char> JniUtil::getByteArrayField(jobject obj, const char *name) 
     return bytes;
 }
 
-void JniUtil::setBytearrayField(jobject object, const char *name, char *bytes, int length) {
+void JniUtil::setByteArrayField(jobject object, const char *name, char *bytes, int length) {
     jclass klass = env->GetObjectClass(object);
 
     jbyteArray byteArray = env->NewByteArray(length);
@@ -59,7 +59,6 @@ int JniUtil::getBooleanField(jobject object, const char *name) {
     } else{
         return 0;
     }
-    return val ? true : false;
 }
 
 void JniUtil::setBooleanField(jobject object, const char *name, int value) {
@@ -70,5 +69,4 @@ void JniUtil::setBooleanField(jobject object, const char *name, int value) {
     }else{
         env->SetBooleanField(object, fid, JNI_FALSE);
     }
-
 }

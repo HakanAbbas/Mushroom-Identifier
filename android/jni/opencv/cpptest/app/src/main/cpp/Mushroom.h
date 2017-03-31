@@ -21,8 +21,8 @@ public:
     Vec3b bgr;
     Vec3b hsv_v; //HSV Bereich Begin (von)
     Vec3b hsv_b; //HSV Bereich Ende (bis)
-    Vec3b hsv_v2;//HSV Bereich Begin (von) fürr Rott�ne
-    Vec3b hsv_b2;//HSV Bereich Ende (bis) f�r Rott�ne
+    Vec3b hsv_v2;//HSV Bereich Begin (von)
+    Vec3b hsv_b2;//HSV Bereich Ende (bis)
     string name;
     string wiki; //Wikipedia Link
     int lamell;

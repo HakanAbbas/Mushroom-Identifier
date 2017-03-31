@@ -1,6 +1,13 @@
 package com.mushroom.android.cpptest;
 
+import android.Manifest;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -8,18 +15,25 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
+
+import permissions.dispatcher.NeedsPermission;
+import permissions.dispatcher.RuntimePermissions;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,9 +47,23 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private TextView fragen;
 
+    private String imagePath;
+
+    private File file;
+    private Uri fileUri;
+
     private List<Pilz> pilze = null;
 
     private List<Mushroom> mushrooms = null;
+
+    private Mushroom[] mushrooms1 = null;
+
+    private MushroomDetector mushRoom = new MushroomDetector();
+
+    File photo = null;
+
+    private Uri mImageUri;
+
 
     private static final String TAG = "MainActivity" ;
 
@@ -43,42 +71,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*
-        AssetUtilities assetUtilities = new AssetUtilities(this);
-        TextView tv = (TextView) findViewById(R.id.sample_text);
-        ImageView originalImageView = (ImageView)findViewById(R.id.image);
-        ImageView grayedView = (ImageView)findViewById(R.id.gray);
-        AssetManager assetManager = getAssets();
-        MushroomDetector mushRoom = new MushroomDetector();
-        File[] files = fetchImages();
-        for (File file: files) {
-            Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
-            originalImageView.setImageBitmap(bitmap);
-            Mushroom mushroom = new Mushroom();
-            mushroom.bgr = new byte[] {(byte)0x01, (byte)0x02, (byte)0x03};
-            mushroom.mushroomName = "a name";
-            Mushroom[] templates = new Mushroom[] {mushroom};
-            Mushroom[] mushrooms = mushRoom.computeSchwammerlType(templates, file.getAbsolutePath());
-            Log.d(TAG, "found file " + file +  " type " + mushrooms);
-            bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
-            grayedView.setImageBitmap(bitmap);
-        }
-    }
-    private File[] fetchImages() {
-        File cacheDir = getCacheDir();
-        File destinationFolder = new File(cacheDir, "mushroomimages");
-        AssetUtilities assetUtilities = new AssetUtilities(this);
-        File[] files = new File[0];
-        try {
-            files = assetUtilities.copyAssetToCacheFolder("mushroomimages", destinationFolder);
-        } catch (IOException e) {
-            Log.e(TAG, "failed to fetch images from assets", e);
-        }
-        return files;
-    }
-    */
-
-        MushroomDetector mushRoom = new MushroomDetector();
 
 
         fragen = (TextView) findViewById(R.id.Fragen);
@@ -98,22 +90,21 @@ public class MainActivity extends AppCompatActivity {
         result = (ImageView) findViewById(R.id.imageView);
 
 
-
         try{
             XMLPullParserHandler parser = new XMLPullParserHandler();
             //pilze = parser.parse(getAssets().open("schwammerl.xml"));
             mushrooms = parser.parse(getAssets().open("schwammerl.xml"));
 
-        }catch ( IOException e){
-            e.printStackTrace();
-        }/*
-        Mushroom[] mushrooms1 = new Mushroom[mushrooms.size()];
+        }catch ( IOException a){
+            a.printStackTrace();
+        }
+        this.mushrooms1 = new Mushroom[mushrooms.size()];
         for(int i = 0; i < mushrooms.size()-1; i++){
             mushrooms1[i] = mushrooms.get(i);
         }
-        //Mushroom[] erkenntePilze = mushRoom.computeSchwammerlType(mushrooms1, "somePathtoPicture");
+        //Mushroom[] erkenntePilze = mushRoom.computeSchwammerlType(mushrooms1, "falscher Pfad");
 
-*/
+
 
 
 
@@ -151,11 +142,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void dispatchTakePictureIntent(View view) {
+    public void dispatchTakePictureIntent(View view) throws IOException {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
+    }
+
+    private String saveToInternalStorage(Bitmap bitmapImage){
+        ContextWrapper cw = new ContextWrapper(getApplicationContext());
+        // path to /data/data/yourapp/app_data/imageDir
+        File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
+        // Create imageDir
+        File mypath=new File(directory,"profile.jpg");
+
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(mypath);
+            // Use the compress method on the BitMap object to write image to the OutputStream
+            bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fos);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                fos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return directory.getAbsolutePath();
     }
 
     @Override
@@ -164,8 +179,14 @@ public class MainActivity extends AppCompatActivity {
             if( requestCode == REQUEST_IMAGE_CAPTURE ) {
                 Bundle extras = data.getExtras();
                 this.bitmap = (Bitmap) extras.get("data");
+                String pathname = saveToInternalStorage(this.bitmap);
                 result.setImageBitmap(this.bitmap);
                 result.setAdjustViewBounds(false);
+
+
+                mushrooms1 = mushRoom.computeSchwammerlType(this.mushrooms1, pathname + "/profile.jpg");
+                System.out.println("asldjasldökj");
+
             }else if( requestCode == IMAGE_GALLERY_REQUEST){
 
                 Uri imageUri = data.getData();
@@ -179,12 +200,16 @@ public class MainActivity extends AppCompatActivity {
 
                     imageView.setImageBitmap(bitmap);
                     imageView.setAdjustViewBounds(true);
+
+                    String pathname = saveToInternalStorage(this.bitmap);
+                    mushrooms1 = mushRoom.computeSchwammerlType(this.mushrooms1, pathname + "/profile.jpg");
                 }catch(FileNotFoundException e){
                     e.printStackTrace();
                     Toast.makeText(this, "Unable to open image", Toast.LENGTH_LONG).show();
                 }
             }
-        }//else if(requestCode == IMAGE_GALLERY_REQUEST && resultCode == RESULT_OK)
+        }
+
     }
 
     public void clickedJa(View button) {
@@ -240,6 +265,18 @@ public class MainActivity extends AppCompatActivity {
             neinButton.setVisibility(View.INVISIBLE);
         }
 
+    }
+
+    public String getOriginalImagePath() {
+        String[] projection = { MediaStore.Images.Media.DATA };
+        Cursor cursor = this.managedQuery(
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                projection, null, null, null);
+        int column_index_data = cursor
+                .getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+        cursor.moveToLast();
+
+        return cursor.getString(column_index_data);
     }
 
     public void clickedNein(View button){
@@ -331,37 +368,3 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
-/*
-        AssetUtilities assetUtilities = new AssetUtilities(this);
-        TextView tv = (TextView) findViewById(R.id.sample_text);
-        ImageView originalImageView = (ImageView)findViewById(R.id.image);
-        ImageView grayedView = (ImageView)findViewById(R.id.gray);
-        AssetManager assetManager = getAssets();
-        MushroomDetector mushRoom = new MushroomDetector();
-        File[] files = fetchImages();
-        for (File file: files) {
-            Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
-            originalImageView.setImageBitmap(bitmap);
-            Mushroom mushroom = new Mushroom();
-            mushroom.bgr = new byte[] {(byte)0x01, (byte)0x02, (byte)0x03};
-            mushroom.mushroomName = "a name";
-            Mushroom[] templates = new Mushroom[] {mushroom};
-            Mushroom[] mushrooms = mushRoom.computeSchwammerlType(templates, file.getAbsolutePath());
-            Log.d(TAG, "found file " + file +  " type " + mushrooms);
-            bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
-            grayedView.setImageBitmap(bitmap);
-        }
-    }
-    private File[] fetchImages() {
-        File cacheDir = getCacheDir();
-        File destinationFolder = new File(cacheDir, "mushroomimages");
-        AssetUtilities assetUtilities = new AssetUtilities(this);
-        File[] files = new File[0];
-        try {
-            files = assetUtilities.copyAssetToCacheFolder("mushroomimages", destinationFolder);
-        } catch (IOException e) {
-            Log.e(TAG, "failed to fetch images from assets", e);
-        }
-        return files;
-    }
-    */

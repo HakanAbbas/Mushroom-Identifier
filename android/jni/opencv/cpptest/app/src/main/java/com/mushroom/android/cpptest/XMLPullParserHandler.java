@@ -57,7 +57,7 @@ public class XMLPullParserHandler {
                 switch(eventType) {
                     case XmlPullParser.START_TAG:
 
-                        if(tagname.equalsIgnoreCase("Mushroom")) {
+                        if(tagname.equalsIgnoreCase("Pilz")) {
                             pilz = new Pilz();
                             mushrooms = new Mushroom();
                         }
@@ -70,7 +70,7 @@ public class XMLPullParserHandler {
 
                     case XmlPullParser.END_TAG:
 
-                        if(tagname.equalsIgnoreCase("Mushroom")) {
+                        if(tagname.equalsIgnoreCase("Pilz")) {
                             mushroom.add(mushrooms);
                         }else if(tagname.equalsIgnoreCase("Farbe")) {
                             byte[] bytes = new byte[3];

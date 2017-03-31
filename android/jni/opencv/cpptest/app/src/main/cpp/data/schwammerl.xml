@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+
+	
+	<Pilz>
+		<Farbe b="13" g="138" r="208"> </Farbe>
+		<Name>Eierschwammerl</Name>
+		<HSV-von h="11" s="145" v="145"> </HSV-von>
+		<HSV-bis h="27" s="255" v="255"> </HSV-bis>
+		<HSV-von2 h="0" s="0" v="0"> </HSV-von2>
+		<HSV-bis2 h="0" s="0" v="0"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+		<Giftigkeit>0</Giftigkeit>
+		<Rund>0</Rund>
+		<Lamellen>1</Lamellen>
+		<Knolle>0</Knolle>
+		<Stiel> einen Stiel der 3-6 cm lang, 1-2cm dick, hellgelb, feinfaserig-schuppig und an der Basis zugespitzt ist</Stiel>
+	</Pilz>
+		
+	<Pilz>
+		<Farbe b="121" g="95" r="209"> </Farbe>
+		<Name>Fliegenpilz</Name>
+		<HSV-von h="0" s="100" v="100"> </HSV-von>
+		<HSV-bis h="8" s="255" v="255"> </HSV-bis>
+		<HSV-von2 h="170" s="100" v="100"> </HSV-von2>
+		<HSV-bis2 h="180" s="255" v="255"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Fliegenpilz</Wiki>
+		<Giftigkeit>1</Giftigkeit>
+		<Rund>1</Rund>
+		<Lamellen>0</Lamellen>
+		<Knolle>0</Knolle>
+		<Stiel> 13</Stiel>
+	</Pilz>
+	
+	<Pilz>
+		<Farbe   b="55" g="63" r="91"> </Farbe>
+		<Name>Steinpilz</Name>
+		<HSV-von h="6" s="0" v="0"> </HSV-von>
+		<HSV-bis h="21" s="255" v="211"> </HSV-bis>
+		<HSV-von2 h="0" s="0" v="0"> </HSV-von2>
+		<HSV-bis2 h="0" s="0" v="0"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Steinpilze</Wiki>
+		<Giftigkeit>0</Giftigkeit>
+		<Rund>1</Rund>
+		<Lamellen>0</Lamellen>
+		<Knolle>0</Knolle>
+		<Stiel> einen Stiel bis 15cm lang; 3-4cm dick; weiﬂlich bis blassbraun; jung knollig, dann schlank und hat ein weiﬂes Netz an der Spitze hat</Stiel>
+	</Pilz>
+	
+	<Pilz>
+		<Farbe b="13" g="138" r="208"> </Farbe>
+		<Name>Ballschwammerl</Name>
+		<HSV-von h="11" s="145" v="145"> </HSV-von>
+		<HSV-bis h="27" s="255" v="255"> </HSV-bis>
+		<HSV-von2 h="0" s="0" v="0"> </HSV-von2>
+		<HSV-bis2 h="0" s="0" v="0"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+		<Giftigkeit>0</Giftigkeit>
+		<Rund>1</Rund>
+		<Lamellen>1</Lamellen>
+		<Knolle>1</Knolle>
+		<Stiel> einen Stiel, der aussieht wie der eines Ballschwammerls</Stiel>
+	</Pilz>
+	
+	<Pilz>
+		<Farbe b="13" g="138" r="208"> </Farbe>
+		<Name>Gurkenschwammerl</Name>
+		<HSV-von h="11" s="145" v="145"> </HSV-von>
+		<HSV-bis h="27" s="255" v="255"> </HSV-bis>
+		<HSV-von2 h="0" s="0" v="0"> </HSV-von2>
+		<HSV-bis2 h="0" s="0" v="0"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+		<Giftigkeit>0</Giftigkeit>
+		<Rund>1</Rund>
+		<Lamellen>0</Lamellen>
+		<Knolle>1</Knolle>
+		<Stiel> einen Stiel, der aussieht wie der eines Gurkenschwammerls</Stiel>
+	</Pilz>
+	
+	<Pilz>
+		<Farbe b="2" g="225" r="253"> </Farbe>
+		<Name>gelb</Name>
+		<HSV-von h="26" s="164" v="166"> </HSV-von>
+		<HSV-bis h="34" s="255" v="255"> </HSV-bis>
+		<HSV-von2 h="0" s="0" v="0"> </HSV-von2>
+		<HSV-bis2 h="0" s="0" v="0"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+		<Giftigkeit>0</Giftigkeit>
+		<Rund>0</Rund>
+		<Lamellen>1</Lamellen>
+		<Knolle>0</Knolle>
+		<Stiel>gelb</Stiel>
+	</Pilz>
+	
+	<Pilz>
+		<Farbe b="13" g="138" r="208"> </Farbe>
+		<Name>Treeschwammerl</Name>
+		<HSV-von h="11" s="145" v="145"> </HSV-von>
+		<HSV-bis h="27" s="255" v="255"> </HSV-bis>
+		<HSV-von2 h="0" s="0" v="0"> </HSV-von2>
+		<HSV-bis2 h="0" s="0" v="0"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+		<Giftigkeit>0</Giftigkeit>
+		<Rund>0</Rund>
+		<Lamellen>1</Lamellen>
+		<Knolle>0</Knolle>
+		<Stiel>einen Stiel, der aussieht wie der eines Treeschwammerls</Stiel>
+	</Pilz>
+	
+	<Pilz>
+		<Farbe b="70" g="60" r="50"> </Farbe>
+		<Name>schwarz3</Name>
+		<HSV-von h="25" s="24" v="24"> </HSV-von>
+		<HSV-bis h="220" s="35" v="30"> </HSV-bis>
+		<HSV-von2 h="0" s="0" v="0"> </HSV-von2>
+		<HSV-bis2 h="0" s="0" v="0"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+		<Giftigkeit>0</Giftigkeit>
+		<Rund>0</Rund>
+		<Lamellen>1</Lamellen>
+		<Knolle>0</Knolle>
+		<Stiel>schwarz</Stiel>
+	</Pilz>
+	
+	<Pilz>
+		<Farbe b="13" g="138" r="208"> </Farbe>
+		<Name>Baumschwammerl</Name>
+		<HSV-von h="11" s="145" v="145"> </HSV-von>
+		<HSV-bis h="27" s="255" v="255"> </HSV-bis>
+		<HSV-von2 h="0" s="0" v="0"> </HSV-von2>
+		<HSV-bis2 h="0" s="0" v="0"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+		<Giftigkeit>0</Giftigkeit>
+		<Rund>0</Rund>
+		<Lamellen>1</Lamellen>
+		<Knolle>1</Knolle>
+		<Stiel>einen Stiel, der aussieht wie der eines Baumschwammerls</Stiel>
+	</Pilz>
+	
+	<Pilz>
+		<Farbe b="24" g="88" r="142"> </Farbe>
+		<Name>Fuchsiger Roetelritterling</Name>
+		<HSV-von h="11" s="145" v="145"> </HSV-von>
+		<HSV-bis h="27" s="255" v="255"> </HSV-bis>
+		<HSV-von2 h="0" s="0" v="0"> </HSV-von2>
+		<HSV-bis2 h="0" s="0" v="0"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Fuchsiger_R%C3%B6telritterling</Wiki>
+		<Giftigkeit>0</Giftigkeit>
+		<Rund>1</Rund>
+		<Lamellen>1</Lamellen>
+		<Knolle>0</Knolle>
+		<Stiel>leicht abloesbare Lamellen</Stiel>
+	</Pilz>
+	<Pilz>
+		<Farbe b="217" g="223" r="222"> </Farbe>
+		<Name>Flaschenbovist</Name>
+		<HSV-von h="0" s="0" v="50"> </HSV-von>
+		<HSV-bis h="255" s="30" v="255"> </HSV-bis>
+		<HSV-von2 h="0" s="0" v="0"> </HSV-von2>
+		<HSV-bis2 h="0" s="0" v="0"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Fuchsiger_R%C3%B6telritterling</Wiki>
+		<Giftigkeit>0</Giftigkeit>
+		<Rund>1</Rund>
+		<Lamellen>1</Lamellen>
+		<Knolle>0</Knolle>
+		<Stiel>leicht abloesbare Lamellen</Stiel>
+	</Pilz>
+	<Pilz>
+		<Farbe b="195" g="196" r="184"> </Farbe>
+		<Name>Gruenspantraeuschling</Name>
+		<HSV-von h="30" s="0" v="30"> </HSV-von>
+		<HSV-bis h="110" s="255" v="255"> </HSV-bis>
+		<HSV-von2 h="0" s="0" v="0"> </HSV-von2>
+		<HSV-bis2 h="0" s="0" v="0"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Fuchsiger_R%C3%B6telritterling</Wiki>
+		<Giftigkeit>0</Giftigkeit>
+		<Rund>1</Rund>
+		<Lamellen>1</Lamellen>
+		<Knolle>0</Knolle>
+		<Stiel>leicht abloesbare Lamellen</Stiel>
+	</Pilz>
+	
+	<Pilz>
+		<Farbe b="13" g="138" r="208"> </Farbe>
+		<Name>Falscher Pfifferling</Name>
+		<HSV-von h="9" s="115" v="115"> </HSV-von>
+		<HSV-bis h="30" s="255" v="255"> </HSV-bis>
+		<HSV-von2 h="0" s="0" v="0"> </HSV-von2>
+		<HSV-bis2 h="0" s="0" v="0"> </HSV-bis2>
+		<Wiki>https://de.wikipedia.org/wiki/Fuchsiger_R%C3%B6telritterling</Wiki>
+		<Giftigkeit>0</Giftigkeit>
+		<Rund>0</Rund>
+		<Lamellen>1</Lamellen>
+		<Knolle>0</Knolle>
+		<Stiel>auch unter der Oberflaeche orange</Stiel>
+	</Pilz>

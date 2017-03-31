@@ -1,14 +1,15 @@
 package com.mushroom.android.cpptest;
 
+
+import android.graphics.Bitmap;
+
 /**
  * Schwammerlerkennungs - JNI Bridge
  */
 
 public class MushroomDetector {
-    /** find the Schwammerl with native MushroomDetector C++ Code that uses OpenCV
-     */
     static {
         System.loadLibrary("mushroomlib");
     }
-    public native Mushroom[] computeSchwammerlType(Mushroom[] templates, String pathToSchwammerlImage);
+    public native Mushroom[] computeSchwammerlType(Mushroom[] templates, String imagePath);
 }
