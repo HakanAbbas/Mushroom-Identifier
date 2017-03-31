@@ -1,12 +1,12 @@
 ﻿  Source.cpp
-c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(96): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(113): warning C4244: '=': conversion from 'double' to 'uchar', possible loss of data
+c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(97): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
 c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(114): warning C4244: '=': conversion from 'double' to 'uchar', possible loss of data
 c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(115): warning C4244: '=': conversion from 'double' to 'uchar', possible loss of data
-c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(169): warning C4101: 'capture': unreferenced local variable
-c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(212): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(116): warning C4244: '=': conversion from 'double' to 'uchar', possible loss of data
+c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(170): warning C4101: 'capture': unreferenced local variable
 c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(213): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(218): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(229): warning C4102: 'std': unreferenced label
-c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(452): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(214): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(219): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(230): warning C4102: 'std': unreferenced label
+c:\users\hakan\desktop\mushroom-identifier\common\source.cpp(453): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   OPENCV31.vcxproj -> C:\Users\Hakan\Desktop\Mushroom-Identifier\OPENCV31\x64\Debug\OPENCV31.exe
