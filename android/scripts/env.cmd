@@ -1,7 +1,7 @@
 SET CURDIR=%~dp0
 call %CURDIR%findjavahome.cmd
 
-SET STANDALONE_TOOLCHAIN=%CURDIR%ndk\ndk-x86_64
+SET STANDALONE_TOOLCHAIN=%CURDIR%ndk\ndk-armeabi
 
 SET ANDROID_SDK=C:\Users\Hakan\AppData\Local\Android\sdk
 SET NDK=%ANDROID_SDK%\ndk-bundle
@@ -10,7 +10,7 @@ SET ANDROID_NDK=%NDK%
 SET PYTHON_HOME=C:\Users\Hakan\AppData\Local\Programs\Python\Python36-32
 SET CMAKE_HOME=%ProgramFiles%\CMake
 
-SET OPENCV_SOURCE_CODE_DIR=C:\Users\Hakan\Desktop\5AHIF\Diplomarbeit_MushroomIdentifier\opencv-3.2.0
+SET OPENCV_SOURCE_CODE_DIR=C:\Users\Hakan\Desktop\opencv-3.2.0
 
 SET CC=clang
 SET CXX=clang++

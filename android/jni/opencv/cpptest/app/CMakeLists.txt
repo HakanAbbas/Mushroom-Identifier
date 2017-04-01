@@ -52,10 +52,10 @@ add_custom_command(
 	DEPENDS	"${INTERFACE_FILE}"
 )
 
-link_directories("C:/Users/Hakan/Desktop/5AHIF/Diplomarbeit_MushroomIdentifier/opencv-3.2.0/install/sdk/native/libs/x86_64")
+link_directories("C:/Users/Hakan/Desktop/opencv-3.2.0/install/sdk/native/libs/armeabi-v7a")
 find_library(log-lib log)
 
-set(TOOLCHAIN_LIB64 ${STANDALONE_TOOLCHAIN}/x86_64-linux-android/lib64)
+set(TOOLCHAIN_LIB64 ${STANDALONE_TOOLCHAIN}/arm-linux-androideabi/lib)
 find_library(stl-lib gnustl_shared
 	HINTS "${TOOLCHAIN_LIB64}" NO_CMAKE_FIND_ROOT_PATH
 )
