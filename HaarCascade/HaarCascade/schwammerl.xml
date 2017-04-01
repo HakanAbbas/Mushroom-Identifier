@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+    <Schwammerl>
+	
+		<Eierschwammerl b="14">
+			<Farbe b="13" g="138" r="208"> </Farbe>
+			<HSV-von h="11" s="145" v="145"> </HSV-von>
+			<HSV-bis h="27" s="255" v="255"> </HSV-von>
+			<Wiki>https://de.wikipedia.org/wiki/Echter_Pfifferling</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>0</Rund>
+			<Lamellen>1</Lamellen>
+		</Eierschwammerl>
+			
+		<Fliegenpilz>
+			<Farbe   b="121" g="95" r="209"> </Farbe>
+			<HSV-von h="0" s="100" v="100"> </HSV-von>
+			<HSV-bis h="8" s="255" v="255"> </HSV-von>
+			<Wiki>https://de.wikipedia.org/wiki/Fliegenpilz</Wiki>
+			<Giftigkeit>1</Giftigkeit>
+			<Rund>1</Rund>
+			<Lamellen>0</Lamellen>
+		</Fliegenpilz>
+		
+		<Steinpilz>
+			<Farbe   b="55" g="63" r="91"> </Farbe>
+			<HSV-von h="0" s="0" v="0"> </HSV-von>
+			<HSV-bis h="150" s="255" v="255"> </HSV-von>
+			<Wiki>https://de.wikipedia.org/wiki/Steinpilze</Wiki>
+			<Giftigkeit>0</Giftigkeit>
+			<Rund>1</Rund>
+			<Lamellen>0</Lamellen>
+		</Steinpilz>
+	</Schwammerl>
