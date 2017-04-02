@@ -12,8 +12,8 @@
 
 @interface OpenCVWrapper : NSObject
 
-+(NSMutableArray<PilzC *> *) DetectByColor:(UIImage*) img : (NSString*) xmlpath1 : (NSString*) xmlpath2;
++(NSMutableArray<PilzC *> *) detectMushroom: (UIImage*) img : (NSString*) xmlpath1 : (NSString*) xmlpath2;
 
-+(NSMutableArray<PilzC *> *) allMushs: (NSString*) xmlpath;
++(NSMutableArray<PilzC *> *) allMushrooms: (NSString*) xmlpath;
 
 @end

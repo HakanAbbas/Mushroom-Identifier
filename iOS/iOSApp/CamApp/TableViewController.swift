@@ -75,7 +75,7 @@ class TableViewController: UITableViewController /*, XMLParserDelegate */ {
         
         let url:URL = bundle.url(forResource: "schwammerl", withExtension: "xml")! as URL
         
-        var a:NSMutableArray  = OpenCVWrapper.allMushs(url.path)
+        let a:NSMutableArray  = OpenCVWrapper.allMushrooms(url.path)
         
         mutToArray(mutArr: a, pilzArr: &pilze)
         
@@ -90,30 +90,30 @@ class TableViewController: UITableViewController /*, XMLParserDelegate */ {
         for i in 0...to {
             p.Name = (mutArr[i] as! PilzC).name
             p.Wiki = (mutArr[i] as! PilzC).wiki
-            p.Stiel = (mutArr[i] as! PilzC).stiel
+            p.Stiel = (mutArr[i] as! PilzC).stalk
             
-            if((mutArr[i] as! PilzC).giftigkeitt == 0){
+            if((mutArr[i] as! PilzC).poisonous == 0){
                 p.Giftigkeit = false
             }
             else{
                 p.Giftigkeit = true
             }
             
-            if((mutArr[i] as! PilzC).rund == 0){
+            if((mutArr[i] as! PilzC).round == 0){
                 p.Rund = false
             }
             else{
                 p.Rund = true
             }
             
-            if((mutArr[i] as! PilzC).lamellen == 0){
+            if((mutArr[i] as! PilzC).lamell == 0){
                 p.Lamellen = false
             }
             else{
                 p.Lamellen = true
             }
             
-            if((mutArr[i] as! PilzC).knolle == 0){
+            if((mutArr[i] as! PilzC).nodule == 0){
                 p.Knolle = false
             }
             else{

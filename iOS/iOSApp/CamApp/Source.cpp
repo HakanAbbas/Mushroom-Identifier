@@ -1,5 +1,5 @@
 #include "opencv2/opencv.hpp"
-#include "data/Markup.h"
+#include "Markup.h"
 #include "opencv2/objdetect/objdetect.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
@@ -7,21 +7,24 @@
 
 using namespace cv;
 using namespace std;
+
 //PILZ KLASSE///////////////////////////////////////////////////////////////////////////////////////////////////
 class Pilz { //Pilzklasse
 public:
 	Vec3b bgr; //BGR Farbe
 	Vec3b hsv_v; //HSV Bereich Begin (von)
 	Vec3b hsv_b; //HSV Bereich Ende (bis)
-	Vec3b hsv_v2;//HSV Bereich Begin (von) f�r Rott�ne
-	Vec3b hsv_b2;//HSV Bereich Ende (bis) f�r Rott�ne
+	Vec3b hsv_v2;//HSV Bereich Begin (von) für Rottöne
+	Vec3b hsv_b2;//HSV Bereich Ende (bis) für Rottöne
 	string name; //Name des Pilzes
 	string wiki; //Wikipedia Link
-	string lamell; //1 f�r es gibt Lamellen, 0 f�r es gibt keine Lamellen, Eigenschaftswort f�r "Hat der pilz ... Lamellen?"
+	int lamell; //1 für es gibt Lamellen, 0 für es gibt
+                //keine Lamellen, Eigenschaftswort für
+                //"Hat der pilz ... Lamellen?"
 	int roud; //ist der Pilz Rund, 1 ja, 0 nein
 	int poisonous; //ist der Pilz giftig, 1 ja, 0 nein
-	string nodule; //= Knolle, Eigenschaftswort (z. B. dicke, rundliche etc.)
-	string stalk;
+	int nodule; //= Knolle, Eigenschaftswort (z. B. dicke, rundliche etc.)
+	string stalk;   //Stiel
 };
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -45,7 +48,7 @@ Mat dst, detected_edges;
 int edgeThresh = 1;
 int lowThreshold = 70;
 int const max_lowThreshold = 70;
-int ratio = 3;
+int ratioo = 3;
 int kernel_size = 3;
 
 
@@ -56,6 +59,8 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 {
 	Mat image_gray;
 
+    cout << "rows: " << image.rows;
+    cout << "cols: " << image.cols;
 
 	vector<Pilz>mushlist = readxml(xmlReadMushPath); //Liste aller gelesenen Pilze
 	vector<Pilz>mushlist2;
@@ -117,7 +122,7 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 
 	//umwandlung von BGR in HSV
 	cv::cvtColor(image, hsv_image, cv::COLOR_BGR2HSV);
-
+cout << "read" << mushlist2.size() << "read";
 	//Errechnen, ob der Pilz von der Farbe her mit einem oder mehrerem aus dem xml-File �bereinstimmt
 	for (int i = 0; i<mushlist.size(); i++)
 	{
@@ -130,7 +135,7 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 			cv::addWeighted(hsv_first, 1.0, hsvhelp, 1.0, 0.0, hsv_first);
 
 		}
-	}
+	}cout << "read" << mushlist2.size() << "read";
 	if (mushlist2.size() == 0) {
 		return mushlist2;
 	}
@@ -147,7 +152,7 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 
 
 	// Gasusscher Weichzeichner
-	GaussianBlur(src_gray, src_gray, Size(9, 9), 2, 2);
+    GaussianBlur(src_gray, src_gray, cv::Size(9, 9), 2, 2);
 
 
 
@@ -195,21 +200,21 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 /** @function detectAndDisplay */
 int detectAndDisplay(Mat frame) //Markus�ss Maschinelles Lernen Algorithmus 
 {
-	std::vector<Rect> faces;
+    std::vector<cv::Rect> faces;
 	Mat frame_gray;
 
 	cvtColor(frame, frame_gray, CV_BGR2GRAY);
 	equalizeHist(frame_gray, frame_gray);
 
 	//-- Detect faces
-	face_cascade.detectMultiScale(frame_gray, faces, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, Size(30, 30));
+    face_cascade.detectMultiScale(frame_gray, faces, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, cv::Size(30, 30));
 
 	for (size_t i = 0; i < faces.size(); i++)
 	{
-		Point center(faces[i].x + faces[i].width*0.5, faces[i].y + faces[i].height*0.5);
-		ellipse(frame, center, Size(faces[i].width*0.5, faces[i].height*0.5), 0, 0, 360, Scalar(255, 0, 255), 4, 8, 0);
+        cv::Point center(faces[i].x + faces[i].width*0.5, faces[i].y + faces[i].height*0.5);
+        ellipse(frame, center, cv::Size(faces[i].width*0.5, faces[i].height*0.5), 0, 0, 360, Scalar(255, 0, 255), 4, 8, 0);
 
-		Mat faceROI = frame_gray(faces[i]);
+        cv::Mat faceROI = frame_gray(faces[i]);
 	}
 
 	return faces.size();
@@ -296,10 +301,10 @@ vector<Pilz> readxml(std::string path) {
 			//Lamellen
 			//Knolle
 			xml.FindElem(MCD_T("Lamellen"));
-			mush.lamell = xml.GetData();
+			mush.lamell = stoi(xml.GetData().c_str());
 
 			xml.FindElem(MCD_T("Knolle"));
-			mush.nodule = xml.GetData();
+			mush.nodule = stoi(xml.GetData().c_str());
 
 			xml.FindElem(MCD_T("Stiel"));
 			mush.stalk = xml.GetData();
@@ -334,10 +339,10 @@ int myStoi(const string& _Str, size_t *_Idx,
 void CannyThreshold(int, void*)
 {
 	/// Reduce noise with a kernel 3x3
-	blur(src_gray, detected_edges, Size(3, 3));
+    blur(src_gray, detected_edges, cv::Size(3, 3));
 
 	/// Canny detector
-	Canny(detected_edges, detected_edges, lowThreshold, lowThreshold*ratio, kernel_size);
+    Canny(detected_edges, detected_edges, lowThreshold, lowThreshold*ratioo, kernel_size);
 
 	/// Using Canny's output as a mask, we display our result
 	dst = Scalar::all(0);
@@ -430,13 +435,13 @@ int HoughDetection(const Mat& src_gray, const Mat& src_display, int cannyThresho
 	// will hold the results of the detection
 	std::vector<Vec3f> circles;
 	// runs the actual detection
-	HoughCircles(src_gray, circles, HOUGH_GRADIENT, 1, src_gray.rows / 8, cannyThreshold, accumulatorThreshold, 0, 0);
+    HoughCircles(src_gray, circles, CV_HOUGH_GRADIENT, 1, src_gray.rows / 8, cannyThreshold, accumulatorThreshold, 0, 0);
 
 	// clone the colour, input image for displaying purposes
 	Mat display = src_display.clone();
 	for (size_t i = 0; i < circles.size(); i++)
 	{
-		Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
+        cv::Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
 		int radius = cvRound(circles[i][2]);
 		// circle center
 		circle(display, center, 3, Scalar(0, 255, 0), -1, 8, 0);

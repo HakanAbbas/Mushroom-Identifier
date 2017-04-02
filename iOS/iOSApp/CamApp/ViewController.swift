@@ -15,13 +15,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var mushroomImage: UIImageView!
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var selectPhotoButton: UIButton!
-    @IBOutlet weak var showResultLabel: UILabel!
+    
+    @IBOutlet weak var showResultLabel: UITextView!
     
     @IBOutlet weak var backgroundView: UIView!
     
     @IBOutlet weak var buttonYes: UIButton!
     @IBOutlet weak var buttonNo: UIButton!
     
+    @IBOutlet weak var spaceTopLabel: UIView!
+    @IBOutlet weak var spaceBottomLabel: UIView!
     
     var a = OpenCVWrapper();
     
@@ -48,8 +51,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         selectPhotoButton.layer.borderColor = theme.secondaryColor.cgColor
         
         showResultLabel.textAlignment = .center
+        showResultLabel.backgroundColor = theme.viewbackground
         
-        showResultLabel.font.withSize(10)
+        showResultLabel.sizeToFit()
+        showResultLabel.layoutIfNeeded()
+        showResultLabel.isScrollEnabled = false
+        showResultLabel.isEditable = false
+        
+        showResultLabel.font?.withSize(10)
+        
+        spaceBottomLabel.backgroundColor = theme.viewbackground
+        spaceTopLabel.backgroundColor = theme.viewbackground
         /*let url:NSURL = Bundle.main.url(forResource: "mushident", withExtension: "png")! as NSURL
         
         let str:String = url.path!
@@ -88,7 +100,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(picker, animated: true, completion: nil)
     }
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         mushroomImage.image = info[UIImagePickerControllerEditedImage] as? UIImage
         //mushroomImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         dismiss(animated: true, completion: nil)
@@ -105,8 +117,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         //showResultLabel.text = String(describing: OpenCVWrapper.detect(byColor: mushroomImage.image, url1.path, url2.path))
         //mushroomImage.image = OpenCVWrapper.DetectByColor(mushroomImage.image)
-        
-        let a:NSMutableArray = OpenCVWrapper.detect(byColor: mushroomImage.image, url1.path, url2.path)
+
+        let a:NSMutableArray = OpenCVWrapper.detectMushroom(mushroomImage.image, url1.path, url2.path)
         
         mutToArray(mutArr: a, pilzArr: &possiblePilze)
         
@@ -137,30 +149,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             for i in 0...to {
                 p.Name = (mutArr[i] as! PilzC).name
                 p.Wiki = (mutArr[i] as! PilzC).wiki
-                p.Stiel = (mutArr[i] as! PilzC).stiel
+                p.Stiel = (mutArr[i] as! PilzC).stalk
             
-                if((mutArr[i] as! PilzC).giftigkeitt == 0){
+                if((mutArr[i] as! PilzC).poisonous == 0){
                     p.Giftigkeit = false
                 }
                 else{
                     p.Giftigkeit = true
                 }
             
-                if((mutArr[i] as! PilzC).rund == 0){
+                if((mutArr[i] as! PilzC).round == 0){
                     p.Rund = false
                 }
                 else{
                     p.Rund = true
                 }
             
-                if((mutArr[i] as! PilzC).lamellen == 0){
+                if((mutArr[i] as! PilzC).lamell == 0){
                     p.Lamellen = false
                 }
                 else{
                     p.Lamellen = true
                 }
             
-                if((mutArr[i] as! PilzC).knolle == 0){
+                if((mutArr[i] as! PilzC).nodule == 0){
                     p.Knolle = false
                 }
                 else{
@@ -213,7 +225,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             possiblePilze = possiblePilze2
             
             if(possiblePilze.count > 1){
-                showResultLabel.text = "Hat ihr Pilz einen Stiel der " + possiblePilze[0].Stiel;
+                showResultLabel.text = "Hat ihr Pilz " + possiblePilze[0].Stiel + "?"
             }
             else if(possiblePilze.count == 1){
                 showResultLabel.text = possiblePilze[0].Name
@@ -272,7 +284,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             possiblePilze = possiblePilze2
             
             if(possiblePilze.count > 1){
-                showResultLabel.text = "Hat ihr Pilz einen Stiel der " + possiblePilze[0].Stiel;
+                showResultLabel.text = "Hat ihr Pilz " + possiblePilze[0].Stiel + "?"
             }
             else if(possiblePilze.count == 1){
                 showResultLabel.text = possiblePilze[0].Name
@@ -294,7 +306,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 possiblePilze = possiblePilze2
             
             
-                showResultLabel.text = "Hat ihr Pilz einen Stiel der " + possiblePilze[0].Stiel
+                showResultLabel.text = "Hat ihr Pilz " + possiblePilze[0].Stiel + "?"
             }
             else{
                 showResultLabel.text = "Leider keine Übereinstimmung"

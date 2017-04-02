@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C033224C1E5D1FCB001DADE4 /* PilzC.h in Sources */ = {isa = PBXBuildFile; fileRef = C08A580A1E5D146400AE46B8 /* PilzC.h */; };
-		C054AF2C1DE22520009F5360 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = C054AF2B1DE22520009F5360 /* OpenCVWrapper.mm */; };
 		C054AF2E1DE225F6009F5360 /* schwammerl.xml in Resources */ = {isa = PBXBuildFile; fileRef = C054AF2D1DE225F6009F5360 /* schwammerl.xml */; };
 		C05B59661E52663D00183EC0 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C05B59641E52663D00183EC0 /* camera.png */; };
 		C05B59671E52663D00183EC0 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C05B59651E52663D00183EC0 /* camera@2x.png */; };
@@ -28,9 +27,9 @@
 		C08A00A71E51F9EC00AD23AB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A00A61E51F9EC00AD23AB /* Theme.swift */; };
 		C08A57FB1E5C50CD00AE46B8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A57FA1E5C50CD00AE46B8 /* DetailViewController.swift */; };
 		C08A57FD1E5CE67D00AE46B8 /* mushroom_cascade.xml in Resources */ = {isa = PBXBuildFile; fileRef = C08A57FC1E5CE67D00AE46B8 /* mushroom_cascade.xml */; };
-		C08A57FF1E5CECC700AE46B8 /* Pilz.mm in Sources */ = {isa = PBXBuildFile; fileRef = C08A57FE1E5CECC700AE46B8 /* Pilz.mm */; };
 		C08A580C1E5D14B000AE46B8 /* PilzC.m in Sources */ = {isa = PBXBuildFile; fileRef = C08A580B1E5D14B000AE46B8 /* PilzC.m */; };
-		C0912BD71E701ACF005CB823 /* Source.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0912BD61E701ACF005CB823 /* Source.cpp */; };
+		C0912BDB1E702937005CB823 /* OpenCVWrapper.h in Sources */ = {isa = PBXBuildFile; fileRef = C0912BD81E701B58005CB823 /* OpenCVWrapper.h */; };
+		C0912BDC1E70293A005CB823 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0912BD91E701B58005CB823 /* OpenCVWrapper.mm */; };
 		C092591C1DDF1FDD00057E51 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C092591B1DDF1FDD00057E51 /* opencv2.framework */; };
 		C09259251DDF217300057E51 /* Markup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C09259231DDF217300057E51 /* Markup.cpp */; };
 		C09259271DDF2EDE00057E51 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C09259261DDF2EDE00057E51 /* libjpeg.a */; };
@@ -61,8 +60,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C054AF2A1DE22520009F5360 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
-		C054AF2B1DE22520009F5360 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		C054AF2D1DE225F6009F5360 /* schwammerl.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = schwammerl.xml; path = ../schwammerl.xml; sourceTree = "<group>"; };
 		C05B59641E52663D00183EC0 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		C05B59651E52663D00183EC0 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
@@ -88,10 +85,11 @@
 		C08A00A61E51F9EC00AD23AB /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C08A57FA1E5C50CD00AE46B8 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C08A57FC1E5CE67D00AE46B8 /* mushroom_cascade.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = mushroom_cascade.xml; path = ../mushroom_cascade.xml; sourceTree = "<group>"; };
-		C08A57FE1E5CECC700AE46B8 /* Pilz.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Pilz.mm; sourceTree = "<group>"; };
 		C08A580A1E5D146400AE46B8 /* PilzC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PilzC.h; sourceTree = "<group>"; };
 		C08A580B1E5D14B000AE46B8 /* PilzC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PilzC.m; sourceTree = "<group>"; };
-		C0912BD61E701ACF005CB823 /* Source.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Source.cpp; sourceTree = "<group>"; };
+		C0912BD41E7011FB005CB823 /* Source.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Source.cpp; sourceTree = "<group>"; };
+		C0912BD81E701B58005CB823 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		C0912BD91E701B58005CB823 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		C092591B1DDF1FDD00057E51 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../opencv2.framework; sourceTree = "<group>"; };
 		C092591D1DDF204300057E51 /* CamApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CamApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C09259231DDF217300057E51 /* Markup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Markup.cpp; path = ../Markup.cpp; sourceTree = "<group>"; };
@@ -178,10 +176,12 @@
 		C05F68231D65DE4C000932F6 /* CamApp */ = {
 			isa = PBXGroup;
 			children = (
-				C0912BD61E701ACF005CB823 /* Source.cpp */,
+				C0912BD41E7011FB005CB823 /* Source.cpp */,
 				C09259261DDF2EDE00057E51 /* libjpeg.a */,
 				C09259231DDF217300057E51 /* Markup.cpp */,
 				C09259241DDF217300057E51 /* Markup.h */,
+				C0912BD81E701B58005CB823 /* OpenCVWrapper.h */,
+				C0912BD91E701B58005CB823 /* OpenCVWrapper.mm */,
 				C092591B1DDF1FDD00057E51 /* opencv2.framework */,
 				C05F68241D65DE4C000932F6 /* AppDelegate.swift */,
 				C05F68261D65DE4C000932F6 /* ViewController.swift */,
@@ -192,12 +192,9 @@
 				C05F682B1D65DE4C000932F6 /* Assets.xcassets */,
 				C05F682D1D65DE4C000932F6 /* LaunchScreen.storyboard */,
 				C05F68301D65DE4C000932F6 /* Info.plist */,
-				C054AF2A1DE22520009F5360 /* OpenCVWrapper.h */,
-				C054AF2B1DE22520009F5360 /* OpenCVWrapper.mm */,
 				C08A00A61E51F9EC00AD23AB /* Theme.swift */,
 				C0F068011E585AFC00F06118 /* Pilz.swift */,
 				C05B59591E52625300183EC0 /* data */,
-				C08A57FE1E5CECC700AE46B8 /* Pilz.mm */,
 				C08A580A1E5D146400AE46B8 /* PilzC.h */,
 				C08A580B1E5D14B000AE46B8 /* PilzC.m */,
 			);
@@ -285,7 +282,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = user;
 				TargetAttributes = {
 					C05F68201D65DE4C000932F6 = {
@@ -372,17 +369,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0912BDC1E70293A005CB823 /* OpenCVWrapper.mm in Sources */,
+				C0912BDB1E702937005CB823 /* OpenCVWrapper.h in Sources */,
 				C033224C1E5D1FCB001DADE4 /* PilzC.h in Sources */,
 				C08A580C1E5D14B000AE46B8 /* PilzC.m in Sources */,
-				C08A57FF1E5CECC700AE46B8 /* Pilz.mm in Sources */,
 				C08A57FB1E5C50CD00AE46B8 /* DetailViewController.swift in Sources */,
 				C05F68271D65DE4C000932F6 /* ViewController.swift in Sources */,
 				C05B59C11E54E47700183EC0 /* TableViewController.swift in Sources */,
 				C05F68251D65DE4C000932F6 /* AppDelegate.swift in Sources */,
 				C0F068031E585AFC00F06118 /* Pilz.swift in Sources */,
 				C08A00A71E51F9EC00AD23AB /* Theme.swift in Sources */,
-				C0912BD71E701ACF005CB823 /* Source.cpp in Sources */,
-				C054AF2C1DE22520009F5360 /* OpenCVWrapper.mm in Sources */,
 				C09259251DDF217300057E51 /* Markup.cpp in Sources */,
 				C0D97E561E576C9C00603A31 /* InfoController.swift in Sources */,
 			);
@@ -452,10 +448,8 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -498,10 +492,8 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -520,7 +512,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -537,6 +528,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = CamApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -567,6 +559,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = CamApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
