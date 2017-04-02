@@ -10,9 +10,9 @@ import UIKit
 
 class DetailViewController: UITableViewController {
 
-    var pilz = Pilz()
+    var mushroom = Mushroom()
     var cells = Array<String>()
-    var indexPilz:Int = 0
+    var indexMushroom:Int = 0
     let theme = ThemeManager.currentTheme()
     
     /*
@@ -78,38 +78,38 @@ class DetailViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        self.openUrl(url: pilz.Wiki)
+        self.openUrl(url: mushroom.wiki)
     }
     
     func initView(){
         
-        self.cells.append(self.pilz.Name)
+        self.cells.append(self.mushroom.name)
         
         
-        if(self.pilz.Giftigkeit){
+        if(self.mushroom.poisonous){
             self.cells.append("giftig")
         }
         else{
             self.cells.append("nicht giftig")
         }
         
-        self.cells.append(self.pilz.Stiel)
+        self.cells.append(self.mushroom.stalk)
         
-        if(self.pilz.Rund){
+        if(self.mushroom.round){
             self.cells.append("rund")
         }
         else{
             self.cells.append("nicht rund")
         }
         
-        if(self.pilz.Lamellen){
+        if(self.mushroom.lamell){
             self.cells.append("hat Lamellen")
         }
         else{
             self.cells.append("hat keine Lamellen")
         }
         
-        if(self.pilz.Knolle){
+        if(self.mushroom.nodule){
             self.cells.append("hat eine Knolle")
         }
         else{

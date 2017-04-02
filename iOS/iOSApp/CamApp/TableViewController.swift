@@ -10,32 +10,34 @@ import UIKit
 
 class TableViewController: UITableViewController /*, XMLParserDelegate */ {
     
-    var a = OpenCVWrapper();
-    
+/*
     var strXMLData:String = ""
     var currentElement:String = ""
     var passData:Bool=false
     var passName:Bool=false
     var parser = XMLParser()
-    var pilz = Pilz()
-    var pilze = Array<Pilz>()
+ */
+    
+    var clickedMushroom = Mushroom()
+    var mushrooms = Array<Mushroom>()
     
     var name = false
     var wiki = false
-    var giftigkeit = false
-    var rund = false
-    var lamelle = false
-    var knolle = false
-    var stiel = false
+    var poisonous = false
+    var round = false
+    var lamell = false
+    var nodule = false
+    var stalk = false
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         let theme = ThemeManager.currentTheme()
         
         self.view.backgroundColor = theme.viewbackground
         
-        parseXml()
+        loadMushrooms()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -49,17 +51,17 @@ class TableViewController: UITableViewController /*, XMLParserDelegate */ {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pilze.count
+        return mushrooms.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
-        cell.textLabel?.text = pilze[indexPath.row].Name
+        cell.textLabel?.text = mushrooms[indexPath.row].name
         
         let bundle = Bundle.main
         
-        if let url = (bundle.url(forResource: pilze[indexPath.row].Name, withExtension: "png")) {
+        if let url = (bundle.url(forResource: mushrooms[indexPath.row].name, withExtension: "png")) {
             cell.imageView?.image = UIImage(contentsOfFile: url.path)
         }
         else{
@@ -70,59 +72,58 @@ class TableViewController: UITableViewController /*, XMLParserDelegate */ {
         return cell
     }
     
-    func parseXml(){
+    func loadMushrooms(){
         let bundle = Bundle.main
         
         let url:URL = bundle.url(forResource: "schwammerl", withExtension: "xml")! as URL
         
-        let a:NSMutableArray  = OpenCVWrapper.allMushrooms(url.path)
+        let mushroomsC:NSMutableArray  = OpenCVWrapper.allMushrooms(url.path)
         
-        mutToArray(mutArr: a, pilzArr: &pilze)
+        mutToArray(mutArr: mushroomsC, mushroomArr: &mushrooms)
         
-        print("")
     }
     
-    func mutToArray(mutArr: NSMutableArray, pilzArr: inout Array<Pilz>){
-        var p = Pilz()
+    func mutToArray(mutArr: NSMutableArray, mushroomArr: inout Array<Mushroom>){
+        var tempMushroom = Mushroom()
         
-        let to = mutArr.count - 1
+        let arrSize = mutArr.count - 1
         
-        for i in 0...to {
-            p.Name = (mutArr[i] as! PilzC).name
-            p.Wiki = (mutArr[i] as! PilzC).wiki
-            p.Stiel = (mutArr[i] as! PilzC).stalk
+        for i in 0...arrSize {
+            tempMushroom.name = (mutArr[i] as! PilzC).name
+            tempMushroom.wiki = (mutArr[i] as! PilzC).wiki
+            tempMushroom.stalk = (mutArr[i] as! PilzC).stalk
             
             if((mutArr[i] as! PilzC).poisonous == 0){
-                p.Giftigkeit = false
+                tempMushroom.poisonous = false
             }
             else{
-                p.Giftigkeit = true
+                tempMushroom.poisonous = true
             }
             
             if((mutArr[i] as! PilzC).round == 0){
-                p.Rund = false
+                tempMushroom.round = false
             }
             else{
-                p.Rund = true
+                tempMushroom.round = true
             }
             
             if((mutArr[i] as! PilzC).lamell == 0){
-                p.Lamellen = false
+                tempMushroom.lamell = false
             }
             else{
-                p.Lamellen = true
+                tempMushroom.lamell = true
             }
             
             if((mutArr[i] as! PilzC).nodule == 0){
-                p.Knolle = false
+                tempMushroom.nodule = false
             }
             else{
-                p.Knolle = true
+                tempMushroom.nodule = true
             }
             
-            pilzArr.append(p)
+            mushroomArr.append(tempMushroom)
             
-            p = Pilz()
+            tempMushroom = Mushroom()
         }
     }
 
@@ -271,12 +272,12 @@ class TableViewController: UITableViewController /*, XMLParserDelegate */ {
             let destViewController = segue.destination as! DetailViewController
             //let currentCell = tableView.cellForRow(at: indexPath!)! as UITableViewCell
             
-            destViewController.pilz = pilze[(indexPath?.row)!]
-            destViewController.indexPilz = (indexPath?.row)!
+            destViewController.mushroom = mushrooms[(indexPath?.row)!]
+            destViewController.indexMushroom = (indexPath?.row)!
             
             print("Zelle: ")
             print(indexPath?.row)
-            print(destViewController.pilz)
+            print(destViewController.mushroom)
         }
     }
 

@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    var possiblePilze = Array<Pilz>()
+    var possibleMushrooms = Array<Mushroom>()
     
     @IBOutlet weak var mushroomImage: UIImageView!
     @IBOutlet weak var cameraButton: UIButton!
@@ -26,14 +26,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var spaceTopLabel: UIView!
     @IBOutlet weak var spaceBottomLabel: UIView!
     
-    var a = OpenCVWrapper();
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //mushroomImage.image = OpenCVWrapper.DetectByColor(2)
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //mushroomImage.backgroundColor = theme.viewbackground
         
         let theme = ThemeManager.currentTheme()
         
@@ -62,20 +57,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         spaceBottomLabel.backgroundColor = theme.viewbackground
         spaceTopLabel.backgroundColor = theme.viewbackground
-        /*let url:NSURL = Bundle.main.url(forResource: "mushident", withExtension: "png")! as NSURL
-        
-        let str:String = url.path!
-        
-        let logo = UIBarButtonItem(image: UIImage(named: str), style: UIBarButtonItemStyle.bordered, target: nil, action: nil)
-        
-        self.navigationItem.rightBarButtonItem = logo*/
         
         backgroundView.backgroundColor = theme.viewbackground
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     
@@ -105,30 +92,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //mushroomImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         dismiss(animated: true, completion: nil)
         
-        getPilz()
+        getMushroom()
     }
     
-    func getPilz(){
+    func getMushroom(){
         let bundle = Bundle.main
         
         let url1:NSURL = bundle.url(forResource: "schwammerl", withExtension: "xml")! as NSURL
         let url2:NSURL = bundle.url(forResource: "mushroom_cascade", withExtension: "xml")! as NSURL
-        possiblePilze = Array<Pilz>()
-        
-        //showResultLabel.text = String(describing: OpenCVWrapper.detect(byColor: mushroomImage.image, url1.path, url2.path))
-        //mushroomImage.image = OpenCVWrapper.DetectByColor(mushroomImage.image)
+        possibleMushrooms = Array<Mushroom>()
 
-        let a:NSMutableArray = OpenCVWrapper.detectMushroom(mushroomImage.image, url1.path, url2.path)
+        let mushrooms:NSMutableArray = OpenCVWrapper.detectMushroom(mushroomImage.image, url1.path, url2.path)
         
-        mutToArray(mutArr: a, pilzArr: &possiblePilze)
+        mutToArray(mutArr: mushrooms, mushroomArr: &possibleMushrooms)
         
-        if(possiblePilze.count > 1){
+        if(possibleMushrooms.count > 1){
             showResultLabel.text = "Hat ihr Pilz Lamellen?";
             buttonYes.isHidden = false
             buttonNo.isHidden = false
         }
-        else if(possiblePilze.count == 1){
-            showResultLabel.text = possiblePilze[0].Name
+        else if(possibleMushrooms.count == 1){
+            showResultLabel.text = possibleMushrooms[0].name
             buttonYes.isHidden = true
             buttonNo.isHidden = true
         }
@@ -140,70 +124,70 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    func mutToArray(mutArr: NSMutableArray, pilzArr: inout Array<Pilz>){
-        var p = Pilz()
+    func mutToArray(mutArr: NSMutableArray, mushroomArr: inout Array<Mushroom>){
+        var tempMushroom = Mushroom()
         
-        let to = mutArr.count - 1
+        let arrSize = mutArr.count - 1
         
-        if(to >= 0){
-            for i in 0...to {
-                p.Name = (mutArr[i] as! PilzC).name
-                p.Wiki = (mutArr[i] as! PilzC).wiki
-                p.Stiel = (mutArr[i] as! PilzC).stalk
+        if(arrSize >= 0){
+            for i in 0...arrSize {
+                tempMushroom.name = (mutArr[i] as! PilzC).name
+                tempMushroom.wiki = (mutArr[i] as! PilzC).wiki
+                tempMushroom.stalk = (mutArr[i] as! PilzC).stalk
             
                 if((mutArr[i] as! PilzC).poisonous == 0){
-                    p.Giftigkeit = false
+                    tempMushroom.poisonous = false
                 }
                 else{
-                    p.Giftigkeit = true
+                    tempMushroom.poisonous = true
                 }
             
                 if((mutArr[i] as! PilzC).round == 0){
-                    p.Rund = false
+                    tempMushroom.round = false
                 }
                 else{
-                    p.Rund = true
+                    tempMushroom.round = true
                 }
             
                 if((mutArr[i] as! PilzC).lamell == 0){
-                    p.Lamellen = false
+                    tempMushroom.lamell = false
                 }
                 else{
-                    p.Lamellen = true
+                    tempMushroom.lamell = true
                 }
             
                 if((mutArr[i] as! PilzC).nodule == 0){
-                    p.Knolle = false
+                    tempMushroom.nodule = false
                 }
                 else{
-                    p.Knolle = true
+                    tempMushroom.nodule = true
                 }
             
-                pilzArr.append(p)
+                mushroomArr.append(tempMushroom)
             
-                p = Pilz()
+                tempMushroom = Mushroom()
             }
         }
     }
     
     @IBAction func clickedYes(_ sender: UIButton) {
-        var possiblePilze2 = Array<Pilz>()
-        let to = possiblePilze.count-1
+        var possibleMushrooms2 = Array<Mushroom>()
+        let arrSize = possibleMushrooms.count-1
         
         if(showResultLabel.text == "Hat ihr Pilz Lamellen?"){
             
-            for i in 0...to {
-                if(possiblePilze[i].Lamellen){
-                    possiblePilze2.append(possiblePilze[i])
+            for i in 0...arrSize {
+                if(possibleMushrooms[i].lamell){
+                    possibleMushrooms2.append(possibleMushrooms[i])
                 }
             }
-            possiblePilze = possiblePilze2
+            possibleMushrooms = possibleMushrooms2
             
-            if(possiblePilze.count > 1){
+            if(possibleMushrooms.count > 1){
                 showResultLabel.text = "Hat ihr Pilz eine Knolle?"
             }
-            else if(possiblePilze.count == 1){
-                showResultLabel.text = possiblePilze[0].Name
+            else if(possibleMushrooms.count == 1){
+                showResultLabel.text = possibleMushrooms[0].name
                 buttonYes.isHidden = true
                 buttonNo.isHidden = true
             }
@@ -217,18 +201,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         else if(showResultLabel.text == "Hat ihr Pilz eine Knolle?"){
             
-            for i in 0...to {
-                if(possiblePilze[i].Knolle){
-                    possiblePilze2.append(possiblePilze[i])
+            for i in 0...arrSize {
+                if(possibleMushrooms[i].nodule){
+                    possibleMushrooms2.append(possibleMushrooms[i])
                 }
             }
-            possiblePilze = possiblePilze2
+            possibleMushrooms = possibleMushrooms2
             
-            if(possiblePilze.count > 1){
-                showResultLabel.text = "Hat ihr Pilz " + possiblePilze[0].Stiel + "?"
+            if(possibleMushrooms.count > 1){
+                showResultLabel.text = "Hat ihr Pilz " + possibleMushrooms[0].stalk + "?"
             }
-            else if(possiblePilze.count == 1){
-                showResultLabel.text = possiblePilze[0].Name
+            else if(possibleMushrooms.count == 1){
+                showResultLabel.text = possibleMushrooms[0].name
                 buttonYes.isHidden = true
                 buttonNo.isHidden = true
             }
@@ -241,29 +225,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("")
         }
         else{
-            showResultLabel.text = possiblePilze[0].Name
+            showResultLabel.text = possibleMushrooms[0].name
             buttonYes.isHidden = true
             buttonNo.isHidden = true
         }
     }
     
     @IBAction func clickedNo(_ sender: UIButton) {
-        var possiblePilze2 = Array<Pilz>()
-        let to = possiblePilze.count-1
+        var possibleMushrooms2 = Array<Mushroom>()
+        let arrSize = possibleMushrooms.count-1
         
         if(showResultLabel.text == "Hat ihr Pilz Lamellen?"){
-            for i in 0...to {
-                if(!possiblePilze[i].Lamellen){
-                    possiblePilze2.append(possiblePilze[i])
+            for i in 0...arrSize {
+                if(!possibleMushrooms[i].lamell){
+                    possibleMushrooms2.append(possibleMushrooms[i])
                 }
             }
-            possiblePilze = possiblePilze2
+            possibleMushrooms = possibleMushrooms2
             
-            if(possiblePilze.count > 1){
+            if(possibleMushrooms.count > 1){
                 showResultLabel.text = "Hat ihr Pilz eine Knolle?";
             }
-            else if(possiblePilze.count == 1){
-                showResultLabel.text = possiblePilze[0].Name
+            else if(possibleMushrooms.count == 1){
+                showResultLabel.text = possibleMushrooms[0].name
                 buttonYes.isHidden = true
                 buttonNo.isHidden = true
             }
@@ -276,18 +260,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
             
         else if(showResultLabel.text == "Hat ihr Pilz eine Knolle?"){
-            for i in 0...to {
-                if(!possiblePilze[i].Knolle){
-                    possiblePilze2.append(possiblePilze[i])
+            for i in 0...arrSize {
+                if(!possibleMushrooms[i].nodule){
+                    possibleMushrooms2.append(possibleMushrooms[i])
                 }
             }
-            possiblePilze = possiblePilze2
+            possibleMushrooms = possibleMushrooms2
             
-            if(possiblePilze.count > 1){
-                showResultLabel.text = "Hat ihr Pilz " + possiblePilze[0].Stiel + "?"
+            if(possibleMushrooms.count > 1){
+                showResultLabel.text = "Hat ihr Pilz " + possibleMushrooms[0].stalk + "?"
             }
-            else if(possiblePilze.count == 1){
-                showResultLabel.text = possiblePilze[0].Name
+            else if(possibleMushrooms.count == 1){
+                showResultLabel.text = possibleMushrooms[0].name
                 buttonYes.isHidden = true
                 buttonNo.isHidden = true
             }
@@ -299,14 +283,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("")
         }
         else{
-            if(possiblePilze.count > 1){
-                for i in 1...to {
-                    possiblePilze2.append(possiblePilze[i])
+            if(possibleMushrooms.count > 1){
+                for i in 1...arrSize {
+                    possibleMushrooms2.append(possibleMushrooms[i])
                 }
-                possiblePilze = possiblePilze2
+                possibleMushrooms = possibleMushrooms2
             
             
-                showResultLabel.text = "Hat ihr Pilz " + possiblePilze[0].Stiel + "?"
+                showResultLabel.text = "Hat ihr Pilz " + possibleMushrooms[0].stalk + "?"
             }
             else{
                 showResultLabel.text = "Leider keine Übereinstimmung"

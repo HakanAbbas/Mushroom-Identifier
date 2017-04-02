@@ -33,13 +33,13 @@
 		C092591C1DDF1FDD00057E51 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C092591B1DDF1FDD00057E51 /* opencv2.framework */; };
 		C09259251DDF217300057E51 /* Markup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C09259231DDF217300057E51 /* Markup.cpp */; };
 		C09259271DDF2EDE00057E51 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C09259261DDF2EDE00057E51 /* libjpeg.a */; };
+		C095831B1E9182530026FBF8 /* Mushroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095831A1E9182530026FBF8 /* Mushroom.swift */; };
 		C09AF5161E62216B00CC2CFC /* Eierschwammerl.png in Resources */ = {isa = PBXBuildFile; fileRef = C09AF5141E62216B00CC2CFC /* Eierschwammerl.png */; };
 		C09AF5171E62216B00CC2CFC /* Eierschwammerl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C09AF5151E62216B00CC2CFC /* Eierschwammerl@2x.png */; };
 		C09AF51A1E6224BE00CC2CFC /* Fliegenpilz.png in Resources */ = {isa = PBXBuildFile; fileRef = C09AF5181E6224BE00CC2CFC /* Fliegenpilz.png */; };
 		C09AF51B1E6224BE00CC2CFC /* Fliegenpilz@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C09AF5191E6224BE00CC2CFC /* Fliegenpilz@2x.png */; };
 		C0BBAD7C1E60E0C600170472 /* lupe.png in Resources */ = {isa = PBXBuildFile; fileRef = C0BBAD7A1E60E0C600170472 /* lupe.png */; };
 		C0D97E561E576C9C00603A31 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D97E551E576C9C00603A31 /* InfoController.swift */; };
-		C0F068031E585AFC00F06118 /* Pilz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F068011E585AFC00F06118 /* Pilz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,13 +95,13 @@
 		C09259231DDF217300057E51 /* Markup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Markup.cpp; path = ../Markup.cpp; sourceTree = "<group>"; };
 		C09259241DDF217300057E51 /* Markup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Markup.h; path = ../Markup.h; sourceTree = "<group>"; };
 		C09259261DDF2EDE00057E51 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../libjpeg.a; sourceTree = "<group>"; };
+		C095831A1E9182530026FBF8 /* Mushroom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mushroom.swift; sourceTree = "<group>"; };
 		C09AF5141E62216B00CC2CFC /* Eierschwammerl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eierschwammerl.png; sourceTree = "<group>"; };
 		C09AF5151E62216B00CC2CFC /* Eierschwammerl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Eierschwammerl@2x.png"; sourceTree = "<group>"; };
 		C09AF5181E6224BE00CC2CFC /* Fliegenpilz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fliegenpilz.png; sourceTree = "<group>"; };
 		C09AF5191E6224BE00CC2CFC /* Fliegenpilz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fliegenpilz@2x.png"; sourceTree = "<group>"; };
 		C0BBAD7A1E60E0C600170472 /* lupe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lupe.png; sourceTree = "<group>"; };
 		C0D97E551E576C9C00603A31 /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
-		C0F068011E585AFC00F06118 /* Pilz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pilz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,7 @@
 				C05F682D1D65DE4C000932F6 /* LaunchScreen.storyboard */,
 				C05F68301D65DE4C000932F6 /* Info.plist */,
 				C08A00A61E51F9EC00AD23AB /* Theme.swift */,
-				C0F068011E585AFC00F06118 /* Pilz.swift */,
+				C095831A1E9182530026FBF8 /* Mushroom.swift */,
 				C05B59591E52625300183EC0 /* data */,
 				C08A580A1E5D146400AE46B8 /* PilzC.h */,
 				C08A580B1E5D14B000AE46B8 /* PilzC.m */,
@@ -376,8 +376,8 @@
 				C08A57FB1E5C50CD00AE46B8 /* DetailViewController.swift in Sources */,
 				C05F68271D65DE4C000932F6 /* ViewController.swift in Sources */,
 				C05B59C11E54E47700183EC0 /* TableViewController.swift in Sources */,
+				C095831B1E9182530026FBF8 /* Mushroom.swift in Sources */,
 				C05F68251D65DE4C000932F6 /* AppDelegate.swift in Sources */,
-				C0F068031E585AFC00F06118 /* Pilz.swift in Sources */,
 				C08A00A71E51F9EC00AD23AB /* Theme.swift in Sources */,
 				C09259251DDF217300057E51 /* Markup.cpp in Sources */,
 				C0D97E561E576C9C00603A31 /* InfoController.swift in Sources */,
