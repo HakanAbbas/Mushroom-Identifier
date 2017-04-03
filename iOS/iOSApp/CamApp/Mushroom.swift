@@ -1,3 +1,11 @@
+//
+//  Mushroom.swift
+//  MushroomIdentifier
+//
+//  Created by Markus Arbeithuber on 15.12.16.
+//  Copyright © 2016 user. All rights reserved.
+//
+
 class Mushroom {
 
     var name: String

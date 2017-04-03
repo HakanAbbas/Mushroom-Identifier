@@ -1,3 +1,10 @@
+//
+//  OpenCVWrapper.m
+//  MushroomIdentifier
+//
+//  Created by Markus Arbeithuber on 31.01.17.
+//  Copyright © 2017 user. All rights reserved.
+//
 
 import UIKit
 

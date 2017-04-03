@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  CamApp
+//  MushroomIdentifier
 //
-//  Created by mbkair02 on 18.08.16.
+//  Created by Markus Arbeithuber on 18.08.16.
 //  Copyright © 2016 user. All rights reserved.
 //
 

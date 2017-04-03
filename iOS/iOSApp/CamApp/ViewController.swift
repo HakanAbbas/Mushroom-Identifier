@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  CamApp
+//  MushroomIdentifier
 //
-//  Created by mbkair02 on 18.08.16.
+//  Created by Markus Arbeithuber on 18.08.16.
 //  Copyright © 2016 user. All rights reserved.
 //
 
@@ -133,32 +133,32 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         if(arrSize >= 0){
             for i in 0...arrSize {
-                tempMushroom.name = (mutArr[i] as! PilzC).name
-                tempMushroom.wiki = (mutArr[i] as! PilzC).wiki
-                tempMushroom.stalk = (mutArr[i] as! PilzC).stalk
+                tempMushroom.name = (mutArr[i] as! MushroomC).name
+                tempMushroom.wiki = (mutArr[i] as! MushroomC).wiki
+                tempMushroom.stalk = (mutArr[i] as! MushroomC).stalk
             
-                if((mutArr[i] as! PilzC).poisonous == 0){
+                if((mutArr[i] as! MushroomC).poisonous == 0){
                     tempMushroom.poisonous = false
                 }
                 else{
                     tempMushroom.poisonous = true
                 }
             
-                if((mutArr[i] as! PilzC).round == 0){
+                if((mutArr[i] as! MushroomC).round == 0){
                     tempMushroom.round = false
                 }
                 else{
                     tempMushroom.round = true
                 }
             
-                if((mutArr[i] as! PilzC).lamell == 0){
+                if((mutArr[i] as! MushroomC).lamell == 0){
                     tempMushroom.lamell = false
                 }
                 else{
                     tempMushroom.lamell = true
                 }
             
-                if((mutArr[i] as! PilzC).nodule == 0){
+                if((mutArr[i] as! MushroomC).nodule == 0){
                     tempMushroom.nodule = false
                 }
                 else{

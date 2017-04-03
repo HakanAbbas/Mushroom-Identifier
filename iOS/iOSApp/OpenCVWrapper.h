@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "PilzC.h"
+#import "MushroomC.h"
 
 @interface OpenCVWrapper : NSObject
 
-+(NSMutableArray<PilzC *> *) detectMushroom: (UIImage*) img : (NSString*) xmlpath1 : (NSString*) xmlpath2;
++(NSMutableArray<MushroomC *> *) detectMushroom: (UIImage*) img : (NSString*) xmlpath1 : (NSString*) xmlpath2;
 
-+(NSMutableArray<PilzC *> *) allMushrooms: (NSString*) xmlpath;
++(NSMutableArray<MushroomC *> *) allMushrooms: (NSString*) xmlpath;
 
 @end

@@ -13,7 +13,7 @@
         <!--Pilzanalyse-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CamApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MushroomIdentifier" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -153,7 +153,7 @@
         <!--InfoView-->
         <scene sceneID="Xsg-Vx-PcU">
             <objects>
-                <viewController id="9lb-Lr-0cy" userLabel="InfoView" customClass="InfoController" customModule="CamApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9lb-Lr-0cy" userLabel="InfoView" customClass="InfoController" customModule="MushroomIdentifier" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sBu-Xf-KMM"/>
                         <viewControllerLayoutGuide type="bottom" id="ajX-vo-BMX"/>
@@ -161,18 +161,67 @@
                     <view key="view" contentMode="scaleToFill" id="rAM-4g-hRZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lamellen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="diN-UW-RNE">
+                                <rect key="frame" x="165" y="84" width="135" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="diN-UW-RNE" secondAttribute="height" multiplier="135:137" id="ziz-iD-qi7"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lamellen können an der Unterseite des Hutes gefunden werden (siehe Abbildung rechts)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vpK-qF-1GL" userLabel="Lamell">
+                                <rect key="frame" x="20" y="84" width="135" height="137"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text für Knolle einfügen (siehe Abbildung links)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="roT-5x-96H" userLabel="Nodule">
+                                <rect key="frame" x="165" y="285" width="139" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="roT-5x-96H" secondAttribute="height" multiplier="139:128" id="0B9-tS-Vsc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.png" translatesAutoresizingMaskIntoConstraints="NO" id="dsM-gd-Lm8">
+                                <rect key="frame" x="16" y="290" width="139" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dsM-gd-Lm8" secondAttribute="height" multiplier="135:131" id="4kq-n8-MrT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="roT-5x-96H" secondAttribute="trailing" id="44V-Uo-xTX"/>
+                            <constraint firstItem="roT-5x-96H" firstAttribute="top" secondItem="diN-UW-RNE" secondAttribute="bottom" constant="64" id="7iJ-xv-JzO"/>
+                            <constraint firstAttribute="trailing" secondItem="diN-UW-RNE" secondAttribute="trailing" constant="20" id="Gtr-lW-y4U"/>
+                            <constraint firstItem="vpK-qF-1GL" firstAttribute="top" secondItem="sBu-Xf-KMM" secondAttribute="bottom" constant="20" id="IeT-co-4Gu"/>
+                            <constraint firstItem="dsM-gd-Lm8" firstAttribute="leading" secondItem="rAM-4g-hRZ" secondAttribute="leadingMargin" id="PVb-ij-jTn"/>
+                            <constraint firstItem="dsM-gd-Lm8" firstAttribute="top" secondItem="vpK-qF-1GL" secondAttribute="bottom" constant="69" id="QSd-oe-BaV"/>
+                            <constraint firstItem="roT-5x-96H" firstAttribute="leading" secondItem="dsM-gd-Lm8" secondAttribute="trailing" constant="10" id="Vcw-AI-bkg"/>
+                            <constraint firstItem="vpK-qF-1GL" firstAttribute="leading" secondItem="rAM-4g-hRZ" secondAttribute="leading" constant="20" id="Wmg-Kt-F0S"/>
+                            <constraint firstItem="vpK-qF-1GL" firstAttribute="bottom" secondItem="diN-UW-RNE" secondAttribute="bottom" id="ZSu-Vz-ZCM"/>
+                            <constraint firstItem="diN-UW-RNE" firstAttribute="leading" secondItem="vpK-qF-1GL" secondAttribute="trailing" constant="10" id="fIz-dl-yYY"/>
+                            <constraint firstItem="diN-UW-RNE" firstAttribute="top" secondItem="sBu-Xf-KMM" secondAttribute="bottom" constant="20" id="jMj-uG-DRM"/>
+                            <constraint firstItem="roT-5x-96H" firstAttribute="leading" secondItem="diN-UW-RNE" secondAttribute="leading" id="qPC-CH-Cu3"/>
+                            <constraint firstItem="vpK-qF-1GL" firstAttribute="width" secondItem="diN-UW-RNE" secondAttribute="width" id="tfS-Zd-zkN"/>
+                            <constraint firstItem="ajX-vo-BMX" firstAttribute="top" secondItem="roT-5x-96H" secondAttribute="bottom" constant="106" id="uJ5-QX-gEl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Informationen" id="a20-VK-del"/>
+                    <connections>
+                        <outlet property="lamell" destination="vpK-qF-1GL" id="fNc-Ns-CGt"/>
+                        <outlet property="nodule" destination="roT-5x-96H" id="shf-Vu-fJW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mb-BI-7VR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="795.5" y="2057.5"/>
+            <point key="canvasLocation" x="795" y="2056.6901408450703"/>
         </scene>
         <!--Pilzliste-->
         <scene sceneID="aoP-dZ-Sxw">
             <objects>
-                <tableViewController id="yiY-3e-aVg" customClass="TableViewController" customModule="CamApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="yiY-3e-aVg" customClass="TableViewController" customModule="MushroomIdentifier" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kPv-Cr-MFK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +231,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GDx-qb-lBA" id="ee4-dY-X6E">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -205,7 +254,7 @@
         <!--Details-->
         <scene sceneID="hAg-Pa-abc">
             <objects>
-                <tableViewController id="3fk-3U-Blx" customClass="DetailViewController" customModule="CamApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3fk-3U-Blx" customClass="DetailViewController" customModule="MushroomIdentifier" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7W6-YI-jVd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,7 +264,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Upf-ge-tvi" id="Xnt-lc-t4O">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration">
@@ -312,6 +361,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Lamellen.jpg" width="608" height="597"/>
         <image name="info.png" width="30" height="30"/>
         <image name="liste.png" width="30" height="30"/>
         <image name="lupe.png" width="30" height="30"/>

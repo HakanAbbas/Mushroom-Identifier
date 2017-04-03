@@ -26,12 +26,13 @@
 		C08A00A71E51F9EC00AD23AB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A00A61E51F9EC00AD23AB /* Theme.swift */; };
 		C08A57FB1E5C50CD00AE46B8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A57FA1E5C50CD00AE46B8 /* DetailViewController.swift */; };
 		C08A57FD1E5CE67D00AE46B8 /* mushroom_cascade.xml in Resources */ = {isa = PBXBuildFile; fileRef = C08A57FC1E5CE67D00AE46B8 /* mushroom_cascade.xml */; };
-		C08A580C1E5D14B000AE46B8 /* PilzC.m in Sources */ = {isa = PBXBuildFile; fileRef = C08A580B1E5D14B000AE46B8 /* PilzC.m */; };
+		C08A580C1E5D14B000AE46B8 /* MushroomC.m in Sources */ = {isa = PBXBuildFile; fileRef = C08A580B1E5D14B000AE46B8 /* MushroomC.m */; };
 		C0912BDC1E70293A005CB823 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0912BD91E701B58005CB823 /* OpenCVWrapper.mm */; };
 		C092591C1DDF1FDD00057E51 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C092591B1DDF1FDD00057E51 /* opencv2.framework */; };
 		C09259251DDF217300057E51 /* Markup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C09259231DDF217300057E51 /* Markup.cpp */; };
 		C09259271DDF2EDE00057E51 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C09259261DDF2EDE00057E51 /* libjpeg.a */; };
 		C095831B1E9182530026FBF8 /* Mushroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095831A1E9182530026FBF8 /* Mushroom.swift */; };
+		C095831D1E92E1AA0026FBF8 /* Lamellen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C095831C1E92E1AA0026FBF8 /* Lamellen.jpg */; };
 		C09AF5161E62216B00CC2CFC /* Eierschwammerl.png in Resources */ = {isa = PBXBuildFile; fileRef = C09AF5141E62216B00CC2CFC /* Eierschwammerl.png */; };
 		C09AF5171E62216B00CC2CFC /* Eierschwammerl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C09AF5151E62216B00CC2CFC /* Eierschwammerl@2x.png */; };
 		C09AF51A1E6224BE00CC2CFC /* Fliegenpilz.png in Resources */ = {isa = PBXBuildFile; fileRef = C09AF5181E6224BE00CC2CFC /* Fliegenpilz.png */; };
@@ -67,24 +68,24 @@
 		C05B59751E52697C00183EC0 /* liste@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "liste@2x.png"; sourceTree = "<group>"; };
 		C05B59841E53212600183EC0 /* mushident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mushident.png; sourceTree = "<group>"; };
 		C05B59C01E54E47700183EC0 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		C05F68211D65DE4C000932F6 /* CamApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C05F68211D65DE4C000932F6 /* MushroomIdentifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MushroomIdentifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05F68241D65DE4C000932F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C05F68261D65DE4C000932F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C05F68291D65DE4C000932F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C05F682B1D65DE4C000932F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C05F682E1D65DE4C000932F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C05F68301D65DE4C000932F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C05F68351D65DE4C000932F6 /* CamAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C05F68351D65DE4C000932F6 /* MushroomIdentifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MushroomIdentifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05F68391D65DE4C000932F6 /* CamAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamAppTests.swift; sourceTree = "<group>"; };
 		C05F683B1D65DE4C000932F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C05F68401D65DE4C000932F6 /* CamAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C05F68401D65DE4C000932F6 /* MushroomIdentifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MushroomIdentifierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05F68441D65DE4C000932F6 /* CamAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamAppUITests.swift; sourceTree = "<group>"; };
 		C05F68461D65DE4C000932F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C08A00A61E51F9EC00AD23AB /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C08A57FA1E5C50CD00AE46B8 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C08A57FC1E5CE67D00AE46B8 /* mushroom_cascade.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = mushroom_cascade.xml; path = ../mushroom_cascade.xml; sourceTree = "<group>"; };
-		C08A580A1E5D146400AE46B8 /* PilzC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PilzC.h; sourceTree = "<group>"; };
-		C08A580B1E5D14B000AE46B8 /* PilzC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PilzC.m; sourceTree = "<group>"; };
+		C08A580A1E5D146400AE46B8 /* MushroomC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MushroomC.h; sourceTree = "<group>"; };
+		C08A580B1E5D14B000AE46B8 /* MushroomC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MushroomC.m; sourceTree = "<group>"; };
 		C0912BD41E7011FB005CB823 /* Source.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Source.cpp; sourceTree = "<group>"; };
 		C0912BD81E701B58005CB823 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		C0912BD91E701B58005CB823 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		C09259241DDF217300057E51 /* Markup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Markup.h; path = ../Markup.h; sourceTree = "<group>"; };
 		C09259261DDF2EDE00057E51 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../libjpeg.a; sourceTree = "<group>"; };
 		C095831A1E9182530026FBF8 /* Mushroom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mushroom.swift; sourceTree = "<group>"; };
+		C095831C1E92E1AA0026FBF8 /* Lamellen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lamellen.jpg; sourceTree = "<group>"; };
 		C09AF5141E62216B00CC2CFC /* Eierschwammerl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eierschwammerl.png; sourceTree = "<group>"; };
 		C09AF5151E62216B00CC2CFC /* Eierschwammerl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Eierschwammerl@2x.png"; sourceTree = "<group>"; };
 		C09AF5181E6224BE00CC2CFC /* Fliegenpilz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fliegenpilz.png; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		C05B59591E52625300183EC0 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				C095831C1E92E1AA0026FBF8 /* Lamellen.jpg */,
 				C08A57FC1E5CE67D00AE46B8 /* mushroom_cascade.xml */,
 				C054AF2D1DE225F6009F5360 /* schwammerl.xml */,
 				C05B59641E52663D00183EC0 /* camera.png */,
@@ -153,9 +156,9 @@
 		C05F68181D65DE4C000932F6 = {
 			isa = PBXGroup;
 			children = (
-				C05F68231D65DE4C000932F6 /* CamApp */,
-				C05F68381D65DE4C000932F6 /* CamAppTests */,
-				C05F68431D65DE4C000932F6 /* CamAppUITests */,
+				C05F68231D65DE4C000932F6 /* MushroomIdentifier */,
+				C05F68381D65DE4C000932F6 /* MushroomIdentifierTests */,
+				C05F68431D65DE4C000932F6 /* MushroomIdentifierUITests */,
 				C05F68221D65DE4C000932F6 /* Products */,
 				C092591D1DDF204300057E51 /* CamApp-Bridging-Header.h */,
 			);
@@ -164,14 +167,14 @@
 		C05F68221D65DE4C000932F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C05F68211D65DE4C000932F6 /* CamApp.app */,
-				C05F68351D65DE4C000932F6 /* CamAppTests.xctest */,
-				C05F68401D65DE4C000932F6 /* CamAppUITests.xctest */,
+				C05F68211D65DE4C000932F6 /* MushroomIdentifier.app */,
+				C05F68351D65DE4C000932F6 /* MushroomIdentifierTests.xctest */,
+				C05F68401D65DE4C000932F6 /* MushroomIdentifierUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C05F68231D65DE4C000932F6 /* CamApp */ = {
+		C05F68231D65DE4C000932F6 /* MushroomIdentifier */ = {
 			isa = PBXGroup;
 			children = (
 				C0912BD41E7011FB005CB823 /* Source.cpp */,
@@ -193,36 +196,39 @@
 				C08A00A61E51F9EC00AD23AB /* Theme.swift */,
 				C095831A1E9182530026FBF8 /* Mushroom.swift */,
 				C05B59591E52625300183EC0 /* data */,
-				C08A580A1E5D146400AE46B8 /* PilzC.h */,
-				C08A580B1E5D14B000AE46B8 /* PilzC.m */,
+				C08A580A1E5D146400AE46B8 /* MushroomC.h */,
+				C08A580B1E5D14B000AE46B8 /* MushroomC.m */,
 			);
+			name = MushroomIdentifier;
 			path = CamApp;
 			sourceTree = "<group>";
 		};
-		C05F68381D65DE4C000932F6 /* CamAppTests */ = {
+		C05F68381D65DE4C000932F6 /* MushroomIdentifierTests */ = {
 			isa = PBXGroup;
 			children = (
 				C05F68391D65DE4C000932F6 /* CamAppTests.swift */,
 				C05F683B1D65DE4C000932F6 /* Info.plist */,
 			);
+			name = MushroomIdentifierTests;
 			path = CamAppTests;
 			sourceTree = "<group>";
 		};
-		C05F68431D65DE4C000932F6 /* CamAppUITests */ = {
+		C05F68431D65DE4C000932F6 /* MushroomIdentifierUITests */ = {
 			isa = PBXGroup;
 			children = (
 				C05F68441D65DE4C000932F6 /* CamAppUITests.swift */,
 				C05F68461D65DE4C000932F6 /* Info.plist */,
 			);
+			name = MushroomIdentifierUITests;
 			path = CamAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C05F68201D65DE4C000932F6 /* CamApp */ = {
+		C05F68201D65DE4C000932F6 /* MushroomIdentifier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C05F68491D65DE4C000932F6 /* Build configuration list for PBXNativeTarget "CamApp" */;
+			buildConfigurationList = C05F68491D65DE4C000932F6 /* Build configuration list for PBXNativeTarget "MushroomIdentifier" */;
 			buildPhases = (
 				C05F681D1D65DE4C000932F6 /* Sources */,
 				C05F681E1D65DE4C000932F6 /* Frameworks */,
@@ -232,14 +238,14 @@
 			);
 			dependencies = (
 			);
-			name = CamApp;
+			name = MushroomIdentifier;
 			productName = CamApp;
-			productReference = C05F68211D65DE4C000932F6 /* CamApp.app */;
+			productReference = C05F68211D65DE4C000932F6 /* MushroomIdentifier.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C05F68341D65DE4C000932F6 /* CamAppTests */ = {
+		C05F68341D65DE4C000932F6 /* MushroomIdentifierTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C05F684C1D65DE4C000932F6 /* Build configuration list for PBXNativeTarget "CamAppTests" */;
+			buildConfigurationList = C05F684C1D65DE4C000932F6 /* Build configuration list for PBXNativeTarget "MushroomIdentifierTests" */;
 			buildPhases = (
 				C05F68311D65DE4C000932F6 /* Sources */,
 				C05F68321D65DE4C000932F6 /* Frameworks */,
@@ -250,14 +256,14 @@
 			dependencies = (
 				C05F68371D65DE4C000932F6 /* PBXTargetDependency */,
 			);
-			name = CamAppTests;
+			name = MushroomIdentifierTests;
 			productName = CamAppTests;
-			productReference = C05F68351D65DE4C000932F6 /* CamAppTests.xctest */;
+			productReference = C05F68351D65DE4C000932F6 /* MushroomIdentifierTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C05F683F1D65DE4C000932F6 /* CamAppUITests */ = {
+		C05F683F1D65DE4C000932F6 /* MushroomIdentifierUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C05F684F1D65DE4C000932F6 /* Build configuration list for PBXNativeTarget "CamAppUITests" */;
+			buildConfigurationList = C05F684F1D65DE4C000932F6 /* Build configuration list for PBXNativeTarget "MushroomIdentifierUITests" */;
 			buildPhases = (
 				C05F683C1D65DE4C000932F6 /* Sources */,
 				C05F683D1D65DE4C000932F6 /* Frameworks */,
@@ -268,9 +274,9 @@
 			dependencies = (
 				C05F68421D65DE4C000932F6 /* PBXTargetDependency */,
 			);
-			name = CamAppUITests;
+			name = MushroomIdentifierUITests;
 			productName = CamAppUITests;
-			productReference = C05F68401D65DE4C000932F6 /* CamAppUITests.xctest */;
+			productReference = C05F68401D65DE4C000932F6 /* MushroomIdentifierUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -301,7 +307,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C05F681C1D65DE4C000932F6 /* Build configuration list for PBXProject "CamApp" */;
+			buildConfigurationList = C05F681C1D65DE4C000932F6 /* Build configuration list for PBXProject "MushroomIdentifier" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -314,9 +320,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C05F68201D65DE4C000932F6 /* CamApp */,
-				C05F68341D65DE4C000932F6 /* CamAppTests */,
-				C05F683F1D65DE4C000932F6 /* CamAppUITests */,
+				C05F68201D65DE4C000932F6 /* MushroomIdentifier */,
+				C05F68341D65DE4C000932F6 /* MushroomIdentifierTests */,
+				C05F683F1D65DE4C000932F6 /* MushroomIdentifierUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -329,6 +335,7 @@
 				C05B59761E52697C00183EC0 /* liste.png in Resources */,
 				C05B59731E52689300183EC0 /* info@2x.png in Resources */,
 				C05B59721E52689300183EC0 /* info.png in Resources */,
+				C095831D1E92E1AA0026FBF8 /* Lamellen.jpg in Resources */,
 				C09AF51B1E6224BE00CC2CFC /* Fliegenpilz@2x.png in Resources */,
 				C054AF2E1DE225F6009F5360 /* schwammerl.xml in Resources */,
 				C05F682F1D65DE4C000932F6 /* LaunchScreen.storyboard in Resources */,
@@ -368,7 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0912BDC1E70293A005CB823 /* OpenCVWrapper.mm in Sources */,
-				C08A580C1E5D14B000AE46B8 /* PilzC.m in Sources */,
+				C08A580C1E5D14B000AE46B8 /* MushroomC.m in Sources */,
 				C08A57FB1E5C50CD00AE46B8 /* DetailViewController.swift in Sources */,
 				C05F68271D65DE4C000932F6 /* ViewController.swift in Sources */,
 				C05B59C11E54E47700183EC0 /* TableViewController.swift in Sources */,
@@ -401,12 +408,12 @@
 /* Begin PBXTargetDependency section */
 		C05F68371D65DE4C000932F6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C05F68201D65DE4C000932F6 /* CamApp */;
+			target = C05F68201D65DE4C000932F6 /* MushroomIdentifier */;
 			targetProxy = C05F68361D65DE4C000932F6 /* PBXContainerItemProxy */;
 		};
 		C05F68421D65DE4C000932F6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C05F68201D65DE4C000932F6 /* CamApp */;
+			target = C05F68201D65DE4C000932F6 /* MushroomIdentifier */;
 			targetProxy = C05F68411D65DE4C000932F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -587,7 +594,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = at.myprojects.CamAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CamApp.app/CamApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MushroomIdentifier.app/MushroomIdentifier";
 			};
 			name = Debug;
 		};
@@ -600,7 +607,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = at.myprojects.CamAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CamApp.app/CamApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MushroomIdentifier.app/MushroomIdentifier";
 			};
 			name = Release;
 		};
@@ -633,7 +640,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C05F681C1D65DE4C000932F6 /* Build configuration list for PBXProject "CamApp" */ = {
+		C05F681C1D65DE4C000932F6 /* Build configuration list for PBXProject "MushroomIdentifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C05F68471D65DE4C000932F6 /* Debug */,
@@ -642,7 +649,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C05F68491D65DE4C000932F6 /* Build configuration list for PBXNativeTarget "CamApp" */ = {
+		C05F68491D65DE4C000932F6 /* Build configuration list for PBXNativeTarget "MushroomIdentifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C05F684A1D65DE4C000932F6 /* Debug */,
@@ -651,7 +658,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C05F684C1D65DE4C000932F6 /* Build configuration list for PBXNativeTarget "CamAppTests" */ = {
+		C05F684C1D65DE4C000932F6 /* Build configuration list for PBXNativeTarget "MushroomIdentifierTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C05F684D1D65DE4C000932F6 /* Debug */,
@@ -660,7 +667,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C05F684F1D65DE4C000932F6 /* Build configuration list for PBXNativeTarget "CamAppUITests" */ = {
+		C05F684F1D65DE4C000932F6 /* Build configuration list for PBXNativeTarget "MushroomIdentifierUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C05F68501D65DE4C000932F6 /* Debug */,

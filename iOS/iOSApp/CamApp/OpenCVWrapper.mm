@@ -1,13 +1,13 @@
 //
 //  OpenCVWrapper.m
-//  CameraApp
+//  MushroomIdentifier
 //
-//  Created by mbkair02 on 31.10.16.
+//  Created by Markus Arbeithuber on 31.10.16.
 //  Copyright © 2016 user. All rights reserved.
 //
 
 #import "OpenCVWrapper.h"
-#import "PilzC.h"
+#import "MushroomC.h"
 
 #import "Source.cpp"
 
@@ -32,15 +32,15 @@ using namespace std;
 //OpenCVWrapper.h File Implementierung
 @implementation OpenCVWrapper
 
-+(NSMutableArray<PilzC *> *) detectMushroom:(UIImage*) img : (NSString*) xmlpath1 : (NSString*) xmlpath2
++(NSMutableArray<MushroomC *> *) detectMushroom:(UIImage*) img : (NSString*) xmlpath1 : (NSString*) xmlpath2
 {
     std::string xmlpathh1 = std::string([xmlpath1 UTF8String]);
     std::string xmlpathh2 = std::string([xmlpath2 UTF8String]);
     
     vector<Pilz> mushlist = detectMushroom(xmlpathh1, xmlpathh2, convertToMat(img));
     
-    NSMutableArray<PilzC *> *arr = [[NSMutableArray alloc] init];
-    PilzC *c = [[PilzC alloc] init];
+    NSMutableArray<MushroomC *> *arr = [[NSMutableArray alloc] init];
+    MushroomC *c = [[MushroomC alloc] init];
     
     for(int i = 0; i < mushlist.size(); i++){
         c.name = [NSString stringWithUTF8String:mushlist[i].name.c_str()];
@@ -55,21 +55,21 @@ using namespace std;
         
         [arr addObject: c];
         
-        c = [[PilzC alloc] init];
+        c = [[MushroomC alloc] init];
     }
     
     return arr;
     
 }
 
-+(NSMutableArray<PilzC *> *) allMushrooms: (NSString*) xmlpath{
++(NSMutableArray<MushroomC *> *) allMushrooms: (NSString*) xmlpath{
     std::string xmlpathh = std::string([xmlpath UTF8String]);
     
     vector<Pilz> mushlist = readxml(string(xmlpathh)); //Liste aller gelesenen Pilze
     
-    NSMutableArray<PilzC *> *arr = [[NSMutableArray alloc] init];
+    NSMutableArray<MushroomC *> *arr = [[NSMutableArray alloc] init];
     
-    PilzC *c = [[PilzC alloc] init];
+    MushroomC *c = [[MushroomC alloc] init];
     
     for(int i = 0; i < mushlist.size(); i++){
         c.name = [NSString stringWithUTF8String:mushlist[i].name.c_str()];
@@ -84,7 +84,7 @@ using namespace std;
         
         [arr addObject: c];
         
-        c = [[PilzC alloc] init];
+        c = [[MushroomC alloc] init];
     }
     
     return arr;

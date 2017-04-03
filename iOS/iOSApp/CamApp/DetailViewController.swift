@@ -1,6 +1,6 @@
 //
 //  DetailViewController.swift
-//  CamApp
+//  MushroomIdentifier
 //
 //  Created by mbkair02 on 21.02.17.
 //  Copyright © 2017 user. All rights reserved.

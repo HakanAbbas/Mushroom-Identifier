@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C05F68201D65DE4C000932F6"
-               BuildableName = "CamApp.app"
-               BlueprintName = "CamApp"
-               ReferencedContainer = "container:CamApp.xcodeproj">
+               BuildableName = "MushroomIdentifier.app"
+               BlueprintName = "MushroomIdentifier"
+               ReferencedContainer = "container:MushroomIdentifier.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C05F68341D65DE4C000932F6"
-               BuildableName = "CamAppTests.xctest"
-               BlueprintName = "CamAppTests"
-               ReferencedContainer = "container:CamApp.xcodeproj">
+               BuildableName = "MushroomIdentifierTests.xctest"
+               BlueprintName = "MushroomIdentifierTests"
+               ReferencedContainer = "container:MushroomIdentifier.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C05F683F1D65DE4C000932F6"
-               BuildableName = "CamAppUITests.xctest"
-               BlueprintName = "CamAppUITests"
-               ReferencedContainer = "container:CamApp.xcodeproj">
+               BuildableName = "MushroomIdentifierUITests.xctest"
+               BlueprintName = "MushroomIdentifierUITests"
+               ReferencedContainer = "container:MushroomIdentifier.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C05F68201D65DE4C000932F6"
-            BuildableName = "CamApp.app"
-            BlueprintName = "CamApp"
-            ReferencedContainer = "container:CamApp.xcodeproj">
+            BuildableName = "MushroomIdentifier.app"
+            BlueprintName = "MushroomIdentifier"
+            ReferencedContainer = "container:MushroomIdentifier.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C05F68201D65DE4C000932F6"
-            BuildableName = "CamApp.app"
-            BlueprintName = "CamApp"
-            ReferencedContainer = "container:CamApp.xcodeproj">
+            BuildableName = "MushroomIdentifier.app"
+            BlueprintName = "MushroomIdentifier"
+            ReferencedContainer = "container:MushroomIdentifier.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C05F68201D65DE4C000932F6"
-            BuildableName = "CamApp.app"
-            BlueprintName = "CamApp"
-            ReferencedContainer = "container:CamApp.xcodeproj">
+            BuildableName = "MushroomIdentifier.app"
+            BlueprintName = "MushroomIdentifier"
+            ReferencedContainer = "container:MushroomIdentifier.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

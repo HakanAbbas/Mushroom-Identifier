@@ -1,15 +1,15 @@
 //
-//  PilzC.m
-//  CamApp
+//  MushroomC.m
+//  MushroomIdentifier
 //
 //  Created by mbkair02 on 22.02.17.
 //  Copyright © 2017 user. All rights reserved.
 //
 
 
-#include "PilzC.h"
+#include "MushroomC.h"
 
-@implementation PilzC
+@implementation MushroomC
 
 -(id)init
 {
