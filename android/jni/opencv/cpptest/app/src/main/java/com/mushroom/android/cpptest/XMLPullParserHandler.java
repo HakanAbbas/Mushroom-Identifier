@@ -84,7 +84,7 @@ public class XMLPullParserHandler {
                             bytes[0] = (byte)Integer.parseInt(blue);
                             bytes[1] = (byte)Integer.parseInt(green);
                             bytes[2] = (byte)Integer.parseInt(red);
-                            mushrooms.setFarbe(bytes);
+                            mushrooms.setColor(bytes);
                         } else if(tagname.equalsIgnoreCase("HSV-von")) {
                             byte[] bytes = new byte[3];
                             String[] temp = new String[3];
@@ -97,7 +97,7 @@ public class XMLPullParserHandler {
                             bytes[0] = (byte)Integer.parseInt(hue);
                             bytes[1] = (byte)Integer.parseInt(saturation);
                             bytes[2] = (byte)Integer.parseInt(value);
-                            mushrooms.setHsvVon(bytes);
+                            mushrooms.setHsv_v(bytes);
                         }else if(tagname.equalsIgnoreCase("HSV-bis")) {
                             byte[] bytes = new byte[3];
                             String[] temp = new String[3];
@@ -110,7 +110,7 @@ public class XMLPullParserHandler {
                             bytes[0] = (byte)Integer.parseInt(hue);
                             bytes[1] = (byte)Integer.parseInt(saturation);
                             bytes[2] = (byte)Integer.parseInt(value);
-                            mushrooms.setHsvBis(bytes);
+                            mushrooms.setHsv_b(bytes);
                         }else if(tagname.equalsIgnoreCase("HSV-von2")) {
                             byte[] bytes = new byte[3];
                             String[] temp = new String[3];
@@ -123,7 +123,7 @@ public class XMLPullParserHandler {
                             bytes[0] = (byte)Integer.parseInt(hue);
                             bytes[1] = (byte)Integer.parseInt(saturation);
                             bytes[2] = (byte)Integer.parseInt(value);
-                            mushrooms.setHsvVS(bytes);
+                            mushrooms.setHsv_v2(bytes);
                         }
                         else if(tagname.equalsIgnoreCase("HSV-bis2")) {
                             byte[] bytes = new byte[3];
@@ -137,37 +137,37 @@ public class XMLPullParserHandler {
                             bytes[0] = (byte)Integer.parseInt(hue);
                             bytes[1] = (byte)Integer.parseInt(saturation);
                             bytes[2] = (byte)Integer.parseInt(value);
-                            mushrooms.setHsvBS(bytes);
+                            mushrooms.setHsv_b2(bytes);
                         }else if(tagname.equalsIgnoreCase("name")) {
                             mushrooms.setName(text);
                         }else if(tagname.equalsIgnoreCase("wiki")) {
                             mushrooms.setWiki(text);
                         }else if(tagname.equalsIgnoreCase("giftigkeit")){
                             if(text.equals("0")){
-                                mushrooms.setGiftigkeit(false);
+                                mushrooms.setPoisonous(false);
                             }else{
-                                mushrooms.setGiftigkeit(true);
+                                mushrooms.setPoisonous(true);
                             }
                         }else if(tagname.equalsIgnoreCase("rund")){
                             if(text.equals("0")){
-                                mushrooms.setRund(false);
+                                mushrooms.setRound(false);
                             }else{
-                                mushrooms.setRund(true);
+                                mushrooms.setRound(true);
                             }
                         }else if(tagname.equalsIgnoreCase("lamellen")){
                             if(text.equals("0")){
-                                mushrooms.setLamellen(false);
+                                mushrooms.setLamella(false);
                             }else{
-                                mushrooms.setLamellen(true);
+                                mushrooms.setLamella(true);
                             }
                         }else if(tagname.equalsIgnoreCase("knolle")){
                             if(text.equals("0")){
-                                mushrooms.setKnollen(false);
+                                mushrooms.setNodule(false);
                             }else{
-                                mushrooms.setKnollen(true);
+                                mushrooms.setNodule(true);
                             }
                         }else if(tagname.equalsIgnoreCase("stiel")){
-                            mushrooms.setStiel(text);
+                            mushrooms.setStalk(text);
                         }
                         break;
                     default:

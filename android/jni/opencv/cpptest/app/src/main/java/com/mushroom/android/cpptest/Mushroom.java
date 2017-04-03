@@ -1,17 +1,18 @@
 package com.mushroom.android.cpptest;
 public class Mushroom {
-    private byte[] farbe = new byte[3];
-    private byte[] hsvVon = new byte[3];
-    private byte[] hsvBis = new byte[3];
-    private byte[] hsvVS = new byte[3];
-    private byte[] hsvBS = new byte[3];
+
+    private byte[] color = new byte[3];
+    private byte[] hsv_v = new byte[3];
+    private byte[] hsv_b = new byte[3];
+    private byte[] hsv_v2 = new byte[3];
+    private byte[] hsv_b2 = new byte[3];
     private String name;
     private String wiki;
-    private boolean giftigkeit;
-    private boolean rund;
-    private boolean lamellen;
-    private boolean knollen;
-    private String stiel;
+    private boolean poisonous;
+    private boolean round;
+    private boolean lamella;
+    private boolean nodule;
+    private String stalk;
 
 
 
@@ -32,44 +33,44 @@ public class Mushroom {
         this.wiki = wiki;
     }
 
-    public boolean getGiftigkeit() {
-        return giftigkeit;
+    public boolean getPoisonous() {
+        return poisonous;
     }
 
-    public void setGiftigkeit(boolean giftigkeit) {
-        this.giftigkeit = giftigkeit;
+    public void setPoisonous(boolean poisonous) {
+        this.poisonous = poisonous;
     }
 
-    public boolean getRund() {
-        return rund;
+    public boolean getRound() {
+        return round;
     }
 
-    public void setRund(boolean rund) {
-        this.rund = rund;
+    public void setRound(boolean round) {
+        this.round = round;
     }
 
-    public boolean getLamellen() {
-        return lamellen;
+    public boolean getLamella() {
+        return lamella;
     }
 
-    public void setLamellen(boolean lamellen) {
-        this.lamellen = lamellen;
+    public void setLamella(boolean lamella) {
+        this.lamella = lamella;
     }
 
-    public boolean getKnollen() {
-        return knollen;
+    public boolean getNodule() {
+        return nodule;
     }
 
-    public void setKnollen(boolean knollen) {
-        this.knollen = knollen;
+    public void setNodule(boolean nodule) {
+        this.nodule = nodule;
     }
 
-    public String getStiel() {
-        return stiel;
+    public String getStalk() {
+        return stalk;
     }
 
-    public void setStiel(String stiel) {
-        this.stiel = stiel;
+    public void setStalk(String stalk) {
+        this.stalk = stalk;
     }
 
     @Override
@@ -80,43 +81,43 @@ public class Mushroom {
 
     /** find the Schwammerl with native Mushroom C++ Code that uses OpenCV
      */
-    public byte[] getFarbe() {
-        return farbe;
+    public byte[] getColor() {
+        return color;
     }
 
-    public void setFarbe(byte[] farbe) {
-        this.farbe = farbe;
+    public void setColor(byte[] color) {
+        this.color = color;
     }
 
-    public byte[] getHsvVon() {
-        return hsvVon;
+    public byte[] getHsv_v() {
+        return hsv_v;
     }
 
-    public void setHsvVon(byte[] hsvVon) {
-        this.hsvVon = hsvVon;
+    public void setHsv_v(byte[] hsv_v) {
+        this.hsv_v = hsv_v;
     }
 
-    public byte[] getHsvBis() {
-        return hsvBis;
+    public byte[] getHsv_b() {
+        return hsv_b;
     }
 
-    public void setHsvBis(byte[] hsvBis) {
-        this.hsvBis = hsvBis;
+    public void setHsv_b(byte[] hsv_b) {
+        this.hsv_b = hsv_b;
     }
 
-    public byte[] getHsvVS() {
-        return hsvVS;
+    public byte[] getHsv_v2() {
+        return hsv_v2;
     }
 
-    public void setHsvVS(byte[] hsvVS) {
-        this.hsvVS = hsvVS;
+    public void setHsv_v2(byte[] hsv_v2) {
+        this.hsv_v2 = hsv_v2;
     }
 
-    public byte[] getHsvBS() {
-        return hsvBS;
+    public byte[] getHsv_b2() {
+        return hsv_b2;
     }
 
-    public void setHsvBS(byte[] hsvBS) {
-        this.hsvBS = hsvBS;
+    public void setHsv_b2(byte[] hsv_b2) {
+        this.hsv_b2 = hsv_b2;
     }
 }

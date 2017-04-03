@@ -47,22 +47,22 @@ public class DisplayListActivity extends AppCompatActivity {
                 String nodule;
                 String lamella;
 
-                if(shroom.getGiftigkeit()){
+                if(shroom.getPoisonous()){
                     poisonous = "Ja";
                 }else
                     poisonous = "Nein";
 
-                if(shroom.getRund()){
+                if(shroom.getRound()){
                     round = "Ja";
                 }else
                     round = "Nein";
 
-                if(shroom.getKnollen()){
+                if(shroom.getNodule()){
                     nodule = "Ja";
                 }else
                     nodule = "Nein";
 
-                if(shroom.getLamellen()){
+                if(shroom.getLamella()){
                     lamella = "Ja";
                 }else
                     lamella = "Nein";
@@ -75,7 +75,7 @@ public class DisplayListActivity extends AppCompatActivity {
                 intent.putExtra("round", round);
                 intent.putExtra("nodule", nodule);
                 intent.putExtra("lamella", lamella);
-                intent.putExtra("stalk", shroom.getStiel());
+                intent.putExtra("stalk", shroom.getStalk());
                 intent.putExtra("wiki", shroom.getWiki());
                 startActivity(intent);
             }

@@ -41,34 +41,34 @@ Mushroom MushroomMarshaller::fromJavaObject(jobject obj) {
     Mushroom mushroom;
     JniUtil util(env);
 
-    vector<unsigned char> bytes = util.getByteArrayField(obj, "farbe");
+    vector<unsigned char> bytes = util.getByteArrayField(obj, "color");
     for (int i = 0; i < bytes.size(); i++) {
         mushroom.bgr[i] = bytes[i];
     }
-    vector<unsigned  char> byte = util.getByteArrayField(obj, "hsvVon");
+    vector<unsigned  char> byte = util.getByteArrayField(obj, "hsv_v");
     //bytes = util.getByteArrayField(obj, "hsvVon");
     for (int i = 0; i < byte.size(); i++) {
         mushroom.hsv_v[i] = byte[i];
     }
-    vector<unsigned char> hsvBis = util.getByteArrayField(obj, "hsvBis");
+    vector<unsigned char> hsvBis = util.getByteArrayField(obj, "hsv_b");
     for (int i = 0; i < bytes.size(); i++) {
         mushroom.hsv_b[i] = hsvBis[i];
     }
-    vector<unsigned char> hsvVonS = util.getByteArrayField(obj, "hsvVS");
+    vector<unsigned char> hsvVonS = util.getByteArrayField(obj, "hsv_v2");
     for (int i = 0; i < bytes.size(); i++) {
         mushroom.hsv_v2[i] = hsvVonS[i];
     }
-    vector<unsigned char> hsvBS = util.getByteArrayField(obj, "hsvBS");
+    vector<unsigned char> hsvBS = util.getByteArrayField(obj, "hsv_b2");
     for (int i = 0; i < bytes.size(); i++) {
         mushroom.hsv_b2[i] = hsvBS[i];
     }
     mushroom.name = util.getStringField(obj, "name");
-    mushroom.stalk = util.getStringField(obj, "stiel");
+    mushroom.stalk = util.getStringField(obj, "stalk");
     mushroom.wiki = util.getStringField(obj, "wiki");
-    mushroom.poisonous = util.getBooleanField(obj, "giftigkeit");
-    mushroom.round = util.getBooleanField(obj, "rund");
-    mushroom.lamell = util.getBooleanField(obj, "lamellen");
-    mushroom.nodule = util.getBooleanField(obj, "knollen");
+    mushroom.poisonous = util.getBooleanField(obj, "poisonous");
+    mushroom.round = util.getBooleanField(obj, "round");
+    mushroom.lamell = util.getBooleanField(obj, "lamella");
+    mushroom.nodule = util.getBooleanField(obj, "nodule");
     return mushroom;
 }
 jobject MushroomMarshaller::asJavaObject(jclass clazz, const Mushroom& mushroom) {
@@ -82,7 +82,7 @@ jobject MushroomMarshaller::asJavaObject(jclass clazz, const Mushroom& mushroom)
     util.setStringField(object, "wiki", mushroom.wiki.c_str());
     util.setBooleanField(object, "poisonous", mushroom.poisonous);
     util.setBooleanField(object, "round", mushroom.round);
-    util.setBooleanField(object, "lamell", mushroom.lamell);
+    util.setBooleanField(object, "lamella", mushroom.lamell);
     util.setBooleanField(object, "stalk", mushroom.nodule);
 
     return object;

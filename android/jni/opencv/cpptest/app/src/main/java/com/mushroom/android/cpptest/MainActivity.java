@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(questions.getText().equals("Hat ihr Mushroom Lamellen?")){
             for(int i = 0; i <= size; i++ ){
-                if(mushrooms.get(i).getLamellen()){
+                if(mushrooms.get(i).getLamella()){
                     shroomsTemp.add(mushrooms.get(i));
                 }
             }
@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
 
         else if(questions.getText().equals("Hat ihr Mushroom eine Knolle?")){
             for(int i = 0; i <= size; i++ ){
-                if(mushrooms.get(i).getKnollen()){
+                if(mushrooms.get(i).getNodule()){
                     shroomsTemp.add(mushrooms.get(i));
                 }
             }
@@ -227,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
             mushrooms = shroomsTemp;
 
             if(mushrooms.size() > 1 ){
-                questions.setText("Hat ihr Mushroom einen Stiel der " + mushrooms.get(0).getStiel());
+                questions.setText("Hat ihr Mushroom einen Stiel der " + mushrooms.get(0).getStalk());
             }
             else if(mushrooms.size() == 1){
                 questions.setText(mushrooms.get(0).getName());
@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(questions.getText().equals("Hat ihr Mushroom Lamellen?")){
             for(int i = 0; i <= size; i++ ){
-                if(!mushrooms.get(i).getLamellen()){
+                if(!mushrooms.get(i).getLamella()){
                     shroomsTemp.add(mushrooms.get(i));
                 }
             }
@@ -276,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
 
         else if(questions.getText().equals("Hat ihr Mushroom eine Knolle?")){
             for(int i = 0; i <= size; i++ ){
-                if(!mushrooms.get(i).getKnollen()){
+                if(!mushrooms.get(i).getNodule()){
                     shroomsTemp.add(mushrooms.get(i));
                 }
             }
@@ -284,7 +284,7 @@ public class MainActivity extends AppCompatActivity {
             mushrooms = shroomsTemp;
 
             if(mushrooms.size() > 1 ){
-                questions.setText("Hat ihr Mushroom einen Stiel der " + mushrooms.get(0).getStiel());
+                questions.setText("Hat ihr Mushroom einen Stiel der " + mushrooms.get(0).getStalk());
             }
             else if(mushrooms.size() == 1){
                 questions.setText(mushrooms.get(0).getName());
@@ -306,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
                 mushrooms = shroomsTemp;
 
 
-                questions.setText("Hat ihr Mushroom einen Stiel der " + mushrooms.get(0).getStiel());
+                questions.setText("Hat ihr Mushroom einen Stiel der " + mushrooms.get(0).getStalk());
             }
             else{
                 questions.setText("Leider keine Übereinstimmung");

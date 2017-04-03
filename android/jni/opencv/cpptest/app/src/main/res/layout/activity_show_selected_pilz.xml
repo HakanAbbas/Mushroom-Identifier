@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/poisonous"
-        android:text="Ist der Pilz rund?  \n \n"
+        android:text="Ist der Pilz round?  \n \n"
      />
 
     <TextView

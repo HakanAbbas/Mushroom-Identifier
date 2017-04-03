@@ -2,18 +2,18 @@ package com.mushroom.android.cpptest;
 
 public class Pilz {
 
-    private String[] farbe;
-    private String[] hsvVon;
-    private String[] hsvBis;
-    private String[] hsvVon2;
-    private String[] hsvBis2 ;
+    private String[] color;
+    private String[] hsv_v;
+    private String[] hsv_b;
+    private String[] hsv_v2;
+    private String[] hsv_b2;
     private String name;
     private String wiki;
-    private Boolean giftigkeit;
-    private Boolean rund;
-    private Boolean lamellen;
-    private Boolean knollen;
-    private String stiel;
+    private Boolean poisonous;
+    private Boolean round;
+    private Boolean lamella;
+    private Boolean nodule;
+    private String stalk;
 
 
 
@@ -34,44 +34,44 @@ public class Pilz {
         this.wiki = wiki;
     }
 
-    public Boolean getGiftigkeit() {
-        return giftigkeit;
+    public Boolean getPoisonous() {
+        return poisonous;
     }
 
-    public void setGiftigkeit(Boolean giftigkeit) {
-        this.giftigkeit = giftigkeit;
+    public void setPoisonous(Boolean poisonous) {
+        this.poisonous = poisonous;
     }
 
-    public Boolean getRund() {
-        return rund;
+    public Boolean getRound() {
+        return round;
     }
 
-    public void setRund(Boolean rund) {
-        this.rund = rund;
+    public void setRound(Boolean round) {
+        this.round = round;
     }
 
-    public Boolean getLamellen() {
-        return lamellen;
+    public Boolean getLamella() {
+        return lamella;
     }
 
-    public void setLamellen(Boolean lamellen) {
-        this.lamellen = lamellen;
+    public void setLamella(Boolean lamella) {
+        this.lamella = lamella;
     }
 
-    public Boolean getKnollen() {
-        return knollen;
+    public Boolean getNodule() {
+        return nodule;
     }
 
-    public void setKnollen(Boolean knollen) {
-        this.knollen = knollen;
+    public void setNodule(Boolean nodule) {
+        this.nodule = nodule;
     }
 
-    public String getStiel() {
-        return stiel;
+    public String getStalk() {
+        return stalk;
     }
 
-    public void setStiel(String stiel) {
-        this.stiel = stiel;
+    public void setStalk(String stalk) {
+        this.stalk = stalk;
     }
 
     @Override
@@ -79,43 +79,43 @@ public class Pilz {
         return name;
     }
 
-    public String[] getFarbe() {
-        return farbe;
+    public String[] getColor() {
+        return color;
     }
 
-    public void setFarbe(String[] farbe) {
-        this.farbe = farbe;
+    public void setColor(String[] color) {
+        this.color = color;
     }
 
-    public String[] getHsvVon() {
-        return hsvVon;
+    public String[] getHsv_v() {
+        return hsv_v;
     }
 
-    public void setHsvVon(String[] hsvVon) {
-        this.hsvVon = hsvVon;
+    public void setHsv_v(String[] hsv_v) {
+        this.hsv_v = hsv_v;
     }
 
-    public String[] getHsvBis() {
-        return hsvBis;
+    public String[] getHsv_b() {
+        return hsv_b;
     }
 
-    public void setHsvBis(String[] hsvBis) {
-        this.hsvBis = hsvBis;
+    public void setHsv_b(String[] hsv_b) {
+        this.hsv_b = hsv_b;
     }
 
-    public String[] getHsvVon2() {
-        return hsvVon2;
+    public String[] getHsv_v2() {
+        return hsv_v2;
     }
 
-    public void setHsvVon2(String[] hsvVon2) {
-        this.hsvVon2 = hsvVon2;
+    public void setHsv_v2(String[] hsv_v2) {
+        this.hsv_v2 = hsv_v2;
     }
 
-    public String[] getHsvBis2() {
-        return hsvBis2;
+    public String[] getHsv_b2() {
+        return hsv_b2;
     }
 
-    public void setHsvBis2(String[] hsvBis2) {
-        this.hsvBis2 = hsvBis2;
+    public void setHsv_b2(String[] hsv_b2) {
+        this.hsv_b2 = hsv_b2;
     }
 }
