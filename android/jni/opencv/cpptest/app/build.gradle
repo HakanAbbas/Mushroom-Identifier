@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.mushroom.android.cpptest"
         minSdkVersion 24
@@ -19,12 +19,12 @@ android {
     }
     buildTypes {
         debug {
-            ndkConfig.abiFilters "armeabi-v7a"
+            ndkConfig.abiFilters "x86_64"
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            ndkConfig.abiFilters "armeabi-v7a"
+            ndkConfig.abiFilters "x86_64"
         }
     }
     sourceSets {

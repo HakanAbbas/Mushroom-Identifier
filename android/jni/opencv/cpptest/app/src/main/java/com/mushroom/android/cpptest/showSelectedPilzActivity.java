@@ -16,15 +16,15 @@ public class showSelectedPilzActivity extends AppCompatActivity {
 
     private TextView name ;
 
-    private TextView giftigkeit;
+    private TextView poisonous;
 
-    private TextView rund;
+    private TextView round;
 
-    private TextView lamellen;
+    private TextView lamella;
 
-    private TextView knolle;
+    private TextView nodule;
 
-    private TextView stiel;
+    private TextView stalk;
 
     private TextView wiki;
 
@@ -42,11 +42,11 @@ public class showSelectedPilzActivity extends AppCompatActivity {
         SpannableString str2;
 
         name = (TextView) findViewById(R.id.name);
-        giftigkeit = (TextView) findViewById(R.id.giftigkeit);
-        rund = (TextView) findViewById(R.id.rund);
-        lamellen = (TextView) findViewById(R.id.lamellen);
-        knolle = (TextView) findViewById(R.id.knolle);
-        stiel  = (TextView) findViewById(R.id.stiel);
+        poisonous = (TextView) findViewById(R.id.poisonous);
+        round = (TextView) findViewById(R.id.round);
+        lamella = (TextView) findViewById(R.id.lamella);
+        nodule = (TextView) findViewById(R.id.nodule);
+        stalk = (TextView) findViewById(R.id.stalk);
         wiki = (TextView) findViewById(R.id.wiki);
         image = (ImageView) findViewById(R.id.imageViewPilz);
 
@@ -58,7 +58,7 @@ public class showSelectedPilzActivity extends AppCompatActivity {
 
         str1 = new SpannableString("Ist der Mushroom giftig? \n");
         builder.append(str1);
-        help = i.getStringExtra("giftigkeit");
+        help = i.getStringExtra("poisonous");
         str2 = new SpannableString(help.toString());
         if(help.equalsIgnoreCase("Ja")){
             str2.setSpan(new ForegroundColorSpan(Color.RED), 0, str2.length(),0);
@@ -66,22 +66,22 @@ public class showSelectedPilzActivity extends AppCompatActivity {
             str2.setSpan(new ForegroundColorSpan(Color.GREEN), 0, str2.length(),0);
         }
         builder.append(str2);
-        this.giftigkeit.setText(builder, TextView.BufferType.SPANNABLE);
+        this.poisonous.setText(builder, TextView.BufferType.SPANNABLE);
         builder.clear();
 
-        //this.giftigkeit.append(help+"\n");
+        //this.poisonous.append(help+"\n");
 
-        help = i.getStringExtra("rund");
-        this.rund.append(help+"\n");
+        help = i.getStringExtra("round");
+        this.round.append(help+"\n");
 
-        help = i.getStringExtra("lamellen");
-        this.lamellen.append(help+"\n");
+        help = i.getStringExtra("lamella");
+        this.lamella.append(help+"\n");
 
-        help = i.getStringExtra("knolle");
-        this.knolle.append(help+"\n");
+        help = i.getStringExtra("nodule");
+        this.nodule.append(help+"\n");
 
-        help = i.getStringExtra("stiel");
-        this.stiel.append(help+"\n");
+        help = i.getStringExtra("stalk");
+        this.stalk.append(help+"\n");
 
 
 

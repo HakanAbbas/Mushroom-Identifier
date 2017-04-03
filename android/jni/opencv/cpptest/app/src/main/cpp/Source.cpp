@@ -28,10 +28,14 @@ static int const max_lowThreshold = 70;
 static int ratioo = 3;
 static int kernel_size = 3;
 
+
+
 Mat readImageFromPath(string fullImagePath){
    cv::Mat image = imread(fullImagePath);
     return image;
 }
+
+
 
 vector<Mushroom> detectMushroom(vector<Mushroom> mushlist, cv::Mat image)
 {

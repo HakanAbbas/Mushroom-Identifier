@@ -1,13 +1,8 @@
 package com.mushroom.android.cpptest;
 
-import android.Manifest;
-import android.content.ContentResolver;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
-import android.content.res.AssetManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -15,24 +10,19 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
-import permissions.dispatcher.NeedsPermission;
-import permissions.dispatcher.RuntimePermissions;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,27 +31,18 @@ public class MainActivity extends AppCompatActivity {
     public static final int IMAGE_GALLERY_REQUEST = 20;
     Bitmap image;
     Bitmap bitmap;
-    Button jaButton;
-    Button neinButton;
+    Button yesButton;
+    Button noButton;
     private ImageView imageView;
-    private TextView fragen;
+    private TextView questions;
 
-    private String imagePath;
-
-    private File file;
-    private Uri fileUri;
-
-    private List<Pilz> pilze = null;
+    private List<Pilz> shrooms = null;
 
     private List<Mushroom> mushrooms = null;
 
     private Mushroom[] mushrooms1 = null;
 
     private MushroomDetector mushRoom = new MushroomDetector();
-
-    File photo = null;
-
-    private Uri mImageUri;
 
 
     private static final String TAG = "MainActivity" ;
@@ -72,15 +53,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        fragen = (TextView) findViewById(R.id.Fragen);
+        questions = (TextView) findViewById(R.id.Question);
 
-        jaButton = (Button) findViewById(R.id.Ja);
+        yesButton = (Button) findViewById(R.id.Ja);
 
-        jaButton.setVisibility(View.INVISIBLE);
+        yesButton.setVisibility(View.INVISIBLE);
 
-        neinButton = (Button) findViewById(R.id.Nein);
+        noButton = (Button) findViewById(R.id.Nein);
 
-        neinButton.setVisibility(View.INVISIBLE);
+        noButton.setVisibility(View.INVISIBLE);
 
         // Referenz zur ImageView, wo das Foto angezeigt wird
         imageView = (ImageView) findViewById(R.id.imageView);
@@ -91,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         try{
             XMLPullParserHandler parser = new XMLPullParserHandler();
-            //pilze = parser.parse(getAssets().open("schwammerl.xml"));
+            //shrooms = parser.parse(getAssets().open("schwammerl.xml"));
             mushrooms = parser.parse(getAssets().open("schwammerl.xml"));
 
         }catch ( IOException a){
@@ -110,19 +91,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         if(mushrooms.size()> 1){
-            fragen.setText("Hat ihr Mushroom Lamellen?");
-            jaButton.setVisibility(View.VISIBLE);
-            neinButton.setVisibility(View.VISIBLE);
+            questions.setText("Hat ihr Mushroom Lamellen?");
+            yesButton.setVisibility(View.VISIBLE);
+            noButton.setVisibility(View.VISIBLE);
         }
         else if(mushrooms.size() == 1){
-            fragen.setText(pilze.get(0).getName());
-            jaButton.setVisibility(View.INVISIBLE);
-            neinButton.setVisibility(View.INVISIBLE);
+            questions.setText(shrooms.get(0).getName());
+            yesButton.setVisibility(View.INVISIBLE);
+            noButton.setVisibility(View.INVISIBLE);
         }
         else{
-            fragen.setText("Leider keine Übereinstimmung");
-            jaButton.setVisibility(View.INVISIBLE);
-            neinButton.setVisibility(View.INVISIBLE);
+            questions.setText("Leider keine Übereinstimmung");
+            yesButton.setVisibility(View.INVISIBLE);
+            noButton.setVisibility(View.INVISIBLE);
         }
 
     }
@@ -184,7 +165,6 @@ public class MainActivity extends AppCompatActivity {
 
 
                 mushrooms1 = mushRoom.computeSchwammerlType(this.mushrooms1, pathname + "/profile.jpg");
-                System.out.println("asldjasldökj");
 
             }else if( requestCode == IMAGE_GALLERY_REQUEST){
 
@@ -211,139 +191,127 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void clickedJa(View button) {
-        List<Mushroom> pilze2 = new ArrayList<Mushroom>();
+    public void clickedYes(View button) {
+        List<Mushroom> shroomsTemp = new ArrayList<Mushroom>();
         int size = mushrooms.size()-1;
 
-        if(fragen.getText().equals("Hat ihr Mushroom Lamellen?")){
+        if(questions.getText().equals("Hat ihr Mushroom Lamellen?")){
             for(int i = 0; i <= size; i++ ){
                 if(mushrooms.get(i).getLamellen()){
-                    pilze2.add(mushrooms.get(i));
+                    shroomsTemp.add(mushrooms.get(i));
                 }
             }
 
-            mushrooms = pilze2;
+            mushrooms = shroomsTemp;
 
             if(mushrooms.size() > 1 ){
-                fragen.setText("Hat ihr Mushroom eine Knolle");
+                questions.setText("Hat ihr Mushroom eine Knolle");
             }
             else if(mushrooms.size() == 1){
-                fragen.setText(mushrooms.get(0).getName());
-                jaButton.setVisibility(View.INVISIBLE);
-                neinButton.setVisibility(View.INVISIBLE);
+                questions.setText(mushrooms.get(0).getName());
+                yesButton.setVisibility(View.INVISIBLE);
+                noButton.setVisibility(View.INVISIBLE);
             }
             else{
-                fragen.setText("Leider keine Übereinstimmung");
+                questions.setText("Leider keine Übereinstimmung");
             }
         }
 
-        else if(fragen.getText().equals("Hat ihr Mushroom eine Knolle?")){
+        else if(questions.getText().equals("Hat ihr Mushroom eine Knolle?")){
             for(int i = 0; i <= size; i++ ){
                 if(mushrooms.get(i).getKnollen()){
-                    pilze2.add(mushrooms.get(i));
+                    shroomsTemp.add(mushrooms.get(i));
                 }
             }
 
-            mushrooms = pilze2;
+            mushrooms = shroomsTemp;
 
             if(mushrooms.size() > 1 ){
-                fragen.setText("Hat ihr Mushroom einen Stiel der " + mushrooms.get(0).getStiel());
+                questions.setText("Hat ihr Mushroom einen Stiel der " + mushrooms.get(0).getStiel());
             }
             else if(mushrooms.size() == 1){
-                fragen.setText(mushrooms.get(0).getName());
-                jaButton.setVisibility(View.INVISIBLE);
-                neinButton.setVisibility(View.INVISIBLE);
+                questions.setText(mushrooms.get(0).getName());
+                yesButton.setVisibility(View.INVISIBLE);
+                noButton.setVisibility(View.INVISIBLE);
             }
             else{
-                fragen.setText("Leider keine Übereinstimmung");
+                questions.setText("Leider keine Übereinstimmung");
             }
         }
         else{
-            fragen.setText(mushrooms.get(0).getName());
-            jaButton.setVisibility(View.INVISIBLE);
-            neinButton.setVisibility(View.INVISIBLE);
+            questions.setText(mushrooms.get(0).getName());
+            yesButton.setVisibility(View.INVISIBLE);
+            noButton.setVisibility(View.INVISIBLE);
         }
 
     }
 
-    public String getOriginalImagePath() {
-        String[] projection = { MediaStore.Images.Media.DATA };
-        Cursor cursor = this.managedQuery(
-                MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                projection, null, null, null);
-        int column_index_data = cursor
-                .getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-        cursor.moveToLast();
-
-        return cursor.getString(column_index_data);
-    }
-
-    public void clickedNein(View button){
-        List<Mushroom> pilze2 = new ArrayList<Mushroom>();
+    public void clickedNo(View button){
+        List<Mushroom> shroomsTemp = new ArrayList<Mushroom>();
         int size = mushrooms.size()-1;
 
-        if(fragen.getText().equals("Hat ihr Mushroom Lamellen?")){
+        if(questions.getText().equals("Hat ihr Mushroom Lamellen?")){
             for(int i = 0; i <= size; i++ ){
                 if(!mushrooms.get(i).getLamellen()){
-                    pilze2.add(mushrooms.get(i));
+                    shroomsTemp.add(mushrooms.get(i));
                 }
             }
 
-            mushrooms = pilze2;
+            mushrooms = shroomsTemp;
 
             if(mushrooms.size() > 1 ){
-                fragen.setText("Hat ihr Mushroom eine Knolle");
+                questions.setText("Hat ihr Mushroom eine Knolle");
             }
             else if(mushrooms.size() == 1){
-                fragen.setText(mushrooms.get(0).getName());
-                jaButton.setVisibility(View.INVISIBLE);
-                neinButton.setVisibility(View.INVISIBLE);
+                questions.setText(mushrooms.get(0).getName());
+                yesButton.setVisibility(View.INVISIBLE);
+                noButton.setVisibility(View.INVISIBLE);
             }
             else{
-                fragen.setText("Leider keine Übereinstimmung");
-                jaButton.setVisibility(View.INVISIBLE);
-                neinButton.setVisibility(View.INVISIBLE);
+                questions.setText("Leider keine Übereinstimmung");
+                yesButton.setVisibility(View.INVISIBLE);
+                noButton.setVisibility(View.INVISIBLE);
             }
         }
 
-        else if(fragen.getText().equals("Hat ihr Mushroom eine Knolle?")){
+        else if(questions.getText().equals("Hat ihr Mushroom eine Knolle?")){
             for(int i = 0; i <= size; i++ ){
                 if(!mushrooms.get(i).getKnollen()){
-                    pilze2.add(mushrooms.get(i));
+                    shroomsTemp.add(mushrooms.get(i));
                 }
             }
 
-            mushrooms = pilze2;
+            mushrooms = shroomsTemp;
 
             if(mushrooms.size() > 1 ){
-                fragen.setText("Hat ihr Mushroom einen Stiel der " + mushrooms.get(0).getStiel());
+                questions.setText("Hat ihr Mushroom einen Stiel der " + mushrooms.get(0).getStiel());
             }
             else if(mushrooms.size() == 1){
-                fragen.setText(mushrooms.get(0).getName());
-                jaButton.setVisibility(View.INVISIBLE);
-                neinButton.setVisibility(View.INVISIBLE);
+                questions.setText(mushrooms.get(0).getName());
+                yesButton.setVisibility(View.INVISIBLE);
+                noButton.setVisibility(View.INVISIBLE);
             }
             else{
-                fragen.setText("Leider keine Übereinstimmung");
-                jaButton.setVisibility(View.INVISIBLE);
-                neinButton.setVisibility(View.INVISIBLE);
+                questions.setText("Leider keine Übereinstimmung");
+                yesButton.setVisibility(View.INVISIBLE);
+                noButton.setVisibility(View.INVISIBLE);
             }
         }
         else{
             if(mushrooms.size() > 1 ){
                 for(int i = 0; i <= size; i++){
-                    pilze2.add(mushrooms.get(i));
+                    shroomsTemp.add(mushrooms.get(i));
                 }
 
-                mushrooms = pilze2;
+                mushrooms = shroomsTemp;
 
 
-                fragen.setText("Hat ihr Mushroom einen Stiel der " + mushrooms.get(0).getStiel());
+                questions.setText("Hat ihr Mushroom einen Stiel der " + mushrooms.get(0).getStiel());
             }
             else{
-                fragen.setText("Leider keine Übereinstimmung");
-                jaButton.setVisibility(View.INVISIBLE);
-                neinButton.setVisibility(View.INVISIBLE);
+                questions.setText("Leider keine Übereinstimmung");
+                yesButton.setVisibility(View.INVISIBLE);
+                noButton.setVisibility(View.INVISIBLE);
             }
         }
     }

@@ -24,7 +24,6 @@ public class DisplayListActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.list);
 
-        List<Pilz> pilze = null;
         List<Mushroom> mushrooms = null;
 
         try{
@@ -42,43 +41,42 @@ public class DisplayListActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Mushroom pilz = (Mushroom) listView.getItemAtPosition(position);
-                String giftigkeit;
-                String rund;
-                String knolle;
-                String lamellen;
+                Mushroom shroom = (Mushroom) listView.getItemAtPosition(position);
+                String poisonous;
+                String round;
+                String nodule;
+                String lamella;
 
-                if(pilz.getGiftigkeit()){
-                    giftigkeit = "Ja";
+                if(shroom.getGiftigkeit()){
+                    poisonous = "Ja";
                 }else
-                    giftigkeit = "Nein";
+                    poisonous = "Nein";
 
-                if(pilz.getRund()){
-                    rund = "Ja";
+                if(shroom.getRund()){
+                    round = "Ja";
                 }else
-                    rund = "Nein";
+                    round = "Nein";
 
-                if(pilz.getKnollen()){
-                    knolle = "Ja";
+                if(shroom.getKnollen()){
+                    nodule = "Ja";
                 }else
-                    knolle = "Nein";
+                    nodule = "Nein";
 
-                if(pilz.getLamellen()){
-                    lamellen = "Ja";
+                if(shroom.getLamellen()){
+                    lamella = "Ja";
                 }else
-                    lamellen = "Nein";
+                    lamella = "Nein";
 
 
                 Intent intent = new Intent(getApplicationContext(), showSelectedPilzActivity.class);
 
-                intent.putExtra("name", pilz.getName());
-                intent.putExtra("wiki", pilz.getWiki());
-                intent.putExtra("giftigkeit", giftigkeit);
-                intent.putExtra("rund", rund);
-                intent.putExtra("knolle", knolle);
-                intent.putExtra("lamellen", lamellen);
-                intent.putExtra("stiel", pilz.getStiel());
-                intent.putExtra("wiki", pilz.getWiki());
+                intent.putExtra("name", shroom.getName());
+                intent.putExtra("poisonous", poisonous);
+                intent.putExtra("round", round);
+                intent.putExtra("nodule", nodule);
+                intent.putExtra("lamella", lamella);
+                intent.putExtra("stalk", shroom.getStiel());
+                intent.putExtra("wiki", shroom.getWiki());
                 startActivity(intent);
             }
         });

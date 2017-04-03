@@ -18,7 +18,7 @@
      />
 
     <TextView
-        android:id="@+id/giftigkeit"
+        android:id="@+id/poisonous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name"
@@ -26,34 +26,34 @@
     />
 
     <TextView
-        android:id="@+id/rund"
+        android:id="@+id/round"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/giftigkeit"
+        android:layout_below="@+id/poisonous"
         android:text="Ist der Pilz rund?  \n \n"
      />
 
     <TextView
-        android:id="@+id/lamellen"
+        android:id="@+id/lamella"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rund"
+        android:layout_below="@+id/round"
         android:text="Hat der Pilz Lamellen? \n \n"
    />
 
     <TextView
-        android:id="@+id/knolle"
+        android:id="@+id/nodule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lamellen"
+        android:layout_below="@+id/lamella"
         android:text="Hat der Pilz eine Knolle? \n \n"
     />
 
     <TextView
-        android:id="@+id/stiel"
+        android:id="@+id/stalk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/knolle"
+        android:layout_below="@+id/nodule"
         android:text="Wie schaut der Stiel aus? \n \n"
     />
 
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/stiel"
+        android:layout_below="@+id/stalk"
         android:text="Für mehr Informationen klicken Sie bitte auf diesen Wikipedia link: "
         />
 
@@ -72,8 +72,8 @@
         android:layout_height="wrap_content"
         android:src="@drawable/fliegenpilz"
         android:id="@+id/imageViewPilz"
-        android:layout_above="@+id/lamellen"
-        android:layout_toRightOf="@id/lamellen"
+        android:layout_above="@+id/lamella"
+        android:layout_toRightOf="@id/lamella"
         android:layout_marginRight="20dp"/>
 
 
