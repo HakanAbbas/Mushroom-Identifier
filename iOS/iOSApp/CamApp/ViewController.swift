@@ -25,11 +25,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var spaceTopLabel: UIView!
     @IBOutlet weak var spaceBottomLabel: UIView!
+    @IBOutlet weak var spaceBottomButton: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         let theme = ThemeManager.currentTheme()
         
         buttonYes.isHidden = true
@@ -57,6 +58,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         spaceBottomLabel.backgroundColor = theme.viewbackground
         spaceTopLabel.backgroundColor = theme.viewbackground
+        spaceBottomButton.backgroundColor = theme.viewbackground
         
         backgroundView.backgroundColor = theme.viewbackground
     }

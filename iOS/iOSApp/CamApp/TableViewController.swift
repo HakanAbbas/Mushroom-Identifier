@@ -274,10 +274,6 @@ class TableViewController: UITableViewController /*, XMLParserDelegate */ {
             
             destViewController.mushroom = mushrooms[(indexPath?.row)!]
             destViewController.indexMushroom = (indexPath?.row)!
-            
-            print("Zelle: ")
-            print(indexPath?.row)
-            print(destViewController.mushroom)
         }
     }
 
