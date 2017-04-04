@@ -3,7 +3,6 @@
 #include "opencv2/objdetect/objdetect.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
-#include "opencv2/opencv.hpp"
 
 
 using namespace cv;
@@ -28,7 +27,6 @@ public:
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /** Function Headers */
-int detectAndDisplay(Mat frame); //Maschinelles Lernen; Fliegenpilzerkennung
 vector<Pilz> readxml(std::string path); //Lesen der PilzXML
 void CannyThreshold(int, void*); //Umrisse werden erkannt
 vector<Pilz> oneornull(vector<Pilz> mushlist2, string question); // 1/0 Entscheidungsfragen
@@ -37,8 +35,8 @@ vector <Pilz> questions(vector <Pilz>mushlist); //Ausf�hrliche Entscheidungsfr
 int HoughDetection(const Mat& src_gray, const Mat& src_display, int cannyThreshold, int accumulatorThreshold); //Hough Circle Detection
 int myStoi(const string& _Str, size_t *_Idx = 0, int _Base = 10);
 																							/** Globale Variablen f�r Maschinelles Lernen*/
-String face_cascade_name = "..\\data\\Pilz_cascade.xml";
-CascadeClassifier face_cascade;
+String mushroom_cascade_name = "mushroom_cascade.xml";
+CascadeClassifier mushroom_cascade;
 RNG rng(12345);
 
 //globale Variablen f�r Canny Edge Detector
@@ -58,6 +56,8 @@ vector<Pilz> detectMushroom(std::string xmlReadMushPath, std::string xmlCascadeP
 {
 	Mat image_gray;
 
+	mushroom_cascade_name = xmlCascadePath;
+	
     cout << "rows: " << image.rows;
     cout << "cols: " << image.cols;
 
@@ -173,10 +173,17 @@ cout << "read" << mushlist2.size() << "read";
 			frame = image;
 
 			//-- 1. Load the cascades
-			if (!face_cascade.load(face_cascade_name)) { printf("--(!)Error loading\n"); 
+			if (!mushroom_cascade.load(mushroom_cascade_name)) { printf("--(!)Error loading Haar\n"); 
 			};
 
-			if (detectAndDisplay(frame) > 0) {
+			
+			std::vector<cv::Rect> mushs;
+			
+			mushroom_cascade.detectMultiScale(frame, mushs, 2.0, 30.0, 0 | CV_HAAR_SCALE_IMAGE, cv::Size(30, 30));
+			
+			cout << "\n\n" << "Anzahl erkannter Fliegenpilze (Haar Cascade): " << mushs.size() << "\n\n";
+			
+			if (mushs.size() > 0) {
 				mushlist3.push_back(mushlist2[i]);
 				fliegennull = 1;
 				cout << "ich bin hier...Fliegenpilz";
@@ -194,29 +201,6 @@ cout << "read" << mushlist2.size() << "read";
 	cv::threshold(grayscaleMat, binaryMat, 100, 255, cv::THRESH_BINARY);
 
 	return mushlist2;
-}
-
-/** @function detectAndDisplay */
-int detectAndDisplay(Mat frame) //Markus�ss Maschinelles Lernen Algorithmus 
-{
-    std::vector<cv::Rect> faces;
-	Mat frame_gray;
-
-	cvtColor(frame, frame_gray, CV_BGR2GRAY);
-	equalizeHist(frame_gray, frame_gray);
-
-	//-- Detect faces
-    face_cascade.detectMultiScale(frame_gray, faces, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, cv::Size(30, 30));
-
-	for (size_t i = 0; i < faces.size(); i++)
-	{
-        cv::Point center(faces[i].x + faces[i].width*0.5, faces[i].y + faces[i].height*0.5);
-        ellipse(frame, center, cv::Size(faces[i].width*0.5, faces[i].height*0.5), 0, 0, 360, Scalar(255, 0, 255), 4, 8, 0);
-
-        cv::Mat faceROI = frame_gray(faces[i]);
-	}
-
-	return faces.size();
 }
 
 
@@ -241,7 +225,7 @@ vector<Pilz> readxml(std::string path) {
 	ws.assign(s.begin(), s.end());
 	try
 	{
-		while (xml.FindElem(MCD_T("Mushroom")))
+		while (xml.FindElem(MCD_T("Schwammerl")))
 		{
 			xml.IntoElem();
 			help << counter;
@@ -350,14 +334,14 @@ void CannyThreshold(int, void*)
 }
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int counter = 0;
-vector<Mushroom> oneornull(vector<Mushroom> mushlist2, string question) {
-	cout << "\n\n\nHat Ihr Mushroom" << question << "? 0=NEIN, 1=JA\n";
+vector<Pilz> oneornull(vector<Pilz> mushlist2, string question) {
+	cout << "\n\n\nHat Ihr Pilz" << question << "? 0=NEIN, 1=JA\n";
 	int dessicion; //hier bitte Ergebniss speichern
 	cin >> dessicion;
 	std::ostringstream ws;
 	ws << dessicion;
 	const std::string dessicion_wstr(ws.str());
-	vector<Mushroom> mushlist3;
+	vector<Pilz> mushlist3;
 	if (counter == 0) {
 		for (int i = 0; i < mushlist2.size(); i++) {
 
@@ -382,8 +366,8 @@ vector<Mushroom> oneornull(vector<Mushroom> mushlist2, string question) {
 	return mushlist3;
 }
 
-vector <Mushroom> roundornot(vector <Mushroom> mushlist, int amountofcircles) {
-	vector<Mushroom> mushlist2;
+vector <Pilz> roundornot(vector <Pilz> mushlist, int amountofcircles) {
+	vector<Pilz> mushlist2;
 	for (int i = 0; i < mushlist.size(); i++) {
 		if (amountofcircles >= mushlist[i].roud) {
 			mushlist2.push_back(mushlist[i]);
@@ -392,13 +376,13 @@ vector <Mushroom> roundornot(vector <Mushroom> mushlist, int amountofcircles) {
 	return mushlist2;
 }
 
-vector <Mushroom> questions(vector <Mushroom>mushlist) {
-	vector<Mushroom> mushlist2;
+vector <Pilz> questions(vector <Pilz>mushlist) {
+	vector<Pilz> mushlist2;
 
 	int dessicion; //hier bitte Ergebniss speichern
 
 	for (int i = 0; i < mushlist.size() && counter != -1; i++) {
-		cout << "\n\n\nHat Ihr Mushroom " << mushlist[i].stalk << "? 0=NEIN, 1=JA\n";
+		cout << "\n\n\nHat Ihr Pilz " << mushlist[i].stalk << "? 0=NEIN, 1=JA\n";
 		cin >> dessicion;
 		std::ostringstream ws;
 		ws << dessicion;

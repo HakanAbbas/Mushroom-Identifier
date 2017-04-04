@@ -14,8 +14,8 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-	vector<Pilz> mushlist=detectMushroom("..\\..\\common\\data\\schwammerl.xml", "..\\..\\common\\data\\mushroom_cascade.xml", imread("..\\..\\common\\data\\eiersch.jpg"));
-	cout<<mushlist.size();
+	vector<Pilz> mushlist=detectMushroom("..\\..\\common\\data\\schwammerl.xml", "..\\..\\common\\data\\mushroom_cascade.xml", imread("..\\..\\common\\data\\fliegen_oben.jpg"));
+	cout << "\n\n" << mushlist.size();
 
 	waitKey(0);
 	return 0;
