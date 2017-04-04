@@ -120,7 +120,7 @@ struct ThemeManager {
         /*UIButton.appearance().backgroundColor = UIColor.white
         UIButton.appearance().tintColor = theme.secondaryColor*/
         
-        UITableViewCell.appearance().backgroundColor = theme.viewbackground
+        //UITableViewCell.appearance().backgroundColor = theme.viewbackground
         
         //UIButton.appearance().layer.cornerRadius = 50
         

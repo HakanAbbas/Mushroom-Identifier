@@ -10,18 +10,18 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    var possibleMushrooms = Array<Mushroom>()
+    var possibleMushrooms = Array<Mushroom>()   //darin werden die von der Bilderkennung erkannten Pilze gespeichert
     
-    @IBOutlet weak var mushroomImage: UIImageView!
-    @IBOutlet weak var cameraButton: UIButton!
-    @IBOutlet weak var selectPhotoButton: UIButton!
+    @IBOutlet weak var mushroomImage: UIImageView!  //Bild vom fotografierten/aus der Galerie ausgewählten Pilz
+    @IBOutlet weak var cameraButton: UIButton!      //Button zum Foto machen
+    @IBOutlet weak var selectPhotoButton: UIButton! //Button zum Foto aus Galerie auswählen
     
-    @IBOutlet weak var showResultLabel: UITextView!
+    @IBOutlet weak var showResultLabel: UITextView! //Anzeige von Fragen und Ergebnis der Erkennung
     
     @IBOutlet weak var backgroundView: UIView!
     
-    @IBOutlet weak var buttonYes: UIButton!
-    @IBOutlet weak var buttonNo: UIButton!
+    @IBOutlet weak var buttonYes: UIButton!         //Button für Benutzerfragen
+    @IBOutlet weak var buttonNo: UIButton!          //Button für Benutzerfragen
     
     @IBOutlet weak var spaceTopLabel: UIView!
     @IBOutlet weak var spaceBottomLabel: UIView!
@@ -31,6 +31,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        //Design (Hintergrund, Buttons, ...)
         let theme = ThemeManager.currentTheme()
         
         buttonYes.isHidden = true
@@ -67,7 +68,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.didReceiveMemoryWarning()
     }
 
-    
+    //Foto aus Galerie auswählen
     @IBAction func selectPhoto(_ sender: UIButton) {
         
         let picker = UIImagePickerController()
@@ -79,6 +80,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(picker, animated: true, completion: nil)
     }
     
+    //Foto machen
     @IBAction func takePhoto(_ sender: UIButton) {
         let picker = UIImagePickerController()
         
@@ -89,7 +91,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(picker, animated: true, completion: nil)
     }
 
+    //wenn das Foto geladen ist, kann mit dieser Methode damit gearbeitet werden
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
         mushroomImage.image = info[UIImagePickerControllerEditedImage] as? UIImage
         //mushroomImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         dismiss(animated: true, completion: nil)
@@ -97,17 +101,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         getMushroom()
     }
     
+    //Aufruf der Pilzerkennung
     func getMushroom(){
+        
         let bundle = Bundle.main
         
-        let url1:NSURL = bundle.url(forResource: "schwammerl", withExtension: "xml")! as NSURL
-        let url2:NSURL = bundle.url(forResource: "mushroom_cascade", withExtension: "xml")! as NSURL
+        let urlMushrooms:NSURL = bundle.url(forResource: "schwammerl", withExtension: "xml")! as NSURL
+        let urlHaar:NSURL = bundle.url(forResource: "mushroom_cascade", withExtension: "xml")! as NSURL
         possibleMushrooms = Array<Mushroom>()
 
-        let mushrooms:NSMutableArray = OpenCVWrapper.detectMushroom(mushroomImage.image, url1.path, url2.path)
+        let mushrooms:NSMutableArray = OpenCVWrapper.detectMushroom(mushroomImage.image, urlMushrooms.path, urlHaar.path)
         
         mutToArray(mutArr: mushrooms, mushroomArr: &possibleMushrooms)
         
+        //Bei nicht eindeutiger Erkennung werden die Buttons eingeblendet und die erste Frage (Hat ihr Pilz Lammelen) gestellt, ansonsten kann bereits der Name des Pilzes, bzw bei keiner Übereinstimmung eine Meldung ausgegeben werden.
         if(possibleMushrooms.count > 1){
             showResultLabel.text = "Hat ihr Pilz Lamellen?";
             buttonYes.isHidden = false
@@ -126,6 +133,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+    //Umwandlung des Objective C Arrays in ein Swift Array
     func mutToArray(mutArr: NSMutableArray, mushroomArr: inout Array<Mushroom>){
         var tempMushroom = Mushroom()
         
@@ -172,6 +180,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    //Benutzerfragen bei KLick auf Ja
     @IBAction func clickedYes(_ sender: UIButton) {
         var possibleMushrooms2 = Array<Mushroom>()
         let arrSize = possibleMushrooms.count-1
@@ -233,6 +242,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    //Benutzerfragen bei Klick auf Nein
     @IBAction func clickedNo(_ sender: UIButton) {
         var possibleMushrooms2 = Array<Mushroom>()
         let arrSize = possibleMushrooms.count-1

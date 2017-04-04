@@ -12,8 +12,10 @@
 
 @interface OpenCVWrapper : NSObject
 
-+(NSMutableArray<MushroomC *> *) detectMushroom:(UIImage*) img : (NSString*) xmlpath1 : (NSString*) xmlpath2;
+//Bilderkennung (gibt eine Liste aller Pilze, die in Frage kommen, zurück)
++(NSMutableArray<MushroomC *> *) detectMushroom:(UIImage*) img : (NSString*) xmlpathMushrooms : (NSString*) xmlpathHaar;
 
-+(NSMutableArray<MushroomC *> *) allMushrooms: (NSString*) xmlpath;
+//gibt eine Liste aller gespeicherten Pilze zurück
++(NSMutableArray<MushroomC *> *) allMushrooms: (NSString*) xmlpathMushrooms;
 
 @end

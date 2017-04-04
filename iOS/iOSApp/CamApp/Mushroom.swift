@@ -8,13 +8,13 @@
 
 class Mushroom {
 
-    var name: String
-    var wiki: String
-    var poisonous: Bool
-    var round: Bool
-    var lamell: Bool
-    var nodule: Bool
-    var stalk: String
+    var name: String    //Name
+    var wiki: String    //Wiki Link
+    var poisonous: Bool //giftig?
+    var round: Bool     //rund?
+    var lamell: Bool    //Lamellen?
+    var nodule: Bool    //Knolle?
+    var stalk: String   //Stiel
 
     init(){
         self.name = ""

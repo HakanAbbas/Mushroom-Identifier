@@ -12,7 +12,6 @@
 #import "Source.cpp"
 
 #include <opencv2/core/core.hpp>
-//#include <iostream>
 #include "opencv2/opencv.hpp"
 
 #include "opencv2/objdetect/objdetect.hpp"
@@ -22,9 +21,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <stdio.h>
-//#include <windows.h>
 #include <codecvt>
-//#include <string>
 #include <list>
 
 using namespace std;
@@ -32,13 +29,18 @@ using namespace std;
 //OpenCVWrapper.h File Implementierung
 @implementation OpenCVWrapper
 
-+(NSMutableArray<MushroomC *> *) detectMushroom:(UIImage*) img : (NSString*) xmlpath1 : (NSString*) xmlpath2
+//Pilzerkennung (Bild, XML Pfad für Pilzinformationen, XML Pfad für maschinelles Lernen
++(NSMutableArray<MushroomC *> *) detectMushroom:(UIImage*) img : (NSString*) xmlpathMushrooms : (NSString*) xmlpathHaar
 {
-    std::string xmlpathh1 = std::string([xmlpath1 UTF8String]);
-    std::string xmlpathh2 = std::string([xmlpath2 UTF8String]);
+    //Umwandlung NSString in std::string
+    std::string xmlpathhMushrooms = std::string([xmlpathMushrooms UTF8String]);
+    std::string xmlpathhHaar = std::string([xmlpathMushrooms UTF8String]);
     
-    vector<Pilz> mushlist = detectMushroom(xmlpathh1, xmlpathh2, convertToMat(img));
+    //Aufruf Bilderkennung
+    vector<Pilz> mushlist = detectMushroom(xmlpathhMushrooms, xmlpathhHaar, convertToMat(img));
     
+    
+    //Umwandlung C++ Pilz in Objective C Pilz
     NSMutableArray<MushroomC *> *arr = [[NSMutableArray alloc] init];
     MushroomC *c = [[MushroomC alloc] init];
     
@@ -62,11 +64,16 @@ using namespace std;
     
 }
 
-+(NSMutableArray<MushroomC *> *) allMushrooms: (NSString*) xmlpath{
-    std::string xmlpathh = std::string([xmlpath UTF8String]);
+//alle Pilze (XML Pfad für Pilzinformationen
++(NSMutableArray<MushroomC *> *) allMushrooms: (NSString*) xmlpathMushrooms{
     
-    vector<Pilz> mushlist = readxml(string(xmlpathh)); //Liste aller gelesenen Pilze
+    //Umwandlung NSString in std::string
+    std::string xmlpathhMushrooms = std::string([xmlpathMushrooms UTF8String]);
     
+    //Liste aller gelesenen Pilze
+    vector<Pilz> mushlist = readxml(string(xmlpathhMushrooms));
+    
+    //Umwandlung C++ Pilz in Objective C Pilz
     NSMutableArray<MushroomC *> *arr = [[NSMutableArray alloc] init];
     
     MushroomC *c = [[MushroomC alloc] init];
@@ -91,6 +98,7 @@ using namespace std;
 }
 
 
+//Umwandlung von UIImage in cv::Mat
 Mat convertToMat(UIImage* img)
 {
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(img.CGImage);
@@ -116,6 +124,7 @@ Mat convertToMat(UIImage* img)
     return cvMat;
 }
 
+//Umwandlung von cv::Mat in UIImage (wurde anfangs zu Testzwecken verwendet)
 UIImage* convertToUIImage(Mat image)
 {
     NSData *data = [NSData dataWithBytes:image.data length:image.elemSize()*image.total()];

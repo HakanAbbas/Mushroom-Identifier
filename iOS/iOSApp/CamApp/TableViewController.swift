@@ -18,42 +18,45 @@ class TableViewController: UITableViewController /*, XMLParserDelegate */ {
     var parser = XMLParser()
  */
     
-    var clickedMushroom = Mushroom()
-    var mushrooms = Array<Mushroom>()
+    var clickedMushroom = Mushroom()    //geklickter Pilz (für Detailansicht)
+    var mushrooms = Array<Mushroom>()   //Liste aller gespeicherten Pilze
     
-    var name = false
-    var wiki = false
-    var poisonous = false
-    var round = false
-    var lamell = false
-    var nodule = false
-    var stalk = false
+    var name = false        //Name
+    var wiki = false        //Wiki Link
+    var poisonous = false   //Giftigkeit
+    var round = false       //Rund
+    var lamell = false      //Lamellen
+    var nodule = false      //Knolle
+    var stalk = false       //Stiel
+    
+    let theme = ThemeManager.currentTheme()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        let theme = ThemeManager.currentTheme()
-        
+        //Hintergrundfarbe
         self.view.backgroundColor = theme.viewbackground
         
+        //Laden aller Pilze
         loadMushrooms()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    //Anzahl der Spalten (1)
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    //Anzahl der Zeilen
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mushrooms.count
     }
     
+    //Aufbauen der einzelnen Zeilen
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
@@ -61,6 +64,7 @@ class TableViewController: UITableViewController /*, XMLParserDelegate */ {
         
         let bundle = Bundle.main
         
+        //Bilder sind unter dem Namen des Pilzes .png gespeichert
         if let url = (bundle.url(forResource: mushrooms[indexPath.row].name, withExtension: "png")) {
             cell.imageView?.image = UIImage(contentsOfFile: url.path)
         }
@@ -69,9 +73,12 @@ class TableViewController: UITableViewController /*, XMLParserDelegate */ {
             cell.imageView?.image = UIImage(contentsOfFile: (url?.path)!)
         }
         
+        cell.backgroundColor = theme.viewbackground
+        
         return cell
     }
     
+    //Laden aller Pilze
     func loadMushrooms(){
         let bundle = Bundle.main
         
@@ -83,6 +90,7 @@ class TableViewController: UITableViewController /*, XMLParserDelegate */ {
         
     }
     
+    //Umwandlung von Objective C Array in Swift Array
     func mutToArray(mutArr: NSMutableArray, mushroomArr: inout Array<Mushroom>){
         var tempMushroom = Mushroom()
         
@@ -264,6 +272,8 @@ class TableViewController: UITableViewController /*, XMLParserDelegate */ {
         print("failure error: ", parseError)
     }
     */
+    
+    //an die Detailansicht wird der Pilz und die Position in der Liste übergeben
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
