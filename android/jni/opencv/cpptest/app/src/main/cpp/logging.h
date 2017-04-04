@@ -1,5 +1,5 @@
 //
-// Created by Christian Aberger on 19.03.2017.
+// Created by Hakan Abbas on 23.03.2017.
 //
 
 #ifndef LOGGING_H_DEFINED

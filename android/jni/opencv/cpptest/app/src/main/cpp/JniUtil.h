@@ -1,5 +1,5 @@
 //
-// Created by Christian Aberger on 20.03.2017.
+// Created by Hakan Abbas on 23.03.2017.
 //
 
 #ifndef CPPTEST_JNIUTILS_H
@@ -11,13 +11,14 @@
 
 using namespace std;
 
+
+//Header File für die Methodendefinitionen
 class JniUtil {
 public:
     JniUtil(JNIEnv *env) : env(env) {
     }
     string toString(jstring jniString);
     vector<unsigned char> getByteArrayField(jobject object, const char *name);
-    void setByteArrayField(jobject, const char *name, char *bytes, int length);
 
     string getStringField(jobject object, const char *name);
     void setStringField(jobject object, const char *name, const char *value);

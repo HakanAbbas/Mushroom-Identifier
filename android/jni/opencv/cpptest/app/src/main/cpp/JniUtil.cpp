@@ -1,5 +1,5 @@
 //
-// Created by Christian Aberger on 20.03.2017.
+// Created by Hakan Abbas on 23.03.2017.
 //
 #import "JniUtil.h"
 using namespace std;
@@ -10,6 +10,7 @@ string JniUtil::toString(jstring jniString) {
     env->ReleaseStringUTFChars(jniString, nativeString);
     return cvString;
 }
+//Umwandlung von Arrays in Vecotren
 vector<unsigned char> JniUtil::getByteArrayField(jobject obj, const char *name) {
     jclass klass = env->GetObjectClass(obj);
     jfieldID fid = env->GetFieldID(klass, name, "[B");
@@ -26,22 +27,14 @@ vector<unsigned char> JniUtil::getByteArrayField(jobject obj, const char *name) 
     return bytes;
 }
 
-void JniUtil::setByteArrayField(jobject object, const char *name, char *bytes, int length) {
-    jclass klass = env->GetObjectClass(object);
-
-    jbyteArray byteArray = env->NewByteArray(length);
-    env->SetByteArrayRegion(byteArray, 0, length, (jbyte *)bytes);
-
-    jfieldID fid = env->GetFieldID(klass, name, "[B");
-    env->SetObjectField(object, fid, byteArray);
-}
-
+//Umwandlung von Java String in C++ String
 string JniUtil::getStringField(jobject obj, const char *name) {
     jclass klass = env->GetObjectClass(obj);
     jfieldID fid = env->GetFieldID(klass, name, "Ljava/lang/String;");
     jstring stringObject = (jstring)env->GetObjectField(obj, fid);
     return stringObject ? toString(stringObject) : "";
 }
+//Umwandlung von C++ String in Java String
 void JniUtil::setStringField(jobject object, const char *name, const char *value) {
     jclass klass = env->GetObjectClass(object);
     jfieldID fieldId = env->GetFieldID(klass, name, "Ljava/lang/String;");
@@ -49,7 +42,7 @@ void JniUtil::setStringField(jobject object, const char *name, const char *value
     env->SetObjectField(object, fieldId, val);
 }
 
-
+//Umwandlung von Java boolean in C++ Integer
 int JniUtil::getBooleanField(jobject object, const char *name) {
     jclass klass = env->GetObjectClass(object);
     jfieldID fid = env->GetFieldID(klass, name, "Z");
@@ -61,6 +54,8 @@ int JniUtil::getBooleanField(jobject object, const char *name) {
     }
 }
 
+
+//Umwandlung von C++ Integer in Java boolean
 void JniUtil::setBooleanField(jobject object, const char *name, int value) {
     jclass klass = env->GetObjectClass(object);
     jfieldID fid = env->GetFieldID(klass, name, "Z");

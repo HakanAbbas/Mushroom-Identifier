@@ -1,9 +1,10 @@
 //
-// Created by Christian Aberger on 21.03.2017.
+// Created by Hakan Abbas on 23.03.2017.
 //
 
 #include "Mushroom.h"
 
+//Klasse von Pilzen für C++
 Mushroom::Mushroom()
 {
 }

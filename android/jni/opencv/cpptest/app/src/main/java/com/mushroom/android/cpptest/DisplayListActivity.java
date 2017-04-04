@@ -11,6 +11,7 @@ import android.widget.ListView;
 import java.io.IOException;
 import java.util.List;
 
+//Das ist die Klasse für die Speicherung der geparsten Pilze in eine Liste und die Ausgabe
 public class DisplayListActivity extends AppCompatActivity {
 
 
@@ -26,10 +27,11 @@ public class DisplayListActivity extends AppCompatActivity {
 
         List<Mushroom> mushrooms = null;
 
+        //Pilze werden in eine Liste gespeichert
         try{
             XMLPullParserHandler parser = new XMLPullParserHandler();
-            //pilze = parser.parse(getAssets().open("schwammerl.xml"));
             mushrooms = parser.parse(getAssets().open("schwammerl.xml"));
+            //Anzeige der Pilze in Form einer Liste
             ArrayAdapter<Mushroom> adapter=
                     new ArrayAdapter<Mushroom>(this, R.layout.list_item, mushrooms);
 
@@ -37,7 +39,7 @@ public class DisplayListActivity extends AppCompatActivity {
         }catch (IOException e){
             e.printStackTrace();
         }
-
+        //Wenn auf ein Pilz gedrückt wird, dann wird die Detailansicht geöffnet
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

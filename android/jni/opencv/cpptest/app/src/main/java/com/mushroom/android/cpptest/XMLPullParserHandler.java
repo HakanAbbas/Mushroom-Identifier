@@ -13,16 +13,19 @@ import java.util.List;
  * Created by Hakan on 11.03.2017.
  */
 
+
+//Klasse die es ermöglicht aus einer xml-Datei Daten in Java zu parsen und zu speichern
 public class XMLPullParserHandler {
 
 
-    private List<Pilz> pilze;
-
+    //Die Liste, die dann anschließen zurückgegeben wird
     private List<Mushroom> mushroom;
 
-    private Pilz pilz;
+    //Hilfsvariable für die einzelnen Texte die zwischen den TAGS eingelesen werden
     private String text;
 
+
+    //Hilfsvariable für die Speicherung einzelner Pilze aus dem xml-Datei
     private Mushroom mushrooms;
 
 
@@ -33,13 +36,8 @@ public class XMLPullParserHandler {
     }
 
 
-    public List<Pilz> getPilze() {
-        return pilze;
-    }
 
-
-
-
+    //Methode für die Speicherung einzelner Pilze aus der xml-Datei
     public List<Mushroom> parse(InputStream is) {
         XmlPullParserFactory factory = null;
         XmlPullParser parser = null;
@@ -52,17 +50,19 @@ public class XMLPullParserHandler {
             parser.setInput(is, null);
 
             int eventType = parser.getEventType();
+            //solange nicht das Ende der xml-Datei erreicht wurde
             while(eventType != XmlPullParser.END_DOCUMENT) {
                 String tagname = parser.getName();
                 switch(eventType) {
+                    //Sagt, dass nun Pilze eingelesen werden, deswegen wird die Liste mit "pilzen" initialisiert, damit dann auch später Pilze hinzugefügt werden können
                     case XmlPullParser.START_TAG:
 
                         if(tagname.equalsIgnoreCase("Pilz")) {
-                            pilz = new Pilz();
                             mushrooms = new Mushroom();
                         }
                         break;
 
+                    //Wenn ein Text gelesen wird, wird dieser in eine Hilfsvariable gespeichert
                     case XmlPullParser.TEXT:
 
                         text = parser.getText();
@@ -70,8 +70,12 @@ public class XMLPullParserHandler {
 
                     case XmlPullParser.END_TAG:
 
+                        //Wenn als END_TAG, also, als Abschluss_TAG ein Pilz gelesen wird -> </Pilz>
+                        //Dann wird der eingelesene Pilz mit allen Eigenschaften in die Liste gespeichert
                         if(tagname.equalsIgnoreCase("Pilz")) {
                             mushroom.add(mushrooms);
+
+                        //Hier werden alle Eigenschaften des Pilzes einzeln eingelesen und in die Variable "Pilz" gespeichert
                         }else if(tagname.equalsIgnoreCase("Farbe")) {
                             byte[] bytes = new byte[3];
                             String[] temp = new String[3];
@@ -178,6 +182,8 @@ public class XMLPullParserHandler {
         }catch ( Exception e) {
             e.printStackTrace();
         }
+
+        //Wenn der xml-Datei bis zum Schluss eingelesen wurde, dann wird die gesamte Liste von Pilzen zurückgegeben
         return mushroom;
     }
 

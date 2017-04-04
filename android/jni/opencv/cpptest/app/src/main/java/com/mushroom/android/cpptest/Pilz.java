@@ -1,5 +1,5 @@
 package com.mushroom.android.cpptest;
-
+//Klasse für das Anzeigen der Details einzelner Pilze, in dieser Klasse werden nur die wichtigsten Eigenschaften eines Pilzes zum anzeigen gespeichert
 public class Pilz {
 
     private String[] color;

@@ -4,7 +4,6 @@
 #include <opencv2/highgui/highgui.hpp>
 
 #include "JniUtil.h"
-#include "GrayScaler.h"
 #include "Mushroom.h"
 #include "MushroomDetector.h"
 #include "Source.h"
@@ -37,6 +36,8 @@ private:
  * @param obj the Mushroom java object
  * @return the converted c++ Mushroom object
  */
+
+//Wandelt ein Array aus Java in ein vector in C++ um
 Mushroom MushroomMarshaller::fromJavaObject(jobject obj) {
     Mushroom mushroom;
     JniUtil util(env);
@@ -71,6 +72,8 @@ Mushroom MushroomMarshaller::fromJavaObject(jobject obj) {
     mushroom.nodule = util.getBooleanField(obj, "nodule");
     return mushroom;
 }
+
+//Wandelt ein vector von C++ in ein Array in Java um
 jobject MushroomMarshaller::asJavaObject(jclass clazz, const Mushroom& mushroom) {
     JniUtil util(env);
 
@@ -88,18 +91,20 @@ jobject MushroomMarshaller::asJavaObject(jclass clazz, const Mushroom& mushroom)
     return object;
 }
 
-
+//Ist die Methode, welche für die Hin und Rückwandlung von Arrays und Vectoren für die Bilderkennung erfüllt
 extern "C"
 JNIEXPORT jobjectArray JNICALL Java_com_mushroom_android_cpptest_MushroomDetector_computeSchwammerlType
         (JNIEnv *env, jobject mushroomDetector, jobjectArray templates, jstring imagePath) {
     JniUtil util(env);
     MushroomMarshaller marshaller(env);
 
+    //Der Pfad für das Bild wird in ein C++ String umgewandelt
     std::string imagePathString = util.toString(imagePath);
 
     int length = env->GetArrayLength(templates);
     vector<Mushroom> mushrooms;
     jclass elementClass = NULL;
+    //Der Array von Pilzen wird iteriert und einzeln in ein vector von Pilzen gespeichert
     for (int i = 0; i < length-1; i++) {
         jobject templateElement = env->GetObjectArrayElement(templates, i);
         if (elementClass == NULL) {
@@ -108,15 +113,23 @@ JNIEXPORT jobjectArray JNICALL Java_com_mushroom_android_cpptest_MushroomDetecto
         Mushroom mushroom = marshaller.fromJavaObject(templateElement);
         mushrooms.push_back(mushroom);
     }
+
+    //Das Bild aus dem Pfad wird in ein Mat eingelesen
     cv::Mat image = readImageFromPath(imagePathString);
 
+
+    //Das ist die Methode für die Bilderkennung
     vector<Mushroom> detectedShrooms = detectMushroom(mushrooms, image);
+
 
     jobjectArray objs = env->NewObjectArray(mushrooms.size(), elementClass, NULL);
     jsize index = 0;
+    //Rückwandlung von C++ vectoren in Arrays von Java
     for(vector<Mushroom>::iterator it = detectedShrooms.begin(); it != detectedShrooms.end(); it++) {
         jobject object = marshaller.asJavaObject(elementClass, *it);
         env->SetObjectArrayElement(objs, index++, object);
     }
+
+    //Array von Pilzen wird zurückgegeben
     return objs;
 }

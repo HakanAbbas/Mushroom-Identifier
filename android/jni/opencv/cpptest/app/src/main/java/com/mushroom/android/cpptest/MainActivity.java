@@ -26,6 +26,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Alle Deklarationen der einzelnen Variablen, die für die Kommunikation zwischen dem layout und der Java Klasse kommunizieren
     ImageView result;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final int IMAGE_GALLERY_REQUEST = 20;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Mushroom[] mushrooms1 = null;
 
+    //Klasse für die JNI-Methode
     private MushroomDetector mushRoom = new MushroomDetector();
 
 
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         Button click = (Button)findViewById(R.id.cameraButton);
         result = (ImageView) findViewById(R.id.imageView);
 
-
+        //Speicherung der geparsten Pilze in eine Liste
         try{
             XMLPullParserHandler parser = new XMLPullParserHandler();
             //shrooms = parser.parse(getAssets().open("schwammerl.xml"));
@@ -78,18 +80,19 @@ public class MainActivity extends AppCompatActivity {
         }catch ( IOException a){
             a.printStackTrace();
         }
+
+        //Die Liste wird in ein Array umgespeichert, damit dies dann der JNI-Methode als Parameter übergeben werden kann
         this.mushrooms1 = new Mushroom[mushrooms.size()];
         for(int i = 0; i < mushrooms.size()-1; i++){
             mushrooms1[i] = mushrooms.get(i);
         }
-        //Mushroom[] erkenntePilze = mushRoom.computeSchwammerlType(mushrooms1, "falscher Pfad");
 
 
 
 
 
 
-
+        //Benutzerfragen, falls mehr als ein Pilz erkennt wird
         if(mushrooms.size()> 1){
             questions.setText("Hat ihr Mushroom Lamellen?");
             yesButton.setVisibility(View.VISIBLE);
@@ -108,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Funktion für Bildaufruf über die Galerie
     public void onImageGalleryClicked(View v){
         Intent photoPickerIntent = new Intent (Intent.ACTION_PICK);
 
@@ -121,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(photoPickerIntent, IMAGE_GALLERY_REQUEST);
     }
 
-
+    //Funktion für das schießen eines Bildes über die Kamera
     public void dispatchTakePictureIntent(View view) throws IOException {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
@@ -129,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Das gespeicherte Bild wird in eine temporaere Datei im Smartphone gespeichert
     private String saveToInternalStorage(Bitmap bitmapImage){
         ContextWrapper cw = new ContextWrapper(getApplicationContext());
         // path to /data/data/yourapp/app_data/imageDir
@@ -155,7 +160,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
         if (resultCode == RESULT_OK) {
+            //Wenn ein Bild geschossen wurde
             if( requestCode == REQUEST_IMAGE_CAPTURE ) {
                 Bundle extras = data.getExtras();
                 this.bitmap = (Bitmap) extras.get("data");
@@ -165,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 mushrooms1 = mushRoom.computeSchwammerlType(this.mushrooms1, pathname + "/profile.jpg");
-
+            //Wenn ein Bild über die Galerie geöffnet wurde
             }else if( requestCode == IMAGE_GALLERY_REQUEST){
 
                 Uri imageUri = data.getData();
@@ -191,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Wenn ein Pilz bei den Fragen eine bestimmte Eigenschaft hat, werden hier die Fragen jeweils angepasst und das gewünschte Pilz gesucht
     public void clickedYes(View button) {
         List<Mushroom> shroomsTemp = new ArrayList<Mushroom>();
         int size = mushrooms.size()-1;
@@ -246,6 +254,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Wenn ein Pilz bei den Fragen keine bestimmte Eigenschaft hat, werden hier die Fragen jeweils angepasst und das gewünschte Pilz gesucht
     public void clickedNo(View button){
         List<Mushroom> shroomsTemp = new ArrayList<Mushroom>();
         int size = mushrooms.size()-1;
@@ -316,7 +325,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
+    //Speichert den Zustand der App, damit Daten zb. bei Rotierungen des Smartphones nicht verloren gehen
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -330,6 +339,7 @@ public class MainActivity extends AppCompatActivity {
         outState.putParcelable("BitmapImage", bitmap);
     }
 
+    //Wenn auf "Pilzliste" Button gedürckt wird, dann wird auf eine neue View mit der Liste von Pilzen weitergeleitet
     public void showPilzList (View view) {
         Intent intent = new Intent(this, DisplayListActivity.class);
         startActivity(intent);

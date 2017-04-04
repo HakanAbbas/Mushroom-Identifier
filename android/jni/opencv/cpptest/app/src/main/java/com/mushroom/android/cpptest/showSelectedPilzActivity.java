@@ -12,8 +12,11 @@ import android.text.style.ForegroundColorSpan;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+//Die Klasse für das Anzeigen einzelner Details eines Pilze
 public class showSelectedPilzActivity extends AppCompatActivity {
 
+    //Deklaration einzelner Variablen für die Kommunikation zwischen dem layout und dieser Klasse
     private TextView name ;
 
     private TextView poisonous;
@@ -36,6 +39,7 @@ public class showSelectedPilzActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_selected_pilz);
 
+        //Mit dieser Klasse ist es möglich, einen Textausschnitt in bestimmter Formatierung anzuzeigen
         SpannableStringBuilder builder = new SpannableStringBuilder();
 
         SpannableString str1;

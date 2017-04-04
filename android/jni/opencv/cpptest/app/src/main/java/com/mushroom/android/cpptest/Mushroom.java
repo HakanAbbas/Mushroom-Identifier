@@ -1,4 +1,5 @@
 package com.mushroom.android.cpptest;
+//Klasse für die Pilzespeicherung, die dann später für die Umwandlung in C++ benötigt wird
 public class Mushroom {
 
     private byte[] color = new byte[3];

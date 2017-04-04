@@ -7,6 +7,8 @@ using namespace cv;
 /**
  * a mushroom to be detected by the app
  */
+
+//Header File für die Definition von Eigenschaften der Pilze in C++
 class Mushroom {
 public:
     /** default constructor */
