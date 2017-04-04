@@ -174,7 +174,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text für Knolle einfügen (siehe Abbildung links)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="roT-5x-96H" userLabel="Nodule">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Eine Knolle ist am unteren Ende des Stiels zu finden (siehe Abbildung links)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="roT-5x-96H" userLabel="Nodule">
                                 <rect key="frame" x="165" y="285" width="139" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -183,7 +183,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.png" translatesAutoresizingMaskIntoConstraints="NO" id="dsM-gd-Lm8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Knolle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dsM-gd-Lm8">
                                 <rect key="frame" x="16" y="290" width="139" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dsM-gd-Lm8" secondAttribute="height" multiplier="135:131" id="4kq-n8-MrT"/>
@@ -361,6 +361,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Knolle.jpg" width="960" height="1140"/>
         <image name="Lamellen.jpg" width="608" height="597"/>
         <image name="info.png" width="30" height="30"/>
         <image name="liste.png" width="30" height="30"/>
