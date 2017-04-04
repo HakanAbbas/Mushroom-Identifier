@@ -86,14 +86,14 @@
 		C08A57FA1E5C50CD00AE46B8 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C08A580A1E5D146400AE46B8 /* MushroomC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MushroomC.h; sourceTree = "<group>"; };
 		C08A580B1E5D14B000AE46B8 /* MushroomC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MushroomC.m; sourceTree = "<group>"; };
-		C0912BD41E7011FB005CB823 /* Source.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Source.cpp; sourceTree = "<group>"; };
+		C0912BD41E7011FB005CB823 /* Source.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Source.cpp; path = ../Source.cpp; sourceTree = "<group>"; };
 		C0912BD81E701B58005CB823 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		C0912BD91E701B58005CB823 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		C092591B1DDF1FDD00057E51 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../opencv2.framework; sourceTree = "<group>"; };
 		C092591D1DDF204300057E51 /* CamApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CamApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		C09259231DDF217300057E51 /* Markup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Markup.cpp; path = ../Markup.cpp; sourceTree = "<group>"; };
-		C09259241DDF217300057E51 /* Markup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Markup.h; path = ../Markup.h; sourceTree = "<group>"; };
-		C09259261DDF2EDE00057E51 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../libjpeg.a; sourceTree = "<group>"; };
+		C09259231DDF217300057E51 /* Markup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Markup.cpp; path = ../../Markup.cpp; sourceTree = "<group>"; };
+		C09259241DDF217300057E51 /* Markup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Markup.h; path = ../../Markup.h; sourceTree = "<group>"; };
+		C09259261DDF2EDE00057E51 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../../libjpeg.a; sourceTree = "<group>"; };
 		C095831A1E9182530026FBF8 /* Mushroom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mushroom.swift; sourceTree = "<group>"; };
 		C095831C1E92E1AA0026FBF8 /* Lamellen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lamellen.jpg; sourceTree = "<group>"; };
 		C09AF5141E62216B00CC2CFC /* Eierschwammerl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eierschwammerl.png; sourceTree = "<group>"; };
@@ -136,6 +136,10 @@
 		C05B59591E52625300183EC0 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				C0912BD41E7011FB005CB823 /* Source.cpp */,
+				C09259261DDF2EDE00057E51 /* libjpeg.a */,
+				C09259231DDF217300057E51 /* Markup.cpp */,
+				C09259241DDF217300057E51 /* Markup.h */,
 				C0EA999E1E943932004AE68E /* mushroom_cascade.xml */,
 				C095831C1E92E1AA0026FBF8 /* Lamellen.jpg */,
 				C0EA99A01E943AAA004AE68E /* Knolle.jpg */,
@@ -180,10 +184,6 @@
 		C05F68231D65DE4C000932F6 /* MushroomIdentifier */ = {
 			isa = PBXGroup;
 			children = (
-				C0912BD41E7011FB005CB823 /* Source.cpp */,
-				C09259261DDF2EDE00057E51 /* libjpeg.a */,
-				C09259231DDF217300057E51 /* Markup.cpp */,
-				C09259241DDF217300057E51 /* Markup.h */,
 				C0912BD81E701B58005CB823 /* OpenCVWrapper.h */,
 				C0912BD91E701B58005CB823 /* OpenCVWrapper.mm */,
 				C092591B1DDF1FDD00057E51 /* opencv2.framework */,
